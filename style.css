@@ -64,6 +64,7 @@
       margin-bottom: 25px;
       font-weight: 400;
       user-select: none;
+      color: #26D97C;
       -webkit-user-select: none; /* Safari / iOS */
       -ms-user-select: none;
     }
@@ -78,7 +79,7 @@
       max-width: 70%;
       padding: 15px 25px;
       background: #1e1e1e;
-      border: 1px solid #333;
+      border: 1px solid #16847D;
       border-radius: 30px;
       color: #fff;
       text-decoration: none;
