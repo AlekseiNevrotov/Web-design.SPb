@@ -28,3 +28,11 @@
     setTimeout(() => {
       logo.classList.remove('glitch');
     }, 600);
+  window.addEventListener('load', () => {
+    const logo = document.querySelector('.glitch-img');
+    if (logo) {
+      logo.classList.remove('glitch-img');
+      void logo.offsetWidth; // триггер перерисовки
+      logo.classList.add('glitch-img');
+    }
+  });
