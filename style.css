@@ -7,7 +7,7 @@
 }
 
 .glitch-img {
-  height: 100px;
+  height: 70px;
   position: relative;
   animation: glitch-color-shift 0.8s ease-out 0.01s forwards;
 }
