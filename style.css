@@ -9,7 +9,7 @@
 .glitch-img {
   height: 100px;
   position: relative;
-  animation: glitch-color-shift 0.6s ease forwards;
+  animation: glitch-color-shift 0.8s ease-out 0.01s forwards;
 }
 
 /* Анимация глитч с цветовым сдвигом */
