@@ -6,11 +6,32 @@
 </head>
 <body>
   <h2>Оставьте заявку</h2>
-  <form action="/api/send.js" method="POST">
+  <form id="contact-form">
   <input type="text" name="name" placeholder="Ваше имя" required><br>
   <input type="email" name="email" placeholder="Email" required><br>
   <textarea name="message" placeholder="Сообщение" required></textarea><br>
   <button type="submit">Отправить</button>
 </form>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value
+    };
+
+    const res = await fetch('/api/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    const text = await res.text();
+    alert(text);
+  });
+</script>
 </body>
 </html>
