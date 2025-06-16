@@ -3,6 +3,8 @@ Disallow: /admin/
 Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /private/
+Disallow: /draft/
+
 Allow: /
 
 Sitemap: https://web-design.spb.ru/sitemap.xml
