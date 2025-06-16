@@ -1,10 +1,51 @@
-    @font-face {
-      font-family: 'Alien League';
-      src: url('fonts/AlienLeague.woff') format('woff');
-      font-display: block;
-    }
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background: #111;
+}
+
+.glitch-img {
+  height: 100px;
+  position: relative;
+  animation: glitch-color-shift 0.6s ease forwards;
+}
+
+/* Анимация глитч с цветовым сдвигом */
+@keyframes glitch-color-shift {
+  0% {
+    filter: none;
+    transform: translate(0, 0);
+  }
+  20% {
+    filter: drop-shadow(-5px 0 red) drop-shadow(5px 0 blue);
+    transform: translate(-5px, 0);
+  }
+  40% {
+    filter: drop-shadow(5px 0 red) drop-shadow(-5px 0 blue);
+    transform: translate(5px, 0);
+  }
+  60% {
+    filter: drop-shadow(-2px 0 red) drop-shadow(2px 0 blue);
+    transform: translate(-2px, 0);
+  }
+  80% {
+    filter: drop-shadow(2px 0 red) drop-shadow(-2px 0 blue);
+    transform: translate(2px, 0);
+  }
+  100% {
+    filter: none;
+    transform: translate(0, 0);
+  }
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/fonts/ubuntu.woff2') format('woff2');
+  font-display: optional; /* или optional, fallback будет быстрее */
+}
     body {
-      font-family: 'Ubuntu', sans-serif;
+      font-family: 'Ubuntu';
       background: #121212;
       color: #fff;
       padding: 5px 5px;
@@ -18,17 +59,6 @@
   line-height: 1.6;
   color: #ffffff;
 }
-    .logo-text {
-      font-family: 'Alien League', sans-serif;
-      font-size: 50px;
-      margin: 25px auto;
-      color: #26D9CD;
-      user-select: none;
-      pointer-events: none;
-      user-select: none;
-      -webkit-user-select: none; /* Safari / iOS */
-      -ms-user-select: none; 
-    }
     h1 {
       font-size: 20px;
       margin-bottom: 25px;
@@ -150,9 +180,6 @@
         transform: none;
         opacity: 1;
       }
-    }
-    .logo-text.glitch {
-      animation: glitch 0.6s linear;
     }
     .mobile-br {
   display: none;
