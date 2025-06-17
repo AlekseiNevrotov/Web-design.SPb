@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Посади дерево</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: Arial, sans-serif;
+      background: #e0f7e9;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #1b5e20;
+    }
+
+    .garden {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .tree {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Посади дерево 🌱</h1>
+  <p>Нажимай кнопку — и в саду появится дерево!</p>
+  <button onclick="plantTree()">Посадить дерево</button>
+
+  <div class="garden" id="garden"></div>
+
+  <script>
+    function plantTree() {
+      const tree = document.createElement("div");
+      tree.className = "tree";
+      tree.textContent = "🌳";
+      document.getElementById("garden").appendChild(tree);
+    }
+  </script>
+</body>
+</html>
