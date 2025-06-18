@@ -4,12 +4,20 @@
   align-items: center;
   height: 100px;
   background: #111;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .glitch-img {
   height: 70px;
   position: relative;
   animation: glitch-color-shift 0.8s ease-out 0.01s forwards;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 /* Анимация глитч с цветовым сдвигом */
@@ -126,6 +134,10 @@
       font-size: 12px;
       color: #666;
       margin-bottom: 30px;
+      user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
     }
     @media (hover: none) {
       .link:hover {
