@@ -146,25 +146,30 @@
           ];
           break;
         case 'blackShades':
-  const grayShades = new Set();
-while (grayShades.size < 3) {
-  const value = Math.floor(Math.random() * (102 - 17 + 1)) + 17;
-  const hex = value.toString(16).padStart(2, '0');
-  grayShades.add(`#${hex}${hex}${hex}`);
-}
-for (let hex of grayShades) {
-  const boxContainer = document.createElement('div');
-  boxContainer.className = 'color-box-container';
-  const box = document.createElement('div');
-  box.className = 'color-box';
-  box.style.backgroundColor = hex;
-  const label = document.createElement('div');
-  label.className = 'color-label';
-  label.textContent = hex;
-  boxContainer.appendChild(box);
-  boxContainer.appendChild(label);
-  palette.appendChild(boxContainer);
-}
+  const paletteShades = [];
+  const ranges = [
+    [17, 45],
+    [46, 75],
+    [76, 102]
+  ];
+  for (const [min, max] of ranges) {
+    const value = Math.floor(Math.random() * (max - min + 1)) + min;
+    const hex = value.toString(16).padStart(2, '0');
+    paletteShades.push(`#${hex}${hex}${hex}`);
+  }
+  paletteShades.forEach(hex => {
+    const boxContainer = document.createElement('div');
+    boxContainer.className = 'color-box-container';
+    const box = document.createElement('div');
+    box.className = 'color-box';
+    box.style.backgroundColor = hex;
+    const label = document.createElement('div');
+    label.className = 'color-label';
+    label.textContent = hex;
+    boxContainer.appendChild(box);
+    boxContainer.appendChild(label);
+    palette.appendChild(boxContainer);
+  });
   return;
       }
       for (let h of hues) {
