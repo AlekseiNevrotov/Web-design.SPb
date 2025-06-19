@@ -1,6 +1,6 @@
 {
-  "name": "Web Design SPb",
-  "short_name": "WD SPb",
+  "name": "Web-Design.SPb",
+  "short_name": "WDSPb",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#121212",
