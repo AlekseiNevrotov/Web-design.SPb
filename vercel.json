@@ -1,9 +1,13 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/*.js", "use": "@vercel/node" }
+    { "src": "api/send.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "api/$1.js" }
+    {
+      "src": "/api/send",
+      "methods": ["POST"],
+      "dest": "api/send.js"
+    }
   ]
 }
