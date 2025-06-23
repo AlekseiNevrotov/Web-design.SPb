@@ -1,24 +1,29 @@
 <form id="contactForm">
-  <input type="text" name="name" placeholder="Ваше имя" required />
-  <input type="email" name="email" placeholder="Ваш email" required />
+  <input type="text" name="name" placeholder="Имя" required />
+  <input type="email" name="email" placeholder="Email" required />
   <textarea name="message" placeholder="Сообщение" required></textarea>
   <button type="submit">Отправить</button>
 </form>
 
 <script>
-  const form = document.getElementById("contactForm");
-  form.addEventListener("submit", async (e) => {
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    const res = await fetch("/api/send", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    const res = await fetch('/api/sendMail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     });
 
-    const result = await res.json();
-    alert(result.message);
+    if (res.ok) {
+      alert('Сообщение отправлено!');
+      form.reset();
+    } else {
+      alert('Ошибка при отправке.');
+    }
   });
 </script>
