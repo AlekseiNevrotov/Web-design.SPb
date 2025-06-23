@@ -1,9 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "-": "^0.0.1",
-    "g": "^2.0.1",
-    "nodemailer": "^6.9.0",
-    "vercel": "^44.0.0"
-  }
-}
