@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/style-parser(/.*)?",
-      "destination": "https://style-parser.vercel.app/:splat"
+      "source": "/style-parser/(.*)",
+      "destination": "https://style-parser.vercel.app/$1"
     }
   ]
 }
