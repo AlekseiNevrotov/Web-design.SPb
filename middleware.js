@@ -12,6 +12,7 @@ export async function middleware(request) {
     // Копируем ответ и добавляем кэш-заголовки
     const res = new NextResponse(await response.text(), response);
     res.headers.set('Cache-Control', 'public, max-age=3600');
+    res.headers.set('Content-Type', response.headers.get('Content-Type') || 'application/json');
     return res;
   }
 
