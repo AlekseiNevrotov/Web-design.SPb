@@ -30,7 +30,7 @@
       touch-action: none;
     }
     .color-label {
-      margin-top: 6px;
+      margin-top: 40px;
       font-size: 16px;
       color: #ccc;
       font-family: monospace;
@@ -46,7 +46,7 @@
     .palette {
       display: flex;
       margin: 30px 0;
-      gap: 10px;
+      gap: 50px;
       touch-action: none;
       -webkit-text-size-adjust: 100%;
     }
@@ -90,6 +90,36 @@
       touch-action: none;
       -webkit-text-size-adjust: 100%;
     }
+    .color-box.cube3d {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cube-rotate 3s linear infinite;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  background: none;
+}
+.cube-face {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0.95;
+  border: 2px solid #fff2;
+  box-sizing: border-box;
+}
+.cube-face.front  { transform: rotateY(  0deg) translateZ(40px);}
+.cube-face.back   { transform: rotateY(180deg) translateZ(40px);}
+.cube-face.right  { transform: rotateY( 90deg) translateZ(40px);}
+.cube-face.left   { transform: rotateY(-90deg) translateZ(40px);}
+.cube-face.top    { transform: rotateX( 90deg) translateZ(40px);}
+.cube-face.bottom { transform: rotateX(-90deg) translateZ(40px);}
+
+@keyframes cube-rotate {
+  0%   { transform: rotateX(0deg) rotateY(0deg);}
+  100% { transform: rotateX(360deg) rotateY(360deg);}
+}
   </style>
 </head>
 <body>
@@ -163,8 +193,14 @@
     const boxContainer = document.createElement('div');
     boxContainer.className = 'color-box-container';
     const box = document.createElement('div');
-    box.className = 'color-box';
-    box.style.backgroundColor = hex;
+    box.className = 'color-box cube3d';
+    // Добавим 6 граней
+    ['front','back','right','left','top','bottom'].forEach(face => {
+      const faceDiv = document.createElement('div');
+      faceDiv.className = 'cube-face ' + face;
+      faceDiv.style.background = hex;
+      box.appendChild(faceDiv);
+    });
     const label = document.createElement('div');
     label.className = 'color-label';
     label.textContent = hex;
@@ -175,18 +211,24 @@
   return;
       }
       for (let h of hues) {
-        const hex = hslToHex(h, saturation, lightness);
-        const boxContainer = document.createElement('div');
-        boxContainer.className = 'color-box-container';
-        const box = document.createElement('div');
-        box.className = 'color-box';
-        box.style.backgroundColor = hex;
-        const label = document.createElement('div');
-        label.className = 'color-label';
-        label.textContent = hex;
-        boxContainer.appendChild(box);
-        boxContainer.appendChild(label);
-        palette.appendChild(boxContainer);
+  const hex = hslToHex(h, saturation, lightness);
+  const boxContainer = document.createElement('div');
+  boxContainer.className = 'color-box-container';
+  const box = document.createElement('div');
+  box.className = 'color-box cube3d';
+  // Добавим 6 граней
+  ['front','back','right','left','top','bottom'].forEach(face => {
+    const faceDiv = document.createElement('div');
+    faceDiv.className = 'cube-face ' + face;
+    faceDiv.style.background = hex;
+    box.appendChild(faceDiv);
+  });
+  const label = document.createElement('div');
+  label.className = 'color-label';
+  label.textContent = hex;
+  boxContainer.appendChild(box);
+  boxContainer.appendChild(label);
+  palette.appendChild(boxContainer);
       }
     }
     generatePalette();
