@@ -1,8 +1,0 @@
-{
-  // "rewrites": [
-  //   {
-  //     "source": "/style-parser/(.*)",
-  //     "destination": "https://style-parser.vercel.app/$1"
-  //   }
-  // ]
-}
