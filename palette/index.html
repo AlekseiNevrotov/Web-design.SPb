@@ -190,7 +190,13 @@
         'blackShades', 'whiteShades', 'contrastingTriadic'
       ];
       const selectedScheme = schemeType[Math.floor(Math.random() * schemeType.length)];
-      const baseHue = Math.round(((Date.now() / 1000) + Math.random()) * 360) % 360;
+      const now = new Date();
+const ms = now.getMilliseconds();
+const randomFactor = Math.floor(Math.random() * 360);
+const baseHue = Math.round(
+  ((Date.now() / 1000) + Math.random() + ms / 1000 + randomFactor / 360)
+  * 360
+) % 360;
       const saturation = 70;
       const lightness = 50;
       let hues = [];
