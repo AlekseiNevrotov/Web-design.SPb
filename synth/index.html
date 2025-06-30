@@ -38,8 +38,9 @@
       flex-wrap: wrap;
       margin-bottom: 20px;
       width: 100%;
-      max-width: 350px; /* уменьшено для десктопа */
-      overflow-x: visible; /* убираем прокрутку на десктопе */
+      max-width: 420px;
+      /* Убираем прокрутку на десктопе */
+      overflow-x: hidden;
     }
     .key {
       width: 38px;
@@ -108,18 +109,15 @@
       .keyboard {
         max-width: 98vw;
         min-width: 0;
-        overflow-x: visible; /* убираем прокрутку */
-        justify-content: center;
-        gap: 0;
+        /* На мобильных разрешаем прокрутку, если не помещается */
+        overflow-x: auto;
       }
       .key {
         width: 12vw;
         min-width: 28px;
-        max-width: 40px;
-        height: 15vw;
-        max-height: 70px;
+        height: 16vw;
+        max-height: 90px;
         font-size: 0.8em;
-        margin: 1vw 1vw 0 0;
       }
       .controls {
         max-width: 98vw;
