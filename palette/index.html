@@ -185,7 +185,10 @@
     function generatePalette() {
       const palette = document.getElementById('palette');
       palette.innerHTML = '';
-      const schemeType = ['analogous', 'complementary', 'triadic', 'adjacent', 'blackShades', 'contrastingTriadic'];
+      const schemeType = [
+        'analogous', 'complementary', 'triadic', 'adjacent',
+        'blackShades', 'whiteShades', 'contrastingTriadic'
+      ];
       const selectedScheme = schemeType[Math.floor(Math.random() * schemeType.length)];
       const baseHue = Math.round(((Date.now() / 1000) + Math.random()) * 360) % 360;
       const saturation = 70;
@@ -248,6 +251,48 @@
             if (value < 30) nameLabel.textContent = 'Чёрный';
             else if (value < 60) nameLabel.textContent = 'Тёмно-серый';
             else nameLabel.textContent = 'Серый';
+
+            boxContainer.appendChild(box);
+            boxContainer.appendChild(label);
+            boxContainer.appendChild(nameLabel);
+            palette.appendChild(boxContainer);
+          });
+          return;
+        case 'whiteShades':
+          const paletteWhites = [];
+          // Диапазон от почти белого до светло-серого
+          const whiteRanges = [
+            [220, 240],
+            [241, 250],
+            [251, 255]
+          ];
+          for (const [min, max] of whiteRanges) {
+            const value = Math.floor(Math.random() * (max - min + 1)) + min;
+            const hex = value.toString(16).padStart(2, '0');
+            paletteWhites.push(`#${hex}${hex}${hex}`);
+          }
+          paletteWhites.forEach(hex => {
+            const boxContainer = document.createElement('div');
+            boxContainer.className = 'color-box-container';
+            const box = document.createElement('div');
+            box.className = 'color-box cube3d';
+            ['front','back','right','left','top','bottom'].forEach(face => {
+              const faceDiv = document.createElement('div');
+              faceDiv.className = 'cube-face ' + face;
+              faceDiv.style.background = hex;
+              box.appendChild(faceDiv);
+            });
+            const label = document.createElement('div');
+            label.className = 'color-label';
+            label.textContent = hex;
+
+            const nameLabel = document.createElement('div');
+            nameLabel.className = 'color-name-label';
+            // Для белых оттенков определяем по яркости
+            const value = parseInt(hex.slice(1, 3), 16);
+            if (value > 245) nameLabel.textContent = 'Белый';
+            else if (value > 235) nameLabel.textContent = 'Очень светло-серый';
+            else nameLabel.textContent = 'Светло-серый';
 
             boxContainer.appendChild(box);
             boxContainer.appendChild(label);
