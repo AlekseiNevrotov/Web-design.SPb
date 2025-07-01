@@ -120,7 +120,7 @@ body {
     }
     @media (max-width: 600px) {
   #asciiOutput {
-    font-size: 2.5vw !important; /* Было 4vw, стало меньше */
+    font-size: 2.5vw !important; /* или подберите меньше */
     line-height: 0.7 !important;
     letter-spacing: 0 !important;
     max-width: 100vw !important;
