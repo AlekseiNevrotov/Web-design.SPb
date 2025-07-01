@@ -1,4 +1,4 @@
-    const upload = document.getElementById('upload');
+const upload = document.getElementById('upload');
     const preview = document.getElementById('preview');
     const output = document.getElementById('asciiOutput');
     const chars = '@#W$9876543210?!abc;:+=-,._ '.split('').reverse();
@@ -12,13 +12,14 @@
       '#D4D4D4', // светлый
       '#808080'  // серый
     ];
+    const isMobile = window.innerWidth <= 600;
+    const maxWidth = isMobile ? 40 : 120; // 40 символов на мобильном, 120 на десктопе
     upload.addEventListener('change', (e) => {
       const file = e.target.files[0];
       if (!file) return;
       const img = new Image();
       img.onload = () => {
         const ctx = preview.getContext('2d');
-        const maxWidth = 120;
         const aspectRatioCorrection = 1; // Для консольного вида
         const scale = maxWidth / img.width;
         const width = Math.floor(img.width * scale);
