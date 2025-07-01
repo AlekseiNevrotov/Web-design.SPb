@@ -13,7 +13,7 @@ const upload = document.getElementById('upload');
       '#808080'  // серый
     ];
     const isMobile = window.innerWidth <= 600;
-    const maxWidth = isMobile ? 40 : 120; // 40 символов на мобильном, 120 на десктопе
+    const maxWidth = isMobile ? 80 : 120; // Было 40, стало 80
     upload.addEventListener('change', (e) => {
       const file = e.target.files[0];
       if (!file) return;
