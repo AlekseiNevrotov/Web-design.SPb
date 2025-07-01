@@ -20,7 +20,7 @@ const upload = document.getElementById('upload');
       const img = new Image();
       img.onload = () => {
         const ctx = preview.getContext('2d');
-        const aspectRatioCorrection = isMobile ? 0.9 : 1; // Для консольного вида
+        const aspectRatioCorrection = isMobile ? 0.85 : 1; // Для консольного вида
         const scale = maxWidth / img.width;
         const width = Math.floor(img.width * scale);
         const height = Math.floor(img.height * scale * aspectRatioCorrection);
