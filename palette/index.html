@@ -309,8 +309,8 @@ const baseHue = Math.round(
       }
       for (let h of hues) {
         // Добавим случайность в насыщенность и светлоту
-        const s = saturation + (Math.random() - 0.5) * 20; // ±10%
-        const l = lightness + (Math.random() - 0.5) * 20;  // ±10%
+        const s = saturation + (Math.random() - 0.5) * 30; // ±10%
+        const l = lightness + (Math.random() - 0.5) * 30;  // ±10%
         const hex = hslToHex(h, Math.max(40, Math.min(100, s)), Math.max(30, Math.min(80, l)));
         const boxContainer = document.createElement('div');
         boxContainer.className = 'color-box-container';
