@@ -13,14 +13,14 @@ const upload = document.getElementById('upload');
       '#808080'  // серый
     ];
     const isMobile = window.innerWidth <= 600;
-    const maxWidth = isMobile ? 40 : 120; // 40 символов на мобильном, 120 на десктопе
+    const maxWidth = isMobile ? 80 : 120; // 40 символов на мобильном, 120 на десктопе
     upload.addEventListener('change', (e) => {
       const file = e.target.files[0];
       if (!file) return;
       const img = new Image();
       img.onload = () => {
         const ctx = preview.getContext('2d');
-        const aspectRatioCorrection = 1; // Для консольного вида
+        const aspectRatioCorrection = isMobile ? 0.5 : 1; // Для консольного вида
         const scale = maxWidth / img.width;
         const width = Math.floor(img.width * scale);
         const height = Math.floor(img.height * scale * aspectRatioCorrection);
