@@ -256,7 +256,7 @@
     flex-direction: column;
     position: fixed;
     top: 0; left: 0; right: 0;
-    background: #121212;
+    background: #131212;
     padding: 60px 20px 20px 20px;
     z-index: 1000;
     min-height: 100vh;
