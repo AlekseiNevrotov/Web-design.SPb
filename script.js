@@ -1,4 +1,4 @@
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (isMobile) {
       const links = document.querySelectorAll('.link');
       links.forEach(link => {
@@ -28,3 +28,8 @@
     setTimeout(() => {
       logo.classList.remove('glitch');
     }, 600);
+    const burgerBtn = document.getElementById('burgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+burgerBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
