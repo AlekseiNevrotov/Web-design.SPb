@@ -28,8 +28,12 @@ const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     setTimeout(() => {
       logo.classList.remove('glitch');
     }, 600);
-    const burgerBtn = document.getElementById('burgerBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-burgerBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-});
+    document.addEventListener('DOMContentLoaded', function() {
+      const burgerBtn = document.getElementById('burgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (burgerBtn && mobileMenu) {
+        burgerBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('open');
+        });
+      }
+    });
