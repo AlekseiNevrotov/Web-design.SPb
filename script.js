@@ -29,11 +29,4 @@ const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       logo.classList.remove('glitch');
     }, 600);
     document.addEventListener('DOMContentLoaded', function() {
-      const burgerBtn = document.getElementById('burgerBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      if (burgerBtn && mobileMenu) {
-        burgerBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('open');
-        });
-      }
     });
