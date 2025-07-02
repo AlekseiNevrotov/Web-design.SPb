@@ -242,6 +242,34 @@
   font-size: 1.2em;
 }
 
+/* Список мобильного меню */
+.mobile-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mobile-menu-list li {
+  margin: 0;
+  padding: 0;
+}
+.mobile-menu-list li a {
+  display: block !important;
+  width: 100%;
+  padding: 18px 0;
+  text-align: left;
+  font-size: 1.2em;
+  color: #fff;
+  border-bottom: 1px solid #222;
+  background: none;
+  border-radius: 0;
+  margin: 0;
+  transition: background 0.2s;
+}
+.mobile-menu-list li a:hover {
+  background: #222;
+  color: #26D97C;
+}
+
 /* Показывать бургер и мобильное меню только на мобильных */
 @media (max-width: 900px) {
   .burger {
