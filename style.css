@@ -234,20 +234,41 @@
   background: #121212;
   padding: 60px 20px 20px 20px;
   z-index: 1000;
+  min-height: 100vh;
+  box-shadow: 0 0 20px #000a;
 }
 .mobile-menu .link {
   margin: 10px 0;
   font-size: 1.2em;
 }
 
-/* Показывать бургер и меню только на мобильных */
+/* Показывать бургер и мобильное меню только на мобильных */
 @media (max-width: 900px) {
-  .burger { display: flex; }
-  .mobile-menu { display: none; }
-  .mobile-menu.open { display: flex; }
+  .burger {
+    display: flex;
+  }
   /* Скрыть обычные ссылки вне меню */
   .link, .shine {
     display: none !important;
+  }
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #121212;
+    padding: 60px 20px 20px 20px;
+    z-index: 1000;
+    min-height: 100vh;
+    box-shadow: 0 0 20px #000a;
+  }
+  .mobile-menu.open {
+    display: flex;
+  }
+  .mobile-menu .link {
+    margin: 10px 0;
+    font-size: 1.2em;
+    display: block !important;
   }
 }
 
