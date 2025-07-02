@@ -272,13 +272,8 @@
 
 /* Показывать бургер и мобильное меню только на мобильных */
 @media (max-width: 900px) {
-  .burger {
-    display: flex;
-  }
-  /* Скрыть обычные ссылки вне меню */
-  .link, .shine {
-    display: none !important;
-  }
+  .desktop-links { display: none; }
+  .burger { display: flex; z-index: 1001; }
   .mobile-menu {
     display: none;
     flex-direction: column;
@@ -289,20 +284,13 @@
     z-index: 1000;
     min-height: 100vh;
     box-shadow: 0 0 20px #000a;
-    overflow-y: auto; /* добавьте эту строку */
-    -webkit-overflow-scrolling: touch; /* для плавной прокрутки на iOS */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .mobile-menu.open {
     display: flex;
   }
-  .mobile-menu .link {
-    margin: 10px 0;
-    font-size: 1.2em;
-    display: block !important;
-  }
-  .desktop-links { display: none; }
 }
-
 @media (max-width: 768px) {
   .mobile-br {
     display: inline;
