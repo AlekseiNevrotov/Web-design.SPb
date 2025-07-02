@@ -256,11 +256,13 @@
     flex-direction: column;
     position: fixed;
     top: 0; left: 0; right: 0;
-    background: #131212;
+    background: #121212;
     padding: 60px 20px 20px 20px;
     z-index: 1000;
     min-height: 100vh;
     box-shadow: 0 0 20px #000a;
+    overflow-y: auto; /* добавьте эту строку */
+    -webkit-overflow-scrolling: touch; /* для плавной прокрутки на iOS */
   }
   .mobile-menu.open {
     display: flex;
