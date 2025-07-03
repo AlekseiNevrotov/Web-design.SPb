@@ -32,7 +32,7 @@ const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       const burgerBtn = document.getElementById('burgerBtn');
       const burgerMenu = document.getElementById('burgerMenu');
       if (burgerBtn && burgerMenu) {
-        burgerBtn.addEventListener('click', () => {
+        burgerBtn.addEventListener('click', function(e) {
           burgerMenu.classList.toggle('open');
         });
       }
