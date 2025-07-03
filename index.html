@@ -15,6 +15,7 @@
   <style>
     :root {
       --accent: #26D97C;
+      --myinterface: #16847D;
       --bg: #121212;
       --text: #fff;
       --header-height: 100px;
@@ -79,7 +80,7 @@
       content: '';
       display: block;
       width: 0;
-      height: 2px;
+      height: 1px;
       background: var(--accent);
       transition: width 0.2s;
       position: absolute;
@@ -91,6 +92,15 @@
     .nav a:hover::after, .nav a.active::after {
       width: 100%;
     }
+    .nav a:active {
+  color: var(--myinterface);
+}
+
+.nav a:active::after {
+  width: 100%;
+  opacity: 0.4; /* визуальный эффект при клике */
+}
+
     /* Подменю */
     .nav-submenu {
       position: relative;
