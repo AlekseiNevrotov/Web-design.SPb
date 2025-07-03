@@ -34,6 +34,7 @@ const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       if (burgerBtn && burgerMenu) {
         burgerBtn.addEventListener('click', function() {
           burgerMenu.classList.toggle('open');
+          console.log('Клик по бургеру, класс open:', burgerMenu.classList.contains('open'));
         });
       }
     });
