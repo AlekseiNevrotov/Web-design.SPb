@@ -126,6 +126,40 @@
     .mobile-menu a:hover {
       color: var(--accent);
     }
+    .submenu {
+      position: relative;
+      width: 100%;
+    }
+    .submenu-toggle {
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.2em;
+      font-weight: 500;
+      text-align: left;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 12px;
+      cursor: pointer;
+      outline: none;
+    }
+    .submenu-list {
+      display: none;
+      flex-direction: column;
+      margin-left: 16px;
+      margin-bottom: 12px;
+    }
+    .submenu.open .submenu-list {
+      display: flex;
+    }
+    .submenu-list a {
+      font-size: 1em;
+      margin-bottom: 8px;
+      color: #aaa;
+    }
+    .submenu-list a:hover {
+      color: var(--accent);
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-10px);}
       to { opacity: 1; transform: none;}
@@ -194,14 +228,14 @@
       <img src="Logo.svg" alt="Logo" />
     </a>
     <nav class="nav">
-      <a href="#about" class="active">О нас</a>
+      <a href="#about" class="active">Главная</a>
       <a href="#services">Услуги</a>
       <a href="#portfolio">Портфолио</a>
-      <a href="#contacts">Отзывы</a>
-      <a href="#contacts">Блог</a>
       <a href="#contacts">Тренды</a>
       <a href="#contacts">Приложения</a>
+      <a href="#contacts">Блог</a>
       <a href="#contacts">База знаний</a>
+      <a href="#contacts">Отзывы</a>
       <a href="#contacts">Контакты</a>
     </nav>
     <button class="burger" id="burgerBtn" aria-label="Открыть меню">
@@ -212,6 +246,15 @@
     <a href="#about">О нас</a>
     <a href="#services">Услуги</a>
     <a href="#portfolio">Портфолио</a>
+    <div class="submenu">
+      <button class="submenu-toggle" type="button">Приложения ▼</button>
+      <div class="submenu-list">
+        <a href="#app1">Генератор палитр</a>
+        <a href="#app2">Парсер стиля</a>
+        <a href="#app3">Фильтр</a>
+        <!-- Добавьте свои приложения -->
+      </div>
+    </div>
     <a href="#contacts">Контакты</a>
   </nav>
   <main>
@@ -259,6 +302,14 @@
         ) {
           burgerMenu.classList.remove('open');
         }
+      });
+      // Выпадающее подменю "Приложения"
+      document.querySelectorAll('.submenu-toggle').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const submenu = btn.parentElement;
+          submenu.classList.toggle('open');
+        });
       });
     });
   </script>
