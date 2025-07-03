@@ -80,6 +80,51 @@
     .nav a:hover::after, .nav a.active::after {
       width: 100%;
     }
+    /* Подменю */
+    .nav-submenu {
+      position: relative;
+      display: inline-block;
+    }
+    .nav-submenu-toggle {
+      cursor: pointer;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1em;
+      transition: color 0.2s;
+      padding: 0 8px;
+    }
+    .nav-submenu-list {
+      display: none;
+      position: absolute;
+      top: 120%;
+      left: 0;
+      background: #181818;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px #0003;
+      min-width: 180px;
+      z-index: 200;
+      flex-direction: column;
+      padding: 12px 0;
+    }
+    .nav-submenu-list a {
+      display: block;
+      color: #aaa;
+      padding: 10px 24px 10px 16px;
+      text-decoration: none;
+      font-size: 1em;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-submenu-list a:hover {
+      background: #232323;
+      color: var(--accent);
+    }
+    /* Показывать подменю при наведении */
+    .nav-submenu:hover .nav-submenu-list,
+    .nav-submenu:focus-within .nav-submenu-list {
+      display: flex;
+    }
     /* Burger */
     .burger {
       display: none;
@@ -232,7 +277,14 @@
       <a href="#services">Услуги</a>
       <a href="#portfolio">Портфолио</a>
       <a href="#contacts">Тренды</a>
-      <a href="#contacts">Приложения</a>
+      <div class="nav-submenu">
+        <a href="#" class="nav-submenu-toggle">Приложения ▼</a>
+        <div class="nav-submenu-list">
+          <a href="#app1">Генератор палитр</a>
+          <a href="#app2">Парсер стиля</a>
+          <a href="#app3">Фильтр</a>
+        </div>
+      </div>
       <a href="#contacts">Блог</a>
       <a href="#contacts">База знаний</a>
       <a href="#contacts">Отзывы</a>
@@ -260,7 +312,7 @@
   <main>
     <h1 class="main-title">Создание сайтов и веб-дизайн</h1>
     <div class="subtitle">
-      Современные сайты под ключ для бизнеса и личных проектов.<br>
+      Современные сайты и веб-приложения под ключ для бизнеса и личных проектов.<br>
       Дизайн, разработка, продвижение, поддержка.
     </div>
     <div class="features">
