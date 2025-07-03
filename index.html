@@ -167,12 +167,15 @@
     .burger span {
       display: block;
       height: 4px;
-      width: 28px;
+      width: 40px;
       background: var(--accent);
       margin: 4px 0;
-      border-radius: 2px;
-      transition: 0.3s;
+      border-radius: 4px;
+      transition: 0.4s;
     }
+    .burger.open span {
+  background: var(--myinterface); /* или любой другой цвет */
+}
     /* Mobile menu */
     .mobile-menu {
       display: none;
@@ -389,6 +392,7 @@
       const burgerMenu = document.getElementById('burgerMenu');
       burgerBtn.addEventListener('click', function() {
         burgerMenu.classList.toggle('open');
+        burgerBtn.classList.toggle('open');
       });
       // Закрытие меню по клику вне меню (опционально)
       document.addEventListener('click', function(e) {
