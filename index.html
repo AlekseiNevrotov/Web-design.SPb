@@ -148,6 +148,9 @@
       white-space: nowrap;
       transition: background 0.2s, color 0.2s;
     }
+    .menu li:hover > a {
+  color: var(--myinterface);
+}
     .nav-submenu-list a:hover {
       background: #232323;
       color: var(--accent);
@@ -204,7 +207,7 @@
       transition: color 0.2s;
     }
     .mobile-menu a:hover {
-      color: var(--accent);
+      color: var(--myinterface);
     }
     .submenu {
       position: relative;
@@ -235,10 +238,10 @@
     .submenu-list a {
       font-size: 1em;
       margin-bottom: 8px;
-      color: #aaa;
+      color: var(--grey2);
     }
     .submenu-list a:hover {
-      color: var(--accent);
+      color: var(--myinterface);
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-10px);}
