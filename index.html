@@ -41,13 +41,14 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       height: var(--header-height);
-      background: var(--black2);
+      background: var(--bg);
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 80px;
       z-index: 100;
       border-bottom: 1px solid var(--grey);
+      border-radius: 0 0 40px 40px;
     }
     .logo {
       display: flex;
@@ -296,6 +297,13 @@
       .nav { display: none; }
       .header {
     padding: 0 20px;
+  }
+  .header {
+    border-radius: 0; /* на мобильных — убираем */
+  }
+
+  .header::after {
+    border-radius: 0; /* если есть псевдоэлемент — тоже убираем */
   }
       .burger { display: flex; }
       .mobile-menu { top: var(--header-height); }
