@@ -23,6 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
   <style>
     :root {
+      --mylogo: #26D9CD;
       --accent: #26D97C;
       --myinterface: #16847D;
       --bg: #121212;
@@ -542,9 +543,9 @@
 
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#00ff99';
-    ctx.strokeStyle = '#00ff9933';
-    ctx.lineWidth = 0.5;
+    ctx.fillStyle = '#26D9CD';
+    ctx.strokeStyle = '#16847D';
+    ctx.lineWidth = 0.4;
 
     for (let i = 0; i < DOT_COUNT; i++) {
       let p = dots[i];
