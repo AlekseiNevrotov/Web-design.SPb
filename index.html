@@ -144,6 +144,20 @@
       margin-right: 12px;
       display: block;
     }
+    .weather {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--grey2);
+}
+
+.weather img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  
+}
     .nav {
       display: flex;
       gap: 24px;
@@ -525,6 +539,10 @@
     <a href="/" class="logo">
       <img src="Logo.svg" alt="Logo" />
     </a>
+    <div id="weather-widget" class="weather">
+  <img id="weather-icon" src="" alt="weather" />
+  <span id="weather-temp">--°C</span>
+</div>
     <nav class="nav">
       <!-- <a href="#about" class="active">Главная</a> -->
       <a href="optimization-ux-ui/">Услуги</a>
@@ -742,6 +760,24 @@
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   });
+  async function fetchWeather() {
+    const apiKey = "304be0f6672349579dc131530250707";
+    const city = "Saint Petersburg";
+
+    try {
+      const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&lang=ru`);
+      const data = await res.json();
+      const iconUrl = "https:" + data.current.condition.icon;
+      const tempC = Math.round(data.current.temp_c);
+
+      document.getElementById("weather-icon").src = iconUrl;
+      document.getElementById("weather-temp").textContent = `${tempC}°C`;
+    } catch (err) {
+      console.error("Ошибка получения погоды:", err);
+    }
+  }
+
+  fetchWeather();
   </script>
 </body>
 </html>
