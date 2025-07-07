@@ -203,17 +203,18 @@
       top: 100%;
       left: 0;
       background: var(--bg);
-      border-radius: 0px 0px 16px 16px;
+      border-radius: 16px 16px 16px 16px;
       box-shadow: 0 4px 16px #0003;
       min-width: auto;
       z-index: 200;
       flex-direction: column;
       padding: 8px 0;
+      overflow: hidden
     }
     .nav-submenu-list a {
       display: block;
       color: var(--text);
-      padding: 8px 8px 8px 8px;
+      padding: 8px 8px 4px 8px;
       text-decoration: none;
       font-size: 1em;
       white-space: nowrap;
@@ -223,9 +224,12 @@
   color: var(--myinterface);
 }
     .nav-submenu-list a:hover {
-      background: #232323;
+      background: var(--black2);
       color: var(--accent);
     }
+    .nav-submenu-list a:focus {
+  color: var(--myinterface);
+}
     /* Показывать подменю при наведении */
     .nav-submenu:hover .nav-submenu-list,
     .nav-submenu:focus-within .nav-submenu-list {
