@@ -73,40 +73,42 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
-  padding: 2rem;
+  color: var(--bg);
+  padding: 16px;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  color: #00ff99;
-  margin-bottom: 1rem;
+  font-size: 63px;
+  color: var(--accent);
+  margin-bottom: 0px;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  color: #ccc;
-  max-width: 600px;
-  margin-bottom: 2rem;
+  font-size: 32px;
+  color: var(--text);
+  max-width: 1000px;
+  margin-bottom: 80px;
 }
 
 .btn {
-      padding: 0.8rem 2rem;
+      padding: 16px 32px;
       font-size: 1rem;
-      color: #00ff99;
-      border: 2px solid #00ff99;
+      color: var(--text);
+      border: 1px solid var(--text);
       background: transparent;
-      border-radius: 5px;
+      border-radius: 60px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: all 0.4s ease;
     }
-
     .btn:hover {
-      background: #00ff99;
-      color: #000;
-      box-shadow: 0 0 10px #00ff99;
+      border: 1px solid var(--accent);
+      color: var(--accent);
     }
-
+    .btn:active {
+  background: var(--myinterface);
+  color: var(--black3);                 
+  transform: scale(0.96);        
+}
     /* Header */
     .header {
       position: fixed;
@@ -572,8 +574,8 @@
   <canvas id="bg"></canvas>
   <div class="hero-content">
     <h1>Создание сайтов и веб-дизайн</h1>
-    <p>Современные сайты и веб-приложения под ключ для бизнеса и личных проектов.
-Дизайн, разработка, продвижение, поддержка, редизайн.</p>
+    <p>Современные сайты и веб-приложения под ключ<br>для бизнеса и личных проектов.
+Дизайн, разработка,<br>продвижение, поддержка, редизайн.</p>
     <button class="btn">Калькулятор стоимости</button>
   </div>
 </section>
