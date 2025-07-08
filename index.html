@@ -565,7 +565,33 @@
   transition: transform 0.3s;
   pointer-events: none;
 }
-
+  main {
+    padding: 24px 4px 24px 4px;
+    max-width: 100vw;
+  }
+  .main-title,
+  .subtitle {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 24px;
+  }
+  .features,
+  .advantages-list {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+    margin-bottom: 32px;
+  }
+  .feature,
+  .advantage-item {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 16px 8px;
+  }
+  .advantages {
+    padding: 24px 4px;
+  }
 /* Поворот стрелки при открытом подменю */
 .submenu.open .submenu-toggle::after {
   transform: translateY(-60%) rotate(-135deg);
@@ -685,7 +711,7 @@
       </div>
       <div class="feature">
         <div class="feature-title">Анализ целевой аудитории</div>
-        <div>Сегментируем целевую <br>аудиторию и анализируем её различными методами.</div>
+        <div>Сегментируем целевую <br>аудиторию и анализируем <br>её различными методами.</div>
       </div>
       <div class="feature">
         <div class="feature-title">Анализ конкурентов</div>
@@ -701,7 +727,7 @@
       </div>
       <div class="feature">
         <div class="feature-title">Шлифовка</div>
-        <div>Когда проект полностью разработан и защищён, мы переходим к финальной стадии. Это этап, на котором мы доводим проект до идеального состояния: устраняем мелкие недочёты <br>и вносим последние правки.</div>
+        <div>Когда проект полностью разработан и защищён, <br>мы переходим к финальной стадии. Это этап, на котором <br>мы доводим проект до идеального состояния: устраняем мелкие недочёты и вносим последние правки.</div>
       </div>
       <div class="feature">
         <div class="feature-title">Публикация</div>
@@ -714,7 +740,7 @@
     <div class="advantage-item">
       <!--<img src="icon1.svg" alt="Качество" class="advantage-icon" />-->
       <h3>💰<br>Честные цены — без скрытых доплат</h3>
-      <p>Прозрачная стоимость с самого начала. Вы сразу знаете, за что платите и что получите. Никаких неприятных сюрпризов.</p>
+      <p>Прозрачная стоимость <br>с самого начала. Вы сразу знаете, за что платите и что получите. Никаких неприятных сюрпризов.</p>
     </div>
     <div class="advantage-item">
       <!--<img src="icon2.svg" alt="Доставка" class="advantage-icon" />-->
