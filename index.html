@@ -109,6 +109,9 @@
   color: var(--black3);                 
   transform: scale(0.96);        
 }
+.mobile-br {
+  display: none;
+}
     /* Header */
     .header {
       position: fixed;
@@ -524,6 +527,22 @@
 
   .header::after {
     border-radius: 0; /* если есть псевдоэлемент — тоже убираем */
+  }.hero-content h1 {
+    font-size: 32px;
+  }
+  .hero-content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .btn {
+    padding: 14px 28px;
+    font-size: 14px;
+    
+    max-width: 320px;
+    border-radius: 40px;
+  }
+  .mobile-br {
+    display: inline;
   }
       .burger { display: flex; }
       .mobile-menu { top: var(--header-height); }
@@ -573,9 +592,9 @@
   <section class="hero">
   <canvas id="bg"></canvas>
   <div class="hero-content">
-    <h1>Создание сайтов и веб-дизайн</h1>
-    <p>Современные сайты и веб-приложения под ключ<br>для бизнеса и личных проектов.
-Дизайн, разработка,<br>продвижение, поддержка, редизайн.</p>
+    <h1>Создание сайтов <br class="mobile-br">и веб-дизайн</h1>
+    <p>Современные сайты <br class="mobile-br">и веб-приложения под ключ<br>для бизнеса и личных проектов.
+<br class="mobile-br">Дизайн, разработка,<br>продвижение, поддержка, <br class="mobile-br">редизайн.</p>
     <button class="btn">Калькулятор стоимости</button>
   </div>
 </section>
