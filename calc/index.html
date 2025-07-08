@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Калькулятор стоимости сайта</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+    }
+    .total {
+      margin-top: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Калькулятор стоимости сайта</h1>
+
+  <label>Количество страниц: <span id="pagesValue">1</span></label>
+  <input type="range" id="pages" min="1" max="20" value="1">
+
+  <label>
+    <input type="checkbox" id="design"> Дизайн
+  </label>
+  <label>
+    <input type="checkbox" id="adaptive"> Адаптивность
+  </label>
+  <label>
+    <input type="checkbox" id="cms"> CMS (админка)
+  </label>
+
+  <div class="total">Итого: <span id="total">0</span> ₽</div>
+
+  <script>
+    const pages = document.getElementById('pages');
+    const pagesValue = document.getElementById('pagesValue');
+    const design = document.getElementById('design');
+    const adaptive = document.getElementById('adaptive');
+    const cms = document.getElementById('cms');
+    const total = document.getElementById('total');
+
+    function calculate() {
+      let cost = pages.value * 1000;
+
+      if (design.checked) cost += 5000;
+      if (adaptive.checked) cost += 3000;
+      if (cms.checked) cost += 7000;
+
+      pagesValue.textContent = pages.value;
+      total.textContent = cost.toLocaleString();
+    }
+
+    pages.addEventListener('input', calculate);
+    design.addEventListener('change', calculate);
+    adaptive.addEventListener('change', calculate);
+    cms.addEventListener('change', calculate);
+
+    calculate(); // начальный расчёт
+  </script>
+</body>
+</html>
