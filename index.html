@@ -548,6 +548,32 @@
   .mobile-br {
     display: inline;
   }
+  .submenu-toggle {
+  position: relative;
+  padding-right: 0px; /* место для стрелки */
+}
+
+.submenu-toggle::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-right: 1px solid var(--text);
+  border-bottom: 1px solid var(--text);
+  transform: translateY(-60%) rotate(45deg);
+  transition: transform 0.3s;
+  pointer-events: none;
+}
+
+/* Поворот стрелки при открытом подменю */
+.submenu.open .submenu-toggle::after {
+  transform: translateY(-60%) rotate(-135deg);
+  border-right: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
       .burger { display: flex; }
       .mobile-menu { top: var(--header-height); }
       main { padding: calc(var(--header-height) + 24px) 8px 24px 8px; }
