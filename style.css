@@ -480,7 +480,7 @@
 }
 
     /* Responsive */
-    @media (max-width: 1000px), (orientation: landscape) and (max-height: 600px) {
+    @media (max-width: 1000px), (max-device-width: 1000px), (orientation: landscape) and (max-height: 600px) {
       :root {
     --header-height: 80px;
   }
