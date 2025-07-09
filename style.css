@@ -480,7 +480,7 @@
 }
 
     /* Responsive */
-    @media (max-width: 1000px) {
+    @media (max-device-width: 1000px) {
       :root {
     --header-height: 80px;
   }
