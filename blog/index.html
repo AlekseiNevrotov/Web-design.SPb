@@ -9,68 +9,120 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
   <meta name="theme-color" content="#121212">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;500;700&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --mylogo: #26D9CD;
+      --accent: #26D97C;
+      --myinterface: #16847D;
+      --bg: #121212;
+      --black2: #191919;
+      --black3: #1C1C1C;
+      --grey: #404040;
+      --grey2: #666666;
+      --text: #FFFFFF;
+      --radius: 32px;
+    }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #333;
-      padding: 2rem;
+      font-family: 'DM Sans', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-
+    main {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 48px 16px 32px 16px;
+      box-sizing: border-box;
+    }
     h1 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 36px;
+      letter-spacing: 0.01em;
     }
-
     .post {
-      background: #fff;
-      border-radius: 8px;
-      padding: 1rem 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      background: var(--black3);
+      border-radius: 20px;
+      padding: 28px 24px 22px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(38,217,205,0.07);
+      border: 1.5px solid var(--black2);
+      transition: box-shadow 0.2s;
     }
-
     .post h2 {
       margin-top: 0;
-      font-size: 1.4rem;
+      font-size: 1.25rem;
+      color: var(--accent);
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-weight: 500;
     }
-
     .post p {
       margin: 0.5rem 0 1rem;
+      color: var(--grey2);
+      font-size: 1.05rem;
+      font-family: 'DM Sans', Arial, sans-serif;
     }
-
     .post a {
-      color: #000;
+      color: var(--text);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      border-bottom: 1px dashed var(--accent);
+      transition: color 0.2s, border-bottom 0.2s;
     }
-
     .post a:hover {
-      text-decoration: underline;
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent);
+    }
+    @media (max-width: 700px) {
+      main {
+        padding: 24px 4vw 24px 4vw;
+      }
+      h1 {
+        font-size: 1.3em;
+        margin-bottom: 24px;
+      }
+      .post {
+        padding: 16px 8px;
+        border-radius: 14px;
+        margin-bottom: 16px;
+      }
+      .post h2 {
+        font-size: 1.1em;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Блог нашей студии</h1>
+  <main>
+    <h1>Блог нашей студии</h1>
 
-  <div class="post">
-    <h2>Как мы создаём дизайн, который работает</h2>
-    <p>Погружаемся в бриф, понимаем аудиторию и создаём продукт, который не только красив, но и эффективен.</p>
-    <a href="#">Читать дальше →</a>
-  </div>
+    <div class="post">
+      <h2>Как мы создаём дизайн, который работает</h2>
+      <p>Погружаемся в бриф, понимаем аудиторию и создаём продукт, который не только красив, но и эффективен.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
 
-  <div class="post">
-    <h2>5 типичных ошибок на лендингах</h2>
-    <p>Разбираем слабые места, которые часто мешают конверсии и портят пользовательский опыт.</p>
-    <a href="#">Читать дальше →</a>
-  </div>
+    <div class="post">
+      <h2>5 типичных ошибок на лендингах</h2>
+      <p>Разбираем слабые места, которые часто мешают конверсии и портят пользовательский опыт.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
 
-  <div class="post">
-    <h2>Что важно при работе с клиентом</h2>
-    <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
-    <a href="#">Читать дальше →</a>
-  </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
 
+  </main>
 </body>
 </html>

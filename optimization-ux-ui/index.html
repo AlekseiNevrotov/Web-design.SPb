@@ -9,57 +9,91 @@
   <meta name="theme-color" content="#121212">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>UX/UI оптимизация</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;500;700&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --mylogo: #26D9CD;
+      --accent: #26D97C;
+      --myinterface: #16847D;
+      --bg: #121212;
+      --black2: #191919;
+      --black3: #1C1C1C;
+      --grey: #404040;
+      --grey2: #666666;
+      --text: #FFFFFF;
+      --radius: 32px;
+    }
     body {
       margin: 0;
-      padding: 2rem;
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #333;
+      padding: 0;
+      font-family: 'DM Sans', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-
+    main {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 48px 16px 32px 16px;
+      box-sizing: border-box;
+    }
     h1 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 36px;
+      letter-spacing: 0.01em;
     }
-
     .service {
-      background: #fff;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      background: var(--black3);
+      border-radius: 20px;
+      padding: 28px 24px 22px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(38,217,205,0.07);
+      border: 1.5px solid var(--black2);
+      transition: box-shadow 0.2s;
     }
-
     .service h2 {
       margin: 0 0 0.5rem;
-      font-size: 1.3rem;
+      font-size: 1.25rem;
+      color: var(--accent);
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-weight: 500;
     }
-
     .service p {
       margin: 0;
+      color: var(--grey2);
+      font-size: 1.05rem;
+      font-family: 'DM Sans', Arial, sans-serif;
     }
-
     .cta {
-      margin-top: 2rem;
+      margin-top: 32px;
       text-align: center;
     }
-
     .cta button {
-      padding: 0.75rem 1.5rem;
+      padding: 16px 32px;
       font-size: 1rem;
-      background: #2e7d32;
-      color: white;
-      border: none;
-      border-radius: 6px;
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--accent);
+      border-radius: 60px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 500;
+      transition: all 0.3s;
+      letter-spacing: 0.04em;
     }
-
     .cta button:hover {
-      background: #1b5e20;
+      background: var(--accent);
+      color: var(--black3);
+      border-color: var(--accent);
     }
-
     /* Modal styles */
     #modal-bg {
       display: none;
@@ -71,17 +105,18 @@
       height: 100vh;
       background: rgba(0,0,0,0.5);
     }
-
     #modal-form {
-      background: #fff;
-      color: #222;
+      background: var(--black3);
+      color: var(--text);
       max-width: 340px;
       margin: 10vh auto;
-      padding: 2rem 1.5rem;
-      border-radius: 10px;
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      border-radius: 24px;
       position: relative;
+      box-shadow: 0 4px 24px rgba(38,217,205,0.10);
+      border: 1.5px solid var(--black2);
+      font-family: 'DM Sans', Arial, sans-serif;
     }
-
     #modal-form button.close {
       position: absolute;
       top: 10px;
@@ -89,63 +124,122 @@
       background: none;
       border: none;
       font-size: 1.2em;
+      color: var(--grey2);
       cursor: pointer;
+      transition: color 0.2s;
     }
-
+    #modal-form button.close:hover {
+      color: var(--accent);
+    }
     #modal-form h2 {
       margin-top: 0;
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-weight: 700;
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 18px;
     }
-
     #modal-form input,
     #modal-form textarea {
       width: 100%;
-      margin-bottom: 10px;
-      padding: 8px;
+      margin-bottom: 14px;
+      padding: 12px 14px;
+      background: var(--black2);
+      color: var(--text);
+      border: 1px solid var(--grey);
+      border-radius: 12px;
+      font-size: 1em;
+      font-family: 'DM Sans', Arial, sans-serif;
+      transition: border 0.2s, background 0.2s;
+      resize: none;
     }
-
+    #modal-form input:focus,
+    #modal-form textarea:focus {
+      border: 1.5px solid var(--accent);
+      background: var(--black3);
+      outline: none;
+    }
     #modal-form button[type="submit"] {
       width: 100%;
-      background: #2e7d32;
-      color: #fff;
-      padding: 10px;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--myinterface) 100%);
+      color: var(--text);
+      padding: 15px 0;
       border: none;
-      border-radius: 6px;
-      font-size: 1em;
+      border-radius: 32px;
+      font-size: 1.1em;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(38,217,205,0.10);
+      letter-spacing: 0.04em;
+      margin-top: 8px;
     }
-
+    #modal-form button[type="submit"]:hover {
+      background: linear-gradient(90deg, var(--myinterface) 0%, var(--accent) 100%);
+      box-shadow: 0 4px 16px rgba(38,217,205,0.18);
+    }
     #form-status {
       margin-top: 10px;
+      min-height: 22px;
+      font-size: 1em;
+      text-align: center;
+      color: var(--accent);
+      font-family: 'DM Sans', Arial, sans-serif;
+    }
+    @media (max-width: 700px) {
+      main {
+        padding: 24px 4vw 24px 4vw;
+      }
+      h1 {
+        font-size: 1.3em;
+        margin-bottom: 24px;
+      }
+      .service {
+        padding: 16px 8px;
+        border-radius: 14px;
+        margin-bottom: 16px;
+      }
+      .cta {
+        margin-top: 18px;
+      }
+      #modal-form {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+        border-radius: 14px;
+      }
+      #modal-form h2 {
+        font-size: 1.1em;
+      }
+      #modal-form button[type="submit"] {
+        font-size: 1em;
+        padding: 12px 0;
+      }
     }
   </style>
 </head>
 <body>
-
-  <h1>Услуги по UX/UI-оптимизации</h1>
-
-  <div class="service">
-    <h2>Аудит пользовательского интерфейса</h2>
-    <p>Выявим слабые места в текущем UI, дадим рекомендации и план по улучшению.</p>
-  </div>
-
-  <div class="service">
-    <h2>Оптимизация пользовательского пути</h2>
-    <p>Проанализируем сценарии, устраним лишние шаги, повысим конверсию и удобство.</p>
-  </div>
-
-  <div class="service">
-    <h2>Редизайн интерфейсов</h2>
-    <p>Обновим визуальный стиль без потери узнаваемости, сохраняя логику и структуру.</p>
-  </div>
-
-  <div class="service">
-    <h2>Тестирование и аналитика</h2>
-    <p>Проведем A/B-тесты, изучим поведение пользователей и внедрим UX-улучшения на основе данных.</p>
-  </div>
-
-  <div class="cta">
-    <button onclick="openModal()">Заказать аудит</button>
-  </div>
-
+  <main>
+    <h1>Услуги по UX/UI-оптимизации</h1>
+    <div class="service">
+      <h2>Аудит пользовательского интерфейса</h2>
+      <p>Выявим слабые места в текущем UI, дадим рекомендации и план по улучшению.</p>
+    </div>
+    <div class="service">
+      <h2>Оптимизация пользовательского пути</h2>
+      <p>Проанализируем сценарии, устраним лишние шаги, повысим конверсию и удобство.</p>
+    </div>
+    <div class="service">
+      <h2>Редизайн интерфейсов</h2>
+      <p>Обновим визуальный стиль без потери узнаваемости, сохраняя логику и структуру.</p>
+    </div>
+    <div class="service">
+      <h2>Тестирование и аналитика</h2>
+      <p>Проведем A/B-тесты, изучим поведение пользователей и внедрим UX-улучшения на основе данных.</p>
+    </div>
+    <div class="cta">
+      <button onclick="openModal()">Заказать аудит</button>
+    </div>
+  </main>
   <div id="modal-bg">
     <div id="modal-form">
       <button class="close" onclick="closeModal()">×</button>
@@ -159,30 +253,25 @@
       <div id="form-status"></div>
     </div>
   </div>
-
   <script>
     function openModal() {
       document.getElementById('modal-bg').style.display = 'block';
     }
-
     function closeModal() {
       document.getElementById('modal-bg').style.display = 'none';
       document.getElementById('form-status').innerText = '';
       document.getElementById('auditForm').reset();
     }
-
     document.getElementById('auditForm').onsubmit = async function(e) {
       e.preventDefault();
       const status = document.getElementById('form-status');
       status.innerText = 'Отправка...';
-
       const form = e.target;
       const data = {
         name: form.name.value,
         email: form.email.value,
         message: form.message.value
       };
-
       try {
         const res = await fetch('/api/sendMail', {
           method: 'POST',
@@ -200,6 +289,5 @@
       }
     };
   </script>
-
 </body>
 </html>
