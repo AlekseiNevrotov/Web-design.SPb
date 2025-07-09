@@ -149,43 +149,59 @@
 
     calculate(); // начальный расчёт
   </script>
+ 
+  
+    
+      
+        <form id="auditForm">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Комментарий" rows="3"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+      <div id="form-status"></div>
+    
 
-  <div class="form-container">
-    <form id="contactForm" autocomplete="off">
-      <input type="text" name="name" placeholder="Ваше имя" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <button type="submit">Отправить</button>
-      <div class="form-status" id="form-status"></div>
-    </form>
-  </div>
-
-<script>
-  const form = document.getElementById('contactForm');
-  const status = document.getElementById('form-status');
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    status.textContent = 'Отправка...';
-
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-
-    try {
-      const res = await fetch('/api/sendMail', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-
-      if (res.ok) {
-        status.textContent = 'Сообщение отправлено!';
-        form.reset();
-      } else {
-        status.textContent = 'Ошибка при отправке.';
-      }
-    } catch {
-      status.textContent = 'Ошибка сети.';
+  <script>
+    function openModal() {
+      document.getElementById('modal-bg').style.display = 'block';
     }
-  });
-</script>
+
+    function closeModal() {
+      document.getElementById('modal-bg').style.display = 'none';
+      document.getElementById('form-status').innerText = '';
+      document.getElementById('auditForm').reset();
+    }
+
+    document.getElementById('auditForm').onsubmit = async function(e) {
+      e.preventDefault();
+      const status = document.getElementById('form-status');
+      status.innerText = 'Отправка...';
+
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+      };
+
+      try {
+        const res = await fetch('/api/sendMail', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(data)
+        });
+        if (res.ok) {
+          status.innerText = 'Спасибо за заявку!';
+          setTimeout(closeModal, 1500);
+        } else {
+          status.innerText = 'Ошибка при отправке. Попробуйте позже.';
+        }
+      } catch {
+        status.innerText = 'Ошибка сети. Попробуйте позже.';
+      }
+    };
+  </script>
+  
 </body>
 </html>
