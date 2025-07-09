@@ -480,9 +480,14 @@
 }
 
     /* Responsive */
-    @media (max-width: 1000px) {
+    @media (max-width: 1000px), (pointer: coarse) and (max-height: 600px) {
       :root {
     --header-height: 80px;
+  }
+  .mobile-menu a,
+  .submenu-toggle,
+  .submenu-list a {
+    font-size: 14px !important;
   }
       .nav { display: none; }
       .header {
