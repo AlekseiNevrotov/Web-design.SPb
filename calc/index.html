@@ -155,7 +155,7 @@
       
         <form id="auditForm">
         <input type="text" name="name" placeholder="Ваше имя" required>
-        <input type="tel" name="tel" placeholder="Тел" required>
+        <input type="email" name="email" placeholder="Email" required>
         <button type="submit">Отправить</button>
       </form>
       <div id="form-status"></div>
@@ -180,7 +180,7 @@
       const form = e.target;
       const data = {
         name: form.name.value,
-        tel: form.tel.value,
+        email: form.email.value,
       };
 
       try {
