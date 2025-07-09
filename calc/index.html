@@ -159,19 +159,19 @@
     
       
         <form id="auditForm">
-        <input type="text" name="name" placeholder="Ваше имя" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="message" placeholder="Комментарий" rows="3"></textarea>
-        <button type="submit">Отправить</button>
-      </form>
-      <div id="form-status"></div>
+          <input type="text" name="name" placeholder="Ваше имя" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="message" placeholder="Комментарий" rows="3"></textarea>
+          <!-- Скрытые поля должны быть здесь -->
+          <input type="hidden" name="pages_count" id="pages_count">
+          <input type="hidden" name="design_selected" id="design_selected">
+          <input type="hidden" name="adaptive_selected" id="adaptive_selected">
+          <input type="hidden" name="cms_selected" id="cms_selected">
+          <input type="hidden" name="total_cost" id="total_cost">
+          <button type="submit">Отправить</button>
+        </form>
+        <div id="form-status"></div>
     
-    <input type="hidden" name="pages_count" id="pages_count">
-<input type="hidden" name="design_selected" id="design_selected">
-<input type="hidden" name="adaptive_selected" id="adaptive_selected">
-<input type="hidden" name="cms_selected" id="cms_selected">
-<input type="hidden" name="total_cost" id="total_cost">
-
 
   <script>
     function openModal() {
