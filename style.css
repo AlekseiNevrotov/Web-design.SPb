@@ -1,4 +1,4 @@
-    :root {
+:root {
       --mylogo: #26D9CD;
       --accent: #26D97C;
       --myinterface: #16847D;
@@ -587,4 +587,9 @@
     .mobile-menu .submenu {
   margin-bottom: 8px;
   margin-top: 0;
+}
+.mobile-menu a,
+.submenu-toggle {
+  font-size: 14px;
+  font-weight: 500;
 }
