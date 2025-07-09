@@ -12,6 +12,18 @@
   <meta name="keywords" content="Генератор палитры, генератор цветовой палитры, генератор палитр, генератор цветовых схем, подбор цветов, палитра онлайн, цвета для дизайна, подбор цветовой гаммы, цветовая палитра, цветовой генератор, инструменты для дизайнера, палитры для сайтов, цветовые комбинации, онлайн генератор цветов, гармония цветов, цветовые схемы, генератор цветовых сочетаний.">
   <meta name="description" content="Онлайн-генератор цветовых палитр: создавай гармоничные цветовые схемы по цветовому кругу Иттена. Идеально для дизайнеров, веб-разработчиков и всех, кто работает с цветом.">
   <style>
+    :root {
+      --mylogo: #26D9CD;
+      --accent: #26D97C;
+      --myinterface: #16847D;
+      --bg: #121212;
+      --black2: #191919;
+      --black3: #1C1C1C;
+      --grey: #404040;
+      --grey2: #666666;
+      --text: #FFFFFF;
+      --header-height: 100px;
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #1a1a1a;
@@ -66,29 +78,24 @@
       -webkit-text-size-adjust: 100%;
     }
     button {
-      padding: 12px 24px;
-      border: none;
-      background-color: #FF842C;
-      color: white;
-      border-radius: 30px;
-      font-size: 16px;
+      padding: 16px 32px;
+      font-size: 1rem;
+      color: var(--text);
+      border: 1px solid var(--text);
+      background: transparent;
+      border-radius: 60px;
       cursor: pointer;
-      touch-action: none;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      -webkit-text-size-adjust: 100%;
+      text-decoration: none;
+      transition: all 0.4s ease;
     }
     button:hover {
-      background-color: #e07220;
-      transform: scale(1.05);
-      touch-action: none;
-      -webkit-text-size-adjust: 100%;
+      border: 1px solid var(--accent);
+      color: var(--accent);
     }
     button:active {
-      background-color: #d55a22;
-      transform: scale(0.98);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      touch-action: none;
-      -webkit-text-size-adjust: 100%;
+  background: var(--myinterface);
+  color: var(--black3);                 
+  transform: scale(0.96);
     }
     .color-box.cube3d {
   width: 80px;
