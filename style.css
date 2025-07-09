@@ -489,10 +489,6 @@
     padding: 0 20px;
     height: 80px
   }
-  .mobile-menu a,
-  .submenu-toggle {
-    font-size: 14px; /* или 1em, или другое нужное вам значение */
-  }
   .logo {
     height: 40px;
     min-width: auto; /* или подбери нужную ширину */
