@@ -8,119 +8,209 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
   <meta name="theme-color" content="#121212">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Заявка</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <title>Калькулятор стоимости — Web-design.SPb</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --mylogo: #26D9CD;
+      --accent: #26D97C;
+      --myinterface: #16847D;
+      --bg: #121212;
+      --black2: #191919;
+      --black3: #1C1C1C;
+      --grey: #404040;
+      --grey2: #666666;
+      --text: #FFFFFF;
+      --radius: 32px;
+    }
     body {
-      background: #181818;
-      color: #fff;
-      font-family: 'Ubuntu', Arial, sans-serif;
-      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', Arial, sans-serif;
       margin: 0;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
     }
-    h1 {
-      margin-top: 40px;
-      margin-bottom: 24px;
-      font-size: 2em;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-align: center;
-    }
-    .form-container {
-      background: #232323;
-      border-radius: 12px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
-      padding: 32px 24px 24px 24px;
-      max-width: 380px;
+    .calc-container {
+      background: var(--black3);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 32px rgba(38,217,205,0.07);
+      padding: 40px 36px 32px 36px;
+      margin: 48px 0 32px 0;
+      max-width: 420px;
       width: 100%;
-      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 24px;
+      border: 1.5px solid var(--black2);
+      position: relative;
+    }
+    .calc-title {
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: 0.03em;
+    }
+    .calc-subtitle {
+      color: var(--grey2);
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 16px;
+      font-family: 'DM Sans', Arial, sans-serif;
+    }
+    label {
+      font-size: 1em;
+      color: var(--text);
+      margin-bottom: 8px;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'DM Sans', Arial, sans-serif;
+    }
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent);
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    .checkbox-group {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    .checkbox-group label {
+      margin: 0;
+      font-size: 1em;
+      font-weight: 300;
+      color: var(--grey2);
+      cursor: pointer;
+      gap: 6px;
+    }
+    input[type="checkbox"] {
+      accent-color: var(--accent);
+      width: 18px;
+      height: 18px;
+      border-radius: 6px;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+    .total {
+      margin-top: 18px;
+      font-size: 1.4em;
+      font-weight: 700;
+      color: var(--accent);
+      text-align: center;
+      letter-spacing: 0.02em;
     }
     form {
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 14px;
+      margin-top: 12px;
     }
-    input, textarea {
-      background: #181818;
-      color: #fff;
-      border: 1px solid #333;
-      border-radius: 6px;
-      padding: 12px;
+    input[type="text"], input[type="email"], textarea {
+      background: var(--black2);
+      color: var(--text);
+      border: 1px solid var(--grey);
+      border-radius: 12px;
+      padding: 12px 14px;
       font-size: 1em;
-      transition: border 0.2s;
+      font-family: 'DM Sans', Arial, sans-serif;
+      transition: border 0.2s, background 0.2s;
       resize: none;
     }
-    input:focus, textarea:focus {
-      border: 1.5px solid #007acc;
+    input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+      border: 1.5px solid var(--accent);
+      background: var(--black3);
       outline: none;
-      background: #222;
     }
     textarea {
-      min-height: 80px;
-      max-height: 200px;
+      min-height: 70px;
+      max-height: 180px;
     }
     button[type="submit"] {
-      background: linear-gradient(90deg, #007acc 0%, #005fa3 100%);
-      color: #fff;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--myinterface) 100%);
+      color: var(--text);
       border: none;
-      border-radius: 6px;
-      padding: 14px 0;
+      border-radius: 32px;
+      padding: 15px 0;
       font-size: 1.1em;
+      font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 600;
       cursor: pointer;
       transition: background 0.2s, box-shadow 0.2s;
-      box-shadow: 0 2px 8px rgba(0,122,204,0.10);
-      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(38,217,205,0.10);
+      letter-spacing: 0.04em;
+      margin-top: 8px;
     }
     button[type="submit"]:hover {
-      background: linear-gradient(90deg, #005fa3 0%, #007acc 100%);
-      box-shadow: 0 4px 16px rgba(0,122,204,0.18);
+      background: linear-gradient(90deg, var(--myinterface) 0%, var(--accent) 100%);
+      box-shadow: 0 4px 16px rgba(38,217,205,0.18);
     }
-    .form-status {
+    #form-status {
       margin-top: 10px;
       min-height: 22px;
       font-size: 1em;
       text-align: center;
+      color: var(--accent);
+      font-family: 'DM Sans', Arial, sans-serif;
     }
-        label {
-      display: block;
-      margin: 15px 0 5px;
-    }
-    .total {
-      margin-top: 20px;
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-    @media (max-width: 500px) {
-      .form-container {
-        padding: 18px 6vw 18px 6vw;
+    @media (max-width: 600px) {
+      .calc-container {
+        padding: 18px 4vw 18px 4vw;
+        margin: 24px 0 16px 0;
+        border-radius: 18px;
       }
-      h1 {
+      .calc-title {
         font-size: 1.3em;
+      }
+      .total {
+        font-size: 1.1em;
+      }
+      button[type="submit"] {
+        font-size: 1em;
+        padding: 12px 0;
       }
     }
   </style>
 </head>
 <body>
-  <label>Количество страниц: <span id="pagesValue">1</span></label>
-  <input type="range" id="pages" min="1" max="20" value="1">
+  <div class="calc-container">
+    <div class="calc-title">Калькулятор стоимости</div>
+    <div class="calc-subtitle">Быстро рассчитайте примерную стоимость сайта и отправьте заявку</div>
+    <label>Количество страниц: <span id="pagesValue">1</span></label>
+    <input type="range" id="pages" min="1" max="20" value="1">
 
-  <label>
-    <input type="checkbox" id="design"> Дизайн
-  </label>
-  <label>
-    <input type="checkbox" id="adaptive"> Адаптивность
-  </label>
-  <label>
-    <input type="checkbox" id="cms"> CMS (админка)
-  </label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="design"> Дизайн</label>
+      <label><input type="checkbox" id="adaptive"> Адаптивность</label>
+      <label><input type="checkbox" id="cms"> CMS (админка)</label>
+    </div>
 
-  <div class="total">Итого: <span id="total">0</span> ₽</div>
+    <div class="total">Итого: <span id="total">0</span> ₽</div>
 
+    <form id="auditForm">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Комментарий" rows="3"></textarea>
+      <input type="hidden" name="pages_count" id="pages_count">
+      <input type="hidden" name="design_selected" id="design_selected">
+      <input type="hidden" name="adaptive_selected" id="adaptive_selected">
+      <input type="hidden" name="cms_selected" id="cms_selected">
+      <input type="hidden" name="total_cost" id="total_cost">
+      <button type="submit">Отправить</button>
+    </form>
+    <div id="form-status"></div>
+  </div>
   <script>
     const pages = document.getElementById('pages');
     const pagesValue = document.getElementById('pagesValue');
@@ -153,35 +243,11 @@
     cms.addEventListener('change', calculate);
 
     calculate(); // начальный расчёт
-  </script>
- 
-  
-    
-      
-        <form id="auditForm">
-          <input type="text" name="name" placeholder="Ваше имя" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" placeholder="Комментарий" rows="3"></textarea>
-          <!-- Скрытые поля должны быть здесь -->
-          <input type="hidden" name="pages_count" id="pages_count">
-          <input type="hidden" name="design_selected" id="design_selected">
-          <input type="hidden" name="adaptive_selected" id="adaptive_selected">
-          <input type="hidden" name="cms_selected" id="cms_selected">
-          <input type="hidden" name="total_cost" id="total_cost">
-          <button type="submit">Отправить</button>
-        </form>
-        <div id="form-status"></div>
-    
-
-  <script>
-    function openModal() {
-      document.getElementById('modal-bg').style.display = 'block';
-    }
 
     function closeModal() {
-      document.getElementById('modal-bg').style.display = 'none';
       document.getElementById('form-status').innerText = '';
       document.getElementById('auditForm').reset();
+      calculate();
     }
 
     document.getElementById('auditForm').onsubmit = async function(e) {
@@ -218,6 +284,5 @@
       }
     };
   </script>
-  
 </body>
 </html>
