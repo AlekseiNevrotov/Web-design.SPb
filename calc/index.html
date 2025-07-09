@@ -138,6 +138,13 @@
 
       pagesValue.textContent = pages.value;
       total.textContent = cost.toLocaleString();
+
+      // Обновляем скрытые поля
+      document.getElementById('pages_count').value = pages.value;
+      document.getElementById('design_selected').value = design.checked ? 'Да' : 'Нет';
+      document.getElementById('adaptive_selected').value = adaptive.checked ? 'Да' : 'Нет';
+      document.getElementById('cms_selected').value = cms.checked ? 'Да' : 'Нет';
+      document.getElementById('total_cost').value = cost;
     }
 
     pages.addEventListener('input', calculate);
@@ -159,6 +166,12 @@
       </form>
       <div id="form-status"></div>
     
+    <input type="hidden" name="pages_count" id="pages_count">
+<input type="hidden" name="design_selected" id="design_selected">
+<input type="hidden" name="adaptive_selected" id="adaptive_selected">
+<input type="hidden" name="cms_selected" id="cms_selected">
+<input type="hidden" name="total_cost" id="total_cost">
+
 
   <script>
     function openModal() {
@@ -180,7 +193,12 @@
       const data = {
         name: form.name.value,
         email: form.email.value,
-        message: form.message.value
+        message: form.message.value,
+        pages_count: form.pages_count.value,
+        design_selected: form.design_selected.value,
+        adaptive_selected: form.adaptive_selected.value,
+        cms_selected: form.cms_selected.value,
+        total_cost: form.total_cost.value
       };
 
       try {
