@@ -51,7 +51,7 @@
   align-items: center;
   text-align: center;
   color: var(--bg);
-  padding: 16px;
+  padding: 0px;
 }
 
 .hero-content h1 {
@@ -431,6 +431,7 @@ p {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 80px;
 }
 
 .footer__logo {
