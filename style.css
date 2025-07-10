@@ -376,7 +376,7 @@
     }
     /* Main */
     main {
-      padding: 80px 24px 60px 24px;
+      padding: 80px 24px 0px 24px;
       max-width: 1000px;
       margin: 0 auto;
     }
