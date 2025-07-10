@@ -331,6 +331,7 @@
   background-color: var(--bg);
   text-align: center;
   margin-top: 0px;
+  margin: 0 auto; /* Центруем контейнер */
 }
 
 .advantages h2 {
@@ -342,7 +343,7 @@
 .advantages-list {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
   flex-wrap: nowrap;
 }
 
