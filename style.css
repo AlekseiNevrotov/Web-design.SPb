@@ -369,6 +369,10 @@
   font-size: 16px;
   color: var(--text);
 }
+p {
+    padding: 0; /* Убираем внутренний отступ */
+    margin: 0; 
+}
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-10px);}
