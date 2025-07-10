@@ -592,7 +592,7 @@
 }
 @media screen and (orientation: landscape) and (max-width: 1000px) {
   body::before {
-    content: "Поверните устройство вертикально";
+    content: "Поверните устройство вертикально и обновите страницу.";
     position: fixed;
     z-index: 9999;
     inset: 0;
