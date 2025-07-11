@@ -492,21 +492,17 @@ p {
   display: flex;
   gap: 10px;
 }
-
-.footer__socials img {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1);
-  transition: 0.3s;
-}
 .social-icons {
     display: flex;
     gap: 16px; /* Отступы между иконками */
 }
-
 .social-icons i {
-    font-size: 40px; /* Размер иконок */
-    color: #333; /* Цвет иконок */
+    font-size: 40px; /* Размер иконки */
+    color: #0088cc; /* Цвет иконки (цвет Telegram) */
+    transition: color 0.3s; /* Плавный переход при наведении */
+}
+.social-icons i:hover {
+    color: #0a8bcc; /* Цвет при наведении */
 }
 .footer__socials img:hover {
   filter: brightness(0) invert(0.5);
