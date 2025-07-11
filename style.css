@@ -498,7 +498,15 @@ p {
   filter: brightness(0) invert(1);
   transition: 0.3s;
 }
+.social-icons {
+    display: flex;
+    gap: 16px; /* Отступы между иконками */
+}
 
+.social-icons i {
+    font-size: 40px; /* Размер иконок */
+    color: #333; /* Цвет иконок */
+}
 .footer__socials img:hover {
   filter: brightness(0) invert(0.5);
 }
