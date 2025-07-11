@@ -405,6 +405,12 @@ p {
       gap: 28px;
       margin-bottom: 80px;
     }
+    .feature-image {
+    width: 100%; /* Растягивает изображение на всю ширину плашки */
+    height: auto; /* Сохраняет пропорции изображения */
+    border-radius: 20px; /* Скругленные углы */
+    margin-bottom: 16px; /* Отступ снизу для пространства между изображением и текстом */
+}
     .feature {
       flex: 1 1 200px;
       background: var(--black3);
