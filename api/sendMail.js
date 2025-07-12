@@ -30,7 +30,7 @@ export async function POST(request) {
     ].filter(Boolean);
     const mailText =
       `Имя: ${name}\n` +
-      `Email: ${phone}\n` +
+      `Телефон: ${phone}\n` +
       `Сообщение:\n${message}\n\n` +
       (calcFields.length
         ? `---\nДанные калькулятора:\n${calcFields.join('\n')}\n`
