@@ -31,14 +31,14 @@ export async function POST(request) {
     const mailText =
       `Имя: ${name}\n` +
       `Телефон: ${phone}\n` +
-      `Сообщение:\n${message}\n\n` +
+      `Задача:\n${message}\n\n` +
       (calcFields.length
         ? `---\nДанные калькулятора:\n${calcFields.join('\n')}\n`
         : '');
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
       to: process.env.GMAIL_USER,
-      subject: `Новое сообщение от ${name}`,
+      subject: `Новая заявка от ${name}`,
       text: mailText,
     });
     return new Response(JSON.stringify({ message: 'Письмо отправлено' }), { status: 200 });
