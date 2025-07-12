@@ -384,7 +384,7 @@ p {
     width: 100%; /* Устанавливаем ширину блока на 100% */
     max-width: 1200px; /* Максимальная ширина для блокировки перегрузки на больших экранах */
     margin: 12px auto 0;
-    margin-bottom: 50px;
+    margin-bottom: -10px;
 }
 
 .reviews-title {
