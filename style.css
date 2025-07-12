@@ -475,7 +475,7 @@ p {
   border-radius: 40px 40px 0 0;
   background: var(--bg);
   color: var(--text);
-  padding: 60px 0px;
+  padding: 40px 0px;
   z-index: 5;
 }
 
