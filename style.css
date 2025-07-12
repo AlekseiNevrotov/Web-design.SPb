@@ -519,21 +519,21 @@ p {
 }
 
 .footer__socials {
-  margin-top: 10px;
+  margin-top: 0px;
   display: flex;
-  gap: 10px;
+  gap: 16px;
 }
 .social-icons {
     display: flex;
     gap: 16px; /* Отступы между иконками */
 }
 .social-icons i {
-    font-size: 40px; /* Размер иконки */
-    color: #0088cc; /* Цвет иконки (цвет Telegram) */
+    font-size: 12px; /* Размер иконки */
+    color: var(--accent); /* Цвет иконки (цвет Telegram) */
     transition: color 0.4s; /* Плавный переход при наведении */
 }
 .social-icons i:hover {
-    color: #0a8bcc; /* Цвет при наведении */
+    color: var(--myinterface); /* Цвет при наведении */
 }
 .footer__socials img:hover {
   filter: brightness(0) invert(0.5);
