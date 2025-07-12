@@ -386,9 +386,9 @@ p {
 }
 
 .reviews-title {
-    font-size: 24px; /* Размер шрифта заголовка */
-    color: #0088cc; /* Цвет текста заголовка */
-    margin-bottom: 15px; /* Отступ снизу */
+    font-size: 48px; /* Размер шрифта заголовка */
+    color: var(--text); /* Цвет текста заголовка */
+    margin-bottom: 60px; /* Отступ снизу */
     text-align: center; /* Выравнивание по центру */
 }
 
