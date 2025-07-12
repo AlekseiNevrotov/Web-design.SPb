@@ -638,13 +638,13 @@ p {
     bottom: 20px; 
     right: 20px; 
     display: none; 
-    background-color: transparent; /* Прозрачный фон */
+    background-color: transparent;
     color: var(--text);
-    border: 1px solid var(--grey2); /* Цвет границы */
+    border: 1px solid var(--grey2); 
     border-radius: 16px;
     padding: 12px; 
     cursor: pointer; 
-    transition: background-color 0.4s, color 0.4s; /* Плавные переходы */
+    transition: background-color 0.4s, color 0.4s; 
 }
 #scrollToTop:hover {
     background-color: var(--accent);
