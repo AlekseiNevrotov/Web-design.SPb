@@ -151,7 +151,7 @@
       text-decoration: none;
       font-weight: 300;
       font-size: 16px;
-      transition: color 0.2s;
+      transition: color 0.4s;
       position: relative;
       font-size: 16px;
     }
@@ -161,7 +161,7 @@
       width: 0;
       height: 1px;
       background: var(--accent);
-      transition: width 0.2s;
+      transition: width 0.4s;
       position: absolute;
       left: 0; bottom: -4px;
     }
@@ -191,7 +191,7 @@
       text-decoration: none;
       font-weight: 500;
       font-size: 1em;
-      transition: color 0.2s;
+      transition: color 0.4s;
       padding: 0 0px;
     }
     .nav-submenu-list {
@@ -215,7 +215,7 @@
       text-decoration: none;
       font-size: 1em;
       white-space: nowrap;
-      transition: background 0.2s, color 0.2s;
+      transition: background 0.4s, color 0.4s;
     }
     .nav-submenu-list a:first-child:hover {
   border-radius: 0 16px 0 0;
@@ -284,7 +284,7 @@
       font-size: 14px;
       font-weight: 500;
       margin-bottom: 20px;
-      transition: color 0.2s;
+      transition: color 0.4s;
     }
     .mobile-menu a:hover {
       color: var(--myinterface);
@@ -487,16 +487,9 @@ p {
   margin: 0 auto;
   padding: 0 80px;
 }
-
-.footer__logo {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
 .footer__tagline {
   font-size: 14px;
-  color: #888;
+  color: var(--grey2);
   max-width: 240px;
 }
 
@@ -507,16 +500,18 @@ p {
 }
 
 .footer__nav a {
-  color: #f1f1f1;
+  color: var(--text);
   text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
+  font-size: 16px;
+  transition: 0.4s;
 }
 
 .footer__nav a:hover {
+  color: var(--accent);
+}
+.footer__nav a:active {
   color: var(--myinterface);
 }
-
 .footer__contact {
   display: flex;
   flex-direction: column;
@@ -535,7 +530,7 @@ p {
 .social-icons i {
     font-size: 40px; /* Размер иконки */
     color: #0088cc; /* Цвет иконки (цвет Telegram) */
-    transition: color 0.3s; /* Плавный переход при наведении */
+    transition: color 0.4s; /* Плавный переход при наведении */
 }
 .social-icons i:hover {
     color: #0a8bcc; /* Цвет при наведении */
@@ -608,7 +603,7 @@ p {
   border-right: 1px solid var(--text);
   border-bottom: 1px solid var(--text);
   transform: translateY(-60%) rotate(45deg);
-  transition: transform 0.3s;
+  transition: transform 0.4s;
   pointer-events: none;
 }
   main {
