@@ -11,8 +11,8 @@ export async function POST(request) {
       cms_selected,
       total_cost
     } = await request.json();
-    if (!name || !phone || !message) {
-      return new Response(JSON.stringify({ error: 'Заполните все поля' }), { status: 400 });
+    if (!phone) {
+      return new Response(JSON.stringify({ error: 'Укажите номер телефона' }), { status: 400 });
     }
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -29,16 +29,16 @@ export async function POST(request) {
       total_cost ? `Итоговая стоимость: ${total_cost}` : null,
     ].filter(Boolean);
     const mailText =
-      `Имя: ${name}\n` +
+      `Имя: ${name || 'Не указано'}\n` +
       `Телефон: ${phone}\n` +
-      `Задача:\n${message}\n\n` +
+      `Задача:\n${message || 'Не указано'}\n\n` +
       (calcFields.length
         ? `---\nДанные калькулятора:\n${calcFields.join('\n')}\n`
         : '');
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
       to: process.env.GMAIL_USER,
-      subject: `Новая заявка от ${name}`,
+      subject: `Новая заявка${name ? ` от ${name}` : ''}`,
       text: mailText,
     });
     return new Response(JSON.stringify({ message: 'Письмо отправлено' }), { status: 200 });
