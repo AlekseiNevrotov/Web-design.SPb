@@ -117,7 +117,7 @@
       gap: 14px;
       margin-top: 12px;
     }
-    input[type="text"], input[type="email"], textarea {
+    input[type="text"], input[type="phone"], textarea {
       background: var(--black2);
       color: var(--text);
       border: 1px solid var(--grey);
@@ -125,10 +125,10 @@
       padding: 12px 14px;
       font-size: 1em;
       font-family: 'DM Sans', Arial, sans-serif;
-      transition: border 0.2s, background 0.2s;
+      transition: border 0.2s, background 0.4s;
       resize: none;
     }
-    input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    input[type="text"]:focus, input[type="phone"]:focus, textarea:focus {
       border: 1.5px solid var(--accent);
       background: var(--black3);
       outline: none;
@@ -258,7 +258,7 @@
       const form = e.target;
       const data = {
         name: form.name.value,
-        email: form.email.value,
+        phone: form.phone.value,
         message: form.message.value,
         pages_count: form.pages_count.value,
         design_selected: form.design_selected.value,
