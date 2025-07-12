@@ -389,7 +389,7 @@ p {
 .reviews-title {
     font-size: 48px; /* Размер шрифта заголовка */
     color: var(--text); /* Цвет текста заголовка */
-    margin-bottom: 60px; /* Отступ снизу */
+    margin-bottom: 50px; /* Отступ снизу */
     text-align: center; /* Выравнивание по центру */
 }
 
