@@ -85,7 +85,6 @@
   async function fetchWeather() {
     const apiKey = "304be0f6672349579dc131530250707";
     const city = "Saint Petersburg";
-
     try {
       const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&lang=ru`);
       const data = await res.json();
@@ -98,5 +97,18 @@
       console.error("Ошибка получения погоды:", err);
     }
   }
-
   fetchWeather();
+const scrollToTopButton = document.getElementById("scrollToTop");
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopButton.style.display = "block"; 
+    } else {
+        scrollToTopButton.style.display = "none"; 
+    }
+};
+scrollToTopButton.onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
