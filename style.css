@@ -376,7 +376,41 @@ p {
     padding: 0; /* Убираем внутренний отступ */
     margin: 0; 
 }
+.reviews-section {
+    background: var(--bg); /* Цвет фона блока с отзывами */
+    padding: 0px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    width: 100%; /* Устанавливаем ширину блока на 100% */
+    max-width: 1200px; /* Максимальная ширина для блокировки перегрузки на больших экранах */
+}
 
+.reviews-title {
+    font-size: 24px; /* Размер шрифта заголовка */
+    color: #0088cc; /* Цвет текста заголовка */
+    margin-bottom: 15px; /* Отступ снизу */
+    text-align: center; /* Выравнивание по центру */
+}
+
+.review {
+    border-bottom: 1px solid #ddd; /* Линия между отзывами */
+    padding: 10px 0; /* Отступы между отзывами */
+}
+
+.review:last-child {
+    border-bottom: none; /* Удаляем нижнюю линию у последнего отзыва */
+}
+
+.review-text {
+    font-size: 16px; /* Размер текста отзыва */
+    color: #333; /* Цвет текста */
+}
+
+.review-author {
+    font-size: 14px; /* Размер текста автора */
+    color: #666; /* Цвет текста автора */
+    text-align: right; /* Выравнивание по правому краю */
+}
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-10px);}
       to { opacity: 1; transform: none;}
