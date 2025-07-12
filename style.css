@@ -384,6 +384,7 @@ p {
     width: 100%; /* Устанавливаем ширину блока на 100% */
     max-width: 1200px; /* Максимальная ширина для блокировки перегрузки на больших экранах */
     margin: 12px auto 0;
+    margin-bottom: 50px;
 }
 
 .reviews-title {
@@ -404,12 +405,12 @@ p {
 
 .review-text {
     font-size: 16px; /* Размер текста отзыва */
-    color: #333; /* Цвет текста */
+    color: var(--text); /* Цвет текста */
 }
 
 .review-author {
-    font-size: 14px; /* Размер текста автора */
-    color: #666; /* Цвет текста автора */
+    font-size: 16px; /* Размер текста автора */
+    color: var(--grey2); /* Цвет текста автора */
     text-align: right; /* Выравнивание по правому краю */
 }
     @keyframes fadeIn {
