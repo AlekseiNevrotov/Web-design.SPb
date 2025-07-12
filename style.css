@@ -430,8 +430,6 @@ p {
       margin-bottom: 20px;
     }
     .subtitle {
-      font-family: 'Ubuntu', Arial, sans-serif;
-      font-weight: 300;
       font-size: 16px;
       color: var(--grey2);
       margin-bottom: 40px;
