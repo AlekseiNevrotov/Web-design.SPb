@@ -12,8 +12,12 @@ export async function POST(request) {
       total_cost
     } = await request.json();
     if (!phone) {
-      return new Response(JSON.stringify({ error: 'Укажите номер телефона' }), { status: 400 });
-    }
+  return new Response(JSON.stringify({ error: 'Укажите номер телефона' }), { status: 400 });
+}
+const digits = phone.replace(/\D/g, '');
+if (digits.length !== 10) {
+  return new Response(JSON.stringify({ error: 'Введите телефон полностью в формате +7 (XXX) XXX-XX-XX.' }), { status: 400 });
+}
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
