@@ -72,6 +72,7 @@
       cursor: pointer;
       text-decoration: none;
       transition: all 0.4s ease;
+      animation: btn-breathe 2.6s ease-in-out infinite;
     }
     .btn:hover {
       border: 1px solid var(--accent);
@@ -81,6 +82,17 @@
   background: var(--myinterface);
   color: var(--black3);                 
   transform: scale(0.96);        
+}
+@keyframes btn-breathe {
+  0% {
+    box-shadow: 0 0 0 0 var(--accent), 0 4px 12px 0 rgba(0,0,0,0.04);
+  }
+  50% {
+    box-shadow: 0 0 18px 0 var(--accent), 0 4px 24px 0 rgba(0,0,0,0.08);
+  }
+  100% {
+    box-shadow: 0 0 0 0 var(--accent), 0 4px 12px 0 rgba(0,0,0,0.04);
+  }
 }
 .mobile-br {
   display: none;
