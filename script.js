@@ -112,3 +112,15 @@ scrollToTopButton.onclick = function() {
         behavior: 'smooth'
     });
 };
+document.addEventListener('DOMContentLoaded', () => {
+  const flipBlock = document.querySelector('.flip-block');
+  const checkScroll = () => {
+    const rect = flipBlock.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    if (rect.top < windowHeight && rect.bottom > 0) {
+      flipBlock.classList.add('flip-in');
+      window.removeEventListener('scroll', checkScroll);
+    }
+  };
+  window.addEventListener('scroll', checkScroll);
+});

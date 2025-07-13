@@ -664,3 +664,21 @@ p {
     background-color: var(--myinterface);
     transition: color 0.4s;
 }
+@keyframes flipIn {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+.flip-block {
+  opacity: 0; 
+  transition: opacity 0.4s ease;
+}
+.flip-in {
+  animation: flipIn 0.8s ease forwards; 
+  opacity: 1; 
+}
