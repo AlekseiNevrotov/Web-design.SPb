@@ -11,15 +11,14 @@ export async function POST(request) {
       cms_selected,
       total_cost
     } = await request.json();
-    if (!phone) {
-  return new Response(JSON.stringify({ error: 'Укажите номер телефона' }), { status: 400 });
-}
-const digits = phone.replace(/\D/g, ''); // только цифры
-console.log('RAW phone:', phone);
-console.log('Digits:', digits);
-if (digits.length !== 10) {
-  return new Response(JSON.stringify({ error: 'Введите телефон полностью в формате +7 (XXX) XXX-XX-XX.' }), { status: 400 });
-}
+    if (!phone || phone.trim() === '') {
+      return new Response(JSON.stringify({ error: 'Укажите номер телефона' }), { status: 400 });
+    }
+    const digits = phone.replace(/\D/g, '');
+    console.log('Получен телефон:', phone, '| Только цифры:', digits);
+    if (digits.length !== 10) {
+      return new Response(JSON.stringify({ error: 'Введите телефон полностью в формате +7 (XXX) XXX-XX-XX.' }), { status: 400 });
+    }
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
