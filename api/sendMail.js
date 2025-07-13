@@ -15,10 +15,13 @@ export async function POST(request) {
       return new Response(JSON.stringify({ error: 'Укажите номер телефона' }), { status: 400 });
     }
     const digits = phone.replace(/\D/g, '');
-    console.log('Получен телефон:', phone, '| Только цифры:', digits);
-    if (digits.length !== 10) {
-      return new Response(JSON.stringify({ error: 'Введите телефон полностью в формате +7 (XXX) XXX-XX-XX.' }), { status: 400 });
-    }
+console.log('Получен телефон:', phone, '| Только цифры:', digits);
+
+if (digits.length !== 10) {
+  return new Response(JSON.stringify({
+    error: 'Введите телефон полностью в формате +7 (XXX) XXX-XX-XX.'
+  }), { status: 400 });
+}
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
