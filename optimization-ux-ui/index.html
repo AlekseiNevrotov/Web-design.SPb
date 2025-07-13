@@ -263,31 +263,51 @@
       document.getElementById('auditForm').reset();
     }
     document.getElementById('auditForm').onsubmit = async function(e) {
-      e.preventDefault();
-      const status = document.getElementById('form-status');
-      status.innerText = 'Отправка...';
-      const form = e.target;
-      const data = {
-        name: form.name.value,
-        phone: form.phone.value.replace(/\D/g, '').slice(-10),
-        message: form.message.value
-      };
-      try {
-        const res = await fetch('/api/sendMail', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(data)
-        });
-        if (res.ok) {
-          status.innerText = 'Спасибо за заявку!';
-          setTimeout(closeModal, 1500);
-        } else {
-          status.innerText = 'Ошибка при отправке. Попробуйте позже.';
-        }
-      } catch {
-        status.innerText = 'Ошибка сети. Попробуйте позже.';
-      }
-    };
+  e.preventDefault();
+  const status = document.getElementById('form-status');
+  status.innerText = 'Отправка...';
+  const form = e.target;
+
+  // Очищаем номер до цифр
+  let digits = form.phone.value.replace(/\D/g, '');
+
+  // Если ввели "7" или "8" первым символом — удаляем
+  if (digits.startsWith('7') || digits.startsWith('8')) {
+    digits = digits.slice(1);
+  }
+
+  console.log('digits:', digits, 'len:', digits.length, '| raw:', form.phone.value); // Для отладки (можно убрать после теста)
+
+  // Проверяем, что ровно 10 цифр
+  if (digits.length !== 10) {
+    status.innerText = 'Пожалуйста, заполните телефон полностью!';
+    form.phone.focus();
+    return;
+  }
+
+  const data = {
+    name: form.name.value,
+    phone: digits,
+    message: form.message.value
+  };
+
+  try {
+    const res = await fetch('/api/sendMail', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+    });
+    if (res.ok) {
+      status.innerText = 'Спасибо за заявку!';
+      setTimeout(closeModal, 1500);
+    } else {
+      status.innerText = 'Ошибка при отправке. Попробуйте позже.';
+    }
+  } catch {
+    status.innerText = 'Ошибка сети. Попробуйте позже.';
+  }
+};
+  
     const phoneInput = document.getElementById('phone');
     const mask = '+7 (___) ___-__-__';
 
