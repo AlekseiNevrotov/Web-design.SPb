@@ -359,7 +359,6 @@ p {
     background: var(--bg);
     padding: 0px;
     border-radius: 20px;
-    box-shadow: 4px 0px 8px var(--black2);
     width: 100%;
     max-width: 1200px; 
     margin: 12px auto 0;
