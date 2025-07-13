@@ -10,6 +10,9 @@
       --text: #FFFFFF;
       --header-height: 100px;
     }
+    html {
+    scroll-behavior: smooth;
+}
     body {
       margin: 0;
       font-family: 'DM Sans', Arial, sans-serif;
