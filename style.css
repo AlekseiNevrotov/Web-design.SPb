@@ -682,3 +682,10 @@ p {
   animation: flipIn 0.8s ease forwards; 
   opacity: 1; 
 }
+body.fonts-loading {
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+body.fonts-loaded {
+  opacity: 1;
+}

@@ -124,3 +124,15 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   window.addEventListener('scroll', checkScroll);
 });
+document.addEventListener('DOMContentLoaded', function () {
+    document.documentElement.classList.add('fonts-loading');
+    var dmSans = new FontFaceObserver('DM Sans');
+    var ubuntu = new FontFaceObserver('Ubuntu');
+    Promise.all([
+      dmSans.load(),
+      ubuntu.load()
+    ]).then(function() {
+      document.documentElement.classList.remove('fonts-loading');
+      document.documentElement.classList.add('fonts-loaded');
+    });
+  });
