@@ -220,7 +220,7 @@
     const total = document.getElementById('total');
 
     function calculate() {
-      let cost = pages.value * 2000;
+      let cost = pages.value * 5000;
 
       if (design.checked) cost += 5000;
       if (adaptive.checked) cost += 3000;
@@ -266,13 +266,6 @@ document.getElementById('auditForm').onsubmit = async function(e) {
     form.phone.focus();
     return; 
   }
-
-  // Проверяем, что другие обязательные поля тоже заполнены
-  if (!form.name.value || !form.message.value) {
-    status.innerText = 'Пожалуйста, заполните все обязательные поля!';
-    return;
-  }
-
   const data = {
     name: form.name.value,
     phone: cleanedPhone, // Используем уже очищенный номер
