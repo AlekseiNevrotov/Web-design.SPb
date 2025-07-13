@@ -250,45 +250,55 @@
       calculate();
     }
 
-    document.getElementById('auditForm').onsubmit = async function(e) {
-      e.preventDefault();
-      const status = document.getElementById('form-status');
-      status.innerText = 'Отправка...';
+document.getElementById('auditForm').onsubmit = async function(e) {
+  e.preventDefault();
+  const status = document.getElementById('form-status');
+  status.innerText = 'Отправка...';
 
-      const form = e.target;
-      const cleanedPhone = form.phone.value.replace(/\D/g, '').slice(-10);
+  const form = e.target;
+
+  // Очищаем телефон до только цифр, берём последние 10
+  const cleanedPhone = form.phone.value.replace(/\D/g, '').slice(-10);
+  
+  // === ПРОВЕРКА НА 10 ЦИФР ===
   if (cleanedPhone.length !== 10) {
     status.innerText = 'Пожалуйста, заполните телефон полностью!';
     form.phone.focus();
     return; 
   }
-      const data = {
-        name: form.name.value,
-        phone: cleanedPhone,
-        message: form.message.value,
-        pages_count: form.pages_count.value,
-        design_selected: form.design_selected.value,
-        adaptive_selected: form.adaptive_selected.value,
-        cms_selected: form.cms_selected.value,
-        total_cost: form.total_cost.value
-      };
 
-      try {
-        const res = await fetch('/api/sendMail', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(data)
-        });
-        if (res.ok) {
-          status.innerText = 'Спасибо за заявку!';
-          setTimeout(closeModal, 1500);
-        } else {
-          status.innerText = 'Ошибка при отправке. Попробуйте позже.';
-        }
-      } catch {
-        status.innerText = 'Ошибка сети. Попробуйте позже.';
-      }
-    };
+  // Проверяем, что другие обязательные поля тоже заполнены
+  if (!form.name.value || !form.message.value) {
+    status.innerText = 'Пожалуйста, заполните все обязательные поля!';
+    return;
+  }
+
+  const data = {
+    name: form.name.value,
+    phone: cleanedPhone, // Используем уже очищенный номер
+    message: form.message.value,
+    pages_count: form.pages_count.value,
+    design_selected: form.design_selected.value,
+    adaptive_selected: form.adaptive_selected.value,
+    cms_selected: form.cms_selected.value,
+    total_cost: form.total_cost.value
+  };
+  try {
+    const res = await fetch('/api/sendMail', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+    });
+    if (res.ok) {
+      status.innerText = 'Спасибо за заявку!';
+      setTimeout(closeModal, 1500);
+    } else {
+      status.innerText = 'Ошибка при отправке. Попробуйте позже.';
+    }
+  } catch {
+    status.innerText = 'Ошибка сети. Попробуйте позже.';
+  }
+};
 const phoneInput = document.getElementById('phone');
     const mask = '+7 (___) ___-__-__';
 
