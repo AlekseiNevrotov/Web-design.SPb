@@ -275,9 +275,6 @@
   if (digits.startsWith('7') || digits.startsWith('8')) {
     digits = digits.slice(1);
   }
-
-  console.log('digits:', digits, 'len:', digits.length, '| raw:', form.phone.value); // Для отладки (можно убрать после теста)
-
   // Проверяем, что ровно 10 цифр
   if (digits.length !== 10) {
     status.innerText = 'Пожалуйста, заполните телефон полностью!';
