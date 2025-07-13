@@ -11,10 +11,7 @@ export async function POST(request) {
       cms_selected,
       total_cost
     } = await request.json();
-    if (!phone || phone.trim() === '') {
-      return new Response(JSON.stringify({ error: 'Укажите номер телефона' }), { status: 400 });
-    }
-    if (!phone || phone.length !== 10) {
+    if (!phone || phone.trim().length !== 10 || !/^\d{10}$/.test(phone)) {
   return new Response(
     JSON.stringify({ error: 'Введите телефон полностью в формате +7 (XXX) XXX-XX-XX.' }),
     { status: 400 }
