@@ -359,7 +359,7 @@ p {
     background: var(--bg);
     padding: 0px;
     border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 4px 0px 8px var(--black2);
     width: 100%;
     max-width: 1200px; 
     margin: 12px auto 0;
@@ -431,7 +431,7 @@ p {
       padding: 24px;
       min-height: 280px;
       min-width: 120px;
-      box-shadow: 0 4px 12px var(--black3);
+      box-shadow: 4px 0px 8px var(--black2);
     }
     .feature-title {
       font-family: 'Ubuntu', Arial, sans-serif;
