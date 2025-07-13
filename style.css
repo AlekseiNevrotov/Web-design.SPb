@@ -684,7 +684,7 @@ p {
 }
 body.fonts-loading {
   opacity: 0;
-  transition: opacity 0.1s;
+  transition: opacity 0.4s;
 }
 body.fonts-loaded {
   opacity: 1;
