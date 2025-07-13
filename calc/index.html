@@ -265,7 +265,6 @@ document.getElementById('auditForm').onsubmit = async function(e) {
     digits = digits.slice(1);
   }
 
-  console.log('digits:', digits, 'len:', digits.length, '| raw:', form.phone.value); // ОТЛАДКА
 
   if (digits.length !== 10) {
     status.innerText = 'Пожалуйста, заполните телефон полностью!';
@@ -274,7 +273,7 @@ document.getElementById('auditForm').onsubmit = async function(e) {
   }
   const data = {
     name: form.name.value,
-    phone: cleanedPhone, // Используем уже очищенный номер
+    phone: digits, // Используем уже очищенный номер
     message: form.message.value,
     pages_count: form.pages_count.value,
     design_selected: form.design_selected.value,
