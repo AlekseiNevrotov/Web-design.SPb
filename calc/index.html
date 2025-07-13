@@ -258,7 +258,7 @@
       const form = e.target;
       const data = {
         name: form.name.value,
-        phone: form.phone.value,
+        phone: form.phone.value.replace(/\D/g, ''),
         message: form.message.value,
         pages_count: form.pages_count.value,
         design_selected: form.design_selected.value,
