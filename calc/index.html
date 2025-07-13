@@ -258,7 +258,7 @@
       const form = e.target;
       const data = {
         name: form.name.value,
-        phone: form.phone.value.replace(/\D/g, ''),
+        phone: form.phone.value.replace(/\D/g, '').slice(-10),
         message: form.message.value,
         pages_count: form.pages_count.value,
         design_selected: form.design_selected.value,
@@ -306,37 +306,21 @@ const phoneInput = document.getElementById('phone');
     }
 
     phoneInput.addEventListener('input', function(e) {
-      // Получаем только цифры, пропуская все нецифровые символы, кроме первой 7
-      let digits = this.value.replace(/\D/g, '').replace(/^7/, ''); // без ведущей 7
+  // Удаляем всё, кроме цифр
+  let digits = this.value.replace(/\D/g, '');
 
-      if (digits.length > 10) digits = digits.slice(0, 10);
-
-      this.value = applyMask(digits);
-    });
-
-    phoneInput.addEventListener('focus', function() {
-      // Если ничего нет, сразу показать начало маски
-      if (this.value === '') {
-        this.value = '+7 (';
-      }
-      setTimeout(() => {
-        this.setSelectionRange(this.value.length, this.value.length);
-      }, 0);
-    });
-
-    phoneInput.addEventListener('blur', function() {
-      // Если ввели только маску — очистить
-      if (this.value === '+7 (') {
-        this.value = '';
-      }
-    });
-
-    // Защита: не даём удалить "+7 (" целиком
-    phoneInput.addEventListener('keydown', function(e) {
-      if ((this.selectionStart <= 4) && (e.key === 'Backspace' || e.key === 'Delete')) {
-        e.preventDefault();
-      }
-    });
+  // отрезаем первые лишние 7 или 8, если были введены
+  if (digits.startsWith('7') && digits.length > 10) {
+    digits = digits.slice(1);
+  }
+  if (digits.startsWith('8') && digits.length > 10) {
+    digits = digits.slice(1);
+  }
+  if (digits.length > 10) {
+    digits = digits.slice(-10); // всегда последние 10 цифр
+  }
+  this.value = applyMask(digits);
+});
   </script>
 </body>
 </html>
