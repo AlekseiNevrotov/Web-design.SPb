@@ -257,11 +257,11 @@
 
       const form = e.target;
       const cleanedPhone = form.phone.value.replace(/\D/g, '').slice(-10);
-if (cleanedPhone.length !== 10) {
-  status.innerText = 'Пожалуйста, заполните телефон полностью!';
-  form.phone.focus();
-  return;
-}
+  if (cleanedPhone.length !== 10) {
+    status.innerText = 'Пожалуйста, заполните телефон полностью!';
+    form.phone.focus();
+    return; 
+  }
       const data = {
         name: form.name.value,
         phone: form.phone.value.replace(/\D/g, '').slice(-10),
