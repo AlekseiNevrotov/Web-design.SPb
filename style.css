@@ -72,7 +72,6 @@
       cursor: pointer;
       text-decoration: none;
       transition: all 0.4s ease;
-      margin-top: -12px;
     }
     .btn:hover {
       border: 1px solid var(--accent);
