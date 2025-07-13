@@ -264,7 +264,7 @@
   }
       const data = {
         name: form.name.value,
-        phone: form.phone.value.replace(/\D/g, '').slice(-10),
+        phone: cleanedPhone,
         message: form.message.value,
         pages_count: form.pages_count.value,
         design_selected: form.design_selected.value,
