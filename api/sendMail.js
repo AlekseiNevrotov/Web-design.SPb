@@ -14,7 +14,9 @@ export async function POST(request) {
     if (!phone) {
   return new Response(JSON.stringify({ error: 'Укажите номер телефона' }), { status: 400 });
 }
-const digits = phone.replace(/\D/g, '');
+const digits = phone.replace(/\D/g, ''); // только цифры
+console.log('RAW phone:', phone);
+console.log('Digits:', digits);
 if (digits.length !== 10) {
   return new Response(JSON.stringify({ error: 'Введите телефон полностью в формате +7 (XXX) XXX-XX-XX.' }), { status: 400 });
 }
