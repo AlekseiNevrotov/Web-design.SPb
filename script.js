@@ -125,3 +125,13 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(review); 
     });
 });
+function smoothScrollTo(targetId) {
+    const targetElement = document.getElementById(targetId);
+    const offset = 140;
+    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - offset;
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+    });
+}
