@@ -12,9 +12,12 @@
   "url": "https://web-design.spb.ru"
 }
 </script>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Ubuntu:wght@300&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    </noscript>
   <meta property="og:site_name" content="Веб-дизайн.СПб" />
   <title>Веб-дизайн и создание сайтов — заказать сайт под ключ</title>
   <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon">
@@ -27,6 +30,11 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <div id="preloader">
+        <div>
+            <div class="spinner"></div>
+        </div>
+    </div>
   <button id="scrollToTop" title="Наверх">↑</button>
   <header class="header">
     <a href="/" class="logo">

@@ -135,3 +135,10 @@ function smoothScrollTo(targetId) {
         behavior: "smooth"
     });
 }
+document.fonts.ready.then(function() {
+        document.getElementById('preloader').classList.add('hide');
+        document.getElementById('main-content').classList.add('visible');
+        setTimeout(() => {
+            document.getElementById('preloader').style.display = 'none';
+        }, 600);
+    });
