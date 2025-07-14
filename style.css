@@ -558,7 +558,45 @@ p {
           color: var(--myinterface);
             transform: scale(0.96);
         }
-    @media (max-width: 1000px) {
+#scrollToTop {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    display: none; 
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--grey2); 
+    border-radius: 16px;
+    padding: 12px; 
+    cursor: pointer; 
+    transition: background-color 0.4s, color 0.4s; 
+}
+#scrollToTop:hover {
+    background-color: var(--accent);
+}
+#scrollToTop:active {
+    background-color: var(--myinterface);
+    transition: color 0.4s;
+}
+@keyframes flipIn {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+.flip-block {
+  opacity: 0; 
+  transition: opacity 0.4s ease;
+}
+.flip-in {
+  animation: flipIn 0.8s ease forwards; 
+  opacity: 1; 
+}
+@media (max-width: 1000px) {
       :root {
     --header-height: 80px;
   }
@@ -678,42 +716,4 @@ p {
     text-align: center;
     pointer-events: all;
   }
-}
-#scrollToTop {
-    position: fixed;
-    bottom: 20px; 
-    right: 20px; 
-    display: none; 
-    background-color: transparent;
-    color: var(--text);
-    border: 1px solid var(--grey2); 
-    border-radius: 16px;
-    padding: 12px; 
-    cursor: pointer; 
-    transition: background-color 0.4s, color 0.4s; 
-}
-#scrollToTop:hover {
-    background-color: var(--accent);
-}
-#scrollToTop:active {
-    background-color: var(--myinterface);
-    transition: color 0.4s;
-}
-@keyframes flipIn {
-  from {
-    transform: rotateY(90deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotateY(0deg);
-    opacity: 1;
-  }
-}
-.flip-block {
-  opacity: 0; 
-  transition: opacity 0.4s ease;
-}
-.flip-in {
-  animation: flipIn 0.8s ease forwards; 
-  opacity: 1; 
 }
