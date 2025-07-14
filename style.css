@@ -510,6 +510,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 0px;
+  color: var(--mylogo);
 }
 .footer__socials {
             display: flex;
