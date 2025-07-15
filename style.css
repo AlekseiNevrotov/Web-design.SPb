@@ -566,13 +566,20 @@ p {
     background-color: transparent;
     color: var(--text);
     border: 1px solid var(--grey2); 
-    border-radius: 16px;
-    padding: 12px; 
+    border-radius: 50%;
+    width: 40px; 
+    height: 40px; 
+    padding: 0; 
     cursor: pointer; 
-    transition: background-color 0.4s, color 0.4s; 
+    transition: background-color 0.4s, color 0.4s;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
 }
 #scrollToTop:hover {
-    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 #scrollToTop:active {
     background-color: var(--myinterface);
