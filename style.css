@@ -419,6 +419,7 @@ ul {
       transition: background 0.2s, color 0.2s, border 0.2s;
       letter-spacing: 0.01em;
       margin-top: -10px;
+      margin-bottom: -20px;
     }
     .portfolio-link:hover {
       background: var(--accent);
