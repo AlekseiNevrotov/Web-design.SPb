@@ -410,14 +410,12 @@ ul {
       color: var(--text);
       text-decoration: none;
       border-radius: 20px;
-      border: 1px solid var(--black2);
-      padding: 22px 24px;
+      padding: 24px 24px;
       font-size: 24px;
-      font-family: 'DM Sans', Arial, sans-serif;
+      font-family: 'Ubuntu', Arial, sans-serif;
       font-weight: 300;
       box-shadow: 4px 0px 8px var(--black2);
-      transition: background 0.2s, color 0.2s, border 0.2s;
-      letter-spacing: 0.01em;
+      transition: color 0.4s;
       margin-top: 40px;
       margin-bottom: -10px;
     }
