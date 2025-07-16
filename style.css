@@ -36,7 +36,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.4s;
+            transition: color 0.4s;
         }
         #preloader.hide {
             opacity: 0;
@@ -247,7 +247,7 @@
       text-decoration: none;
       font-size: 1em;
       white-space: nowrap;
-      transition: background 0.4s, color 0.4s;
+      transition: color 0.4s;
     }
     .nav-submenu-list a:first-child:hover {
   border-radius: 0 16px 0 0;
@@ -421,8 +421,12 @@ ul {
     }
     .portfolio-link:hover {
       background: var(--accent);
-      color: var(--black3);
-      border-color: var(--accent);
+      color: var(--text);
+    }
+    .portfolio-link:active {
+      background: var(--myinterface);
+      color: var(--text);
+      transition: color 0.4s;
     }
     @media (max-width: 600px) {
       main {
