@@ -427,10 +427,12 @@ ul {
     }
     .portfolio-link:hover {
       background: var(--accent);
+      box-shadow: 4px 0px 8px var(--accent);
       color: var(--text);
     }
     .portfolio-link:active {
       background: var(--myinterface);
+      box-shadow: 4px 0px 8px var(--myinterface);
       color: var(--text);
       transition: color 0.4s;
     }
