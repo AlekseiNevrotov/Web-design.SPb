@@ -403,6 +403,12 @@ ul {
     li {
       margin-bottom: -20px;
     }
+    .portfolio-title {
+    font-size: 48px; 
+    color: var(--text); 
+    margin-bottom: 40px; 
+    text-align: center;
+    }
     .portfolio-link {
       display: block;
       width: 100%;
