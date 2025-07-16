@@ -394,6 +394,53 @@ p {
     padding: 0; 
     margin: 0; 
 }
+ul {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+      margin: 0;
+    }
+    li {
+      margin-bottom: 20px;
+    }
+    .portfolio-link {
+      display: block;
+      width: 100%;
+      background: var(--black3);
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 20px;
+      border: 1px solid var(--black2);
+      padding: 22px 24px;
+      font-size: 24px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 500;
+      box-shadow: 0 4px 16px rgba(38,217,205,0.07);
+      transition: background 0.2s, color 0.2s, border 0.2s;
+      letter-spacing: 0.01em;
+    }
+    .portfolio-link:hover {
+      background: var(--accent);
+      color: var(--black3);
+      border-color: var(--accent);
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 24px 4vw 24px 4vw;
+      }
+      h1 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+      }
+      .portfolio-link {
+        padding: 14px 10px;
+        border-radius: 12px;
+        font-size: 1em;
+      }
+      li {
+        margin-bottom: 12px;
+      }
+    }
 .reviews-section {
     background: var(--bg);
     padding: 0px;
