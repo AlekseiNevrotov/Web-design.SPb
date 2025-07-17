@@ -664,7 +664,8 @@ ul {
   opacity: 1; 
 }
 .services-title {
-    font-size: 48px; 
+    font-size: 48px;
+    width: 100%;
     color: var(--text); 
     margin-bottom: 40px; 
     text-align: center;
