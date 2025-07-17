@@ -663,107 +663,6 @@ ul {
   animation: flipIn 0.8s ease forwards; 
   opacity: 1; 
 }
-.services-title {
-    font-size: 48px;
-    width: 100%;
-    color: var(--text); 
-    margin-bottom: -28px; 
-    margin-top: 52px;
-    text-align: center;
-    }
-.services-form-block {
-  display: flex;
-  gap: 0;
-  background: var(--black3);
-  border-radius: var(--radius);
-  box-shadow: 0 4px 24px rgba(38,217,205,0.10);
-  margin: 40px auto 0 auto;
-  overflow: hidden;
-}
-
-.services-list {
-  flex: 1.2;
-  padding: 45px 30px;
-  background: #18181b;
-  color: var(--text);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.services-list h2 {
-  font-family: 'Ubuntu', Arial, sans-serif;
-  color: var(--accent);
-  margin-bottom: 26px;
-  font-size: 1.45rem;
-  font-weight: 700;
-}
-
-.services-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.services-list li {
-  margin-bottom: 22px;
-  font-size: 1.08rem;
-}
-.services-list span {
-  color: var(--grey2);
-  font-weight: 300;
-  font-size: 1em;
-}
-
-.inline-form {
-  flex: 1;
-  background: var(--bg);
-  color: var(--black3);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 45px 32px;
-}
-.inline-form h2 {
-  color: var(--accent);
-  font-family: 'Ubuntu', Arial, sans-serif;
-  margin-bottom: 22px;
-  font-size: 1.22rem;
-}
-
-.inline-form form input,
-.inline-form form textarea {
-  width: 100%;
-  margin-bottom: 12px;
-  padding: 14px 13px;
-  background: var(--black2);
-  color: var(--text);
-  border: 1px solid var(--grey);
-  border-radius: 10px;
-  font-size: 1em;
-  font-family: 'DM Sans', Arial, sans-serif;
-  transition: border 0.2s, background 0.2s;
-}
-.inline-form form input:focus,
-.inline-form form textarea:focus {
-  border: 1.5px solid var(--accent);
-  outline: none;
-}
-.inline-form form button[type="submit"] {
-  width: 100%;
-  background: linear-gradient(90deg, var(--accent) 0%, var(--myinterface) 100%);
-  color: var(--text);
-  padding: 14px 0;
-  border: none;
-  border-radius: 32px;
-  font-size: 1.08em;
-  font-family: 'DM Sans', Arial, sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s, box-shadow 0.2s;
-  letter-spacing: 0.04em;
-  margin-top: 3px;
-}
-
 /* Адаптация под мобилки */
 @media (max-width: 800px) {
   .services-form-block {
@@ -896,4 +795,104 @@ ul {
     text-align: center;
     pointer-events: all;
   }
+}
+.services-title {
+    font-size: 48px;
+    width: 100%;
+    color: var(--text); 
+    margin-bottom: -28px; 
+    margin-top: 52px;
+    text-align: center;
+    }
+.services-form-block {
+  display: flex;
+  gap: 0;
+  background: var(--black3);
+  border-radius: var(--radius);
+  box-shadow: 4px 0px 8px var(--black2);
+  margin: 40px auto 0 auto;
+  overflow: hidden;
+}
+
+.services-list {
+  flex: 1.2;
+  padding: 45px 30px;
+  background: #18181b;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-list h2 {
+  font-family: 'Ubuntu', Arial, sans-serif;
+  color: var(--accent);
+  margin-bottom: 26px;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.services-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.services-list li {
+  margin-bottom: 22px;
+  font-size: 1.08rem;
+}
+.services-list span {
+  color: var(--grey2);
+  font-weight: 300;
+  font-size: 1em;
+}
+
+.inline-form {
+  flex: 1;
+  background: var(--bg);
+  color: var(--black3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px 32px;
+}
+.inline-form h2 {
+  color: var(--accent);
+  font-family: 'Ubuntu', Arial, sans-serif;
+  margin-bottom: 22px;
+  font-size: 1.22rem;
+}
+
+.inline-form form input,
+.inline-form form textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 14px 13px;
+  background: var(--black2);
+  color: var(--text);
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+  font-size: 1em;
+  font-family: 'DM Sans', Arial, sans-serif;
+  transition: border 0.2s, background 0.2s;
+}
+.inline-form form input:focus,
+.inline-form form textarea:focus {
+  border: 1.5px solid var(--accent);
+  outline: none;
+}
+.inline-form form button[type="submit"] {
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--myinterface) 100%);
+  color: var(--text);
+  padding: 14px 0;
+  border: none;
+  border-radius: 32px;
+  font-size: 1.08em;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.04em;
+  margin-top: 3px;
 }
