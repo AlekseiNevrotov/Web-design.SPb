@@ -145,15 +145,8 @@ document.fonts.ready.then(function() {
 
 
 
-    
-    function openModal() {
-      document.getElementById('modal-bg').style.display = 'block';
-    }
-    function closeModal() {
-      document.getElementById('modal-bg').style.display = 'none';
-      document.getElementById('form-status').innerText = '';
-      document.getElementById('auditForm').reset();
-    }
+
+
     document.getElementById('auditForm').onsubmit = async function(e) {
   e.preventDefault();
   const status = document.getElementById('form-status');
