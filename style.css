@@ -105,15 +105,14 @@
       cursor: pointer;
       text-decoration: none;
       transition: all 0.4s ease;
-      animation: btn-breathe 2.6s ease-in-out infinite;
+      animation: btn-breathe 2.4s ease-in-out infinite;
     }
     .btn:hover {
       border: 1px solid var(--accent);
       color: var(--accent);
     }
     .btn:active {
-  background: var(--myinterface);
-  color: var(--black3);                 
+  color: var(--myinterface);                 
   transform: scale(0.96);        
 }
 @keyframes btn-breathe {
