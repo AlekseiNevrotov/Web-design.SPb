@@ -411,7 +411,7 @@ ul {
     }
     .portfolio-link {
       display: block;
-      width: 100%;
+      
       background: var(--black3);
       color: var(--text);
       text-decoration: none;
