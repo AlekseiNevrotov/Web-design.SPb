@@ -147,7 +147,7 @@ document.fonts.ready.then(function() {
 
 
 
-    document.getElementById('auditForm').onsubmit = async function(e) {
+  document.getElementById('auditForm').onsubmit = async function(e) {
   e.preventDefault();
   const status = document.getElementById('form-status');
   status.innerText = 'Отправка...';
@@ -181,7 +181,10 @@ document.fonts.ready.then(function() {
     });
     if (res.ok) {
       status.innerText = 'Спасибо за заявку!';
-      setTimeout(closeModal, 1500);
+      setTimeout(() => {
+  form.reset();
+  status.innerText = '';
+}, 1500);
     } else {
       status.innerText = 'Ошибка при отправке. Попробуйте позже.';
     }
