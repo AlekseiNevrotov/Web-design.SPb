@@ -1,6 +1,6 @@
 :root {
       --mylogo: #26D9CD;
-      --accent: #26D97C;
+      --accent: #26C5D9;
       --myinterface: #16847D;
       --bg: #121212;
       --black2: #191919;
@@ -98,7 +98,7 @@
       padding: 16px 32px;
       font-size: 16px;
       color: var(--text);
-      border: 1px solid var(--text);
+      border: 1px solid var(--accent);
       background: transparent;
       border-radius: 60px;
       cursor: pointer;
