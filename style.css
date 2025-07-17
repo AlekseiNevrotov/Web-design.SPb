@@ -109,10 +109,13 @@
     }
     .btn:hover {
       border: 1px solid var(--accent);
+      background: transparent; 
       color: var(--accent);
     }
     .btn:active {
-  color: var(--myinterface);                 
+  border: 1px solid var(--myinterface);
+  background: transparent; 
+  color: var(--myinterface);                
   transform: scale(0.96);        
 }
 @keyframes btn-breathe {
