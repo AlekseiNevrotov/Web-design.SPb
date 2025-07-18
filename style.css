@@ -628,7 +628,7 @@ ul {
     display: none; 
     background-color: transparent;
     color: var(--text);
-    border: 1px solid var(--grey2); 
+    border: 1px solid var(--accent); 
     border-radius: 50%;
     width: 40px; 
     height: 40px; 
@@ -645,8 +645,10 @@ ul {
     color: var(--accent);
 }
 #scrollToTop:active {
-    background-color: var(--myinterface);
-    transition: color 0.4s;
+    border: 1px solid var(--myinterface);
+    background: transparent; 
+    color: var(--myinterface);                
+    transform: scale(0.96);  
 }
 @keyframes flipIn {
   from {
