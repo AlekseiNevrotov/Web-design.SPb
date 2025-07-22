@@ -142,11 +142,6 @@ document.fonts.ready.then(function() {
             document.getElementById('preloader').style.display = 'none';
         }, 600);
     });
-
-
-
-
-
   document.getElementById('auditForm').onsubmit = async function(e) {
   e.preventDefault();
   const status = document.getElementById('form-status');
