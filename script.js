@@ -145,6 +145,7 @@ document.fonts.ready.then(function() {
   document.getElementById('auditForm').onsubmit = async function(e) {
   e.preventDefault();
   const status = document.getElementById('form-status');
+  status.className = 'sending';
   status.innerText = 'Отправка...';
   const form = e.target;
 
@@ -157,6 +158,7 @@ document.fonts.ready.then(function() {
   }
   // Проверяем, что ровно 10 цифр
   if (digits.length !== 10) {
+    status.className = 'error';
     status.innerText = 'Пожалуйста, заполните телефон полностью!';
     form.phone.focus();
     return;
@@ -175,15 +177,19 @@ document.fonts.ready.then(function() {
       body: JSON.stringify(data)
     });
     if (res.ok) {
+      status.className = 'success';
       status.innerText = 'Спасибо за заявку!';
       setTimeout(() => {
   form.reset();
   status.innerText = '';
+  status.className = '';
 }, 1500);
     } else {
+      status.className = 'error';
       status.innerText = 'Ошибка при отправке. Попробуйте позже.';
     }
   } catch {
+    status.className = 'error';
     status.innerText = 'Ошибка сети. Попробуйте позже.';
   }
 };
@@ -234,3 +240,18 @@ document.fonts.ready.then(function() {
 
   this.value = masked;
 });
+const servicesBlock = document.querySelector('.services-form-block');
+const isElementInViewport = (el) => {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) + 152 &&
+        rect.bottom >= 0
+    );
+};
+const handleScroll = () => {
+    if (isElementInViewport(servicesBlock)) {
+        servicesBlock.classList.add('show'); 
+        window.removeEventListener('scroll', handleScroll); 
+    }
+};
+window.addEventListener('scroll', handleScroll);

@@ -821,7 +821,6 @@ ul {
   border-radius: 20px;
   font-weight: 300;
 }
-
 .services-list {
   flex: 1.6;
   padding: 24px 24px;
@@ -861,7 +860,6 @@ ul {
   font-weight: 300;
   font-size: 16px;
 }
-
 .inline-form {
   flex: 1;
   background: var(--black3);
@@ -872,8 +870,29 @@ ul {
   margin-right: 24px;
   font-weight: 300;
 }
-
-
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) rotate(10deg);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.05) rotate(-5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+.services-form-block {
+    opacity: 0; 
+    transform: scale(0.8); 
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
+}
+.services-form-block.show {
+    opacity: 1; 
+    transform: scale(1); 
+}
 .inline-form form input,
 .inline-form form textarea {
   width: 100%;
@@ -919,7 +938,33 @@ textarea::placeholder {
   font-family: 'DM Sans', Arial, sans-serif;
   font-weight: 300;
   cursor: pointer;
+  text-decoration: none;
   background: transparent;
   letter-spacing: 0.04em;
   margin-top: 19px;
+}
+    .inline-form form button[type="submit"]:hover {
+      border: 1px solid var(--accent);
+      background: transparent; 
+      color: var(--accent);
+    }
+    .inline-form form button[type="submit"]:active {
+  border: 1px solid var(--myinterface);
+  background: transparent; 
+  color: var(--myinterface);                
+  transform: scale(0.96);        
+}
+/* Примеры статусов */
+#form-status.sending {
+    display: block; /* Для статуса отправки */
+}
+
+.success {
+    background-color: #d4edda; /* Светлый зеленый фон для успешного сообщения */
+    color: #155724; /* Темно-зеленый текст */
+}
+
+.error {
+    background-color: #f8d7da; /* Светлый красный фон для ошибки */
+    color: #721c24; /* Темно-красный текст */
 }
