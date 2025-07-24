@@ -88,12 +88,20 @@
   color: var(--accent);
   margin-bottom: 0px;
   margin-top: 40px;
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none;
 }
 .hero-content p {
   font-size: 32px;
   color: var(--text);
   max-width: 1000px;
   margin-bottom: 60px;
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none;
 }
 .btn {
       padding: 16px 32px;
@@ -106,6 +114,10 @@
       text-decoration: none;
       transition: all 0.4s ease;
       animation: btn-breathe 2.4s ease-in-out infinite;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
     }
     .btn:hover {
       border: 1px solid var(--accent);
@@ -155,6 +167,10 @@
       overflow: hidden;
       transition: transform 0.4s ease, filter 0.4s ease;
       cursor: pointer;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
     }
     .logo:hover {
   transform: scale(1.04);  
@@ -173,6 +189,10 @@
   gap: 8px;
   font-size: 14px;
   color: var(--grey2);
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none;
 }
 .weather img {
   width: 24px;
@@ -182,6 +202,10 @@
     .nav {
       display: flex;
       gap: 24px;
+      -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none;
     }
     .nav a {
       color: var(--text);
@@ -428,6 +452,10 @@ ul {
       margin-top: 40px;
       margin-bottom: 30px;
       text-align: center;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
     }
     .portfolio-link:hover {
       box-shadow: 4px 0px 8px var(--accent);
@@ -548,6 +576,10 @@ ul {
     .business-article {
       margin-top: 52px;
       line-height: 24px;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
 }
     .footer {
   border-top: 1px solid var(--grey);
@@ -569,6 +601,10 @@ ul {
   font-size: 14px;
   color: var(--grey2);
   max-width: 240px;
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none; 
 }
 .footer__nav {
   display: flex;
@@ -580,6 +616,10 @@ ul {
   text-decoration: none;
   font-size: 16px;
   transition: 0.4s;
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none;
 }
 .footer__nav a:hover {
   color: var(--accent);
@@ -903,6 +943,10 @@ ul {
   font-size: 16px;
   font-family: 'DM Sans', Arial, sans-serif;
   transition: border 0.2s, background 0.2s;
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none;
 }
 input {
     resize: none; 
@@ -939,6 +983,10 @@ textarea::placeholder {
   background: transparent;
   letter-spacing: 0.04em;
   margin-top: 19px;
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none;
 }
     .inline-form form button[type="submit"]:hover {
       border: 1px solid var(--accent);
