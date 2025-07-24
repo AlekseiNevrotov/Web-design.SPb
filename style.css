@@ -414,13 +414,13 @@ ul {
     }
     .portfolio-link {
       display: block;
-      
       background: var(--black3);
       color: var(--text);
       text-decoration: none;
       border-radius: 20px;
       padding: 24px 24px;
       font-size: 24px;
+      transition: box-shadow 0.4s;
       font-family: 'Ubuntu', Arial, sans-serif;
       font-weight: 300;
       box-shadow: 4px 0px 8px var(--black2);
@@ -430,15 +430,12 @@ ul {
       text-align: center;
     }
     .portfolio-link:hover {
-      background: var(--accent);
       box-shadow: 4px 0px 8px var(--accent);
-      color: var(--text);
     }
     .portfolio-link:active {
-      background: var(--myinterface);
-      box-shadow: 4px 0px 8px var(--myinterface);
-      color: var(--text);
-      transition: color 0.4s;
+    box-shadow: 4px 0px 8px var(--myinterface); /* Цвет тени при клике */
+    color: var(--text);
+    transform: scale(0.96);
     }
     @media (max-width: 600px) {
       main {
