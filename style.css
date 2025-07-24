@@ -968,3 +968,7 @@ textarea::placeholder {
     background-color: #f8d7da; /* Светлый красный фон для ошибки */
     color: #721c24; /* Темно-красный текст */
 }
+.sending {
+    background-color: #f8d7da; /* Светлый красный фон для ошибки */
+    color: #721c24; /* Темно-красный текст */
+}
