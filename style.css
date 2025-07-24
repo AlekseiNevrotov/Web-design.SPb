@@ -826,6 +826,9 @@ ul {
   background: var(--black3);
   color: var(--text);
   display: flex;
+  font-family: 'Ubuntu', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
   flex-direction: column;
   justify-content: center;
 }
