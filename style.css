@@ -954,17 +954,24 @@ textarea::placeholder {
   color: var(--myinterface);                
   transform: scale(0.96);        
 }
-
-
 .success {
-    background-color: #d4edda; /* Светлый зеленый фон для успешного сообщения */
-    color: #155724; /* Темно-зеленый текст */
+    background-color: var(--black3); 
+    color: var(--mylogo); 
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
 }
 .error {
-    background-color: #f8d7da; /* Светлый красный фон для ошибки */
-    color: #721c24; /* Темно-красный текст */
+    background-color: var(--black3); 
+    color: var(--accent); 
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
 }
 .sending {
-    background-color: #f8d7da; /* Светлый красный фон для ошибки */
-    color: #721c24; /* Темно-красный текст */
+    background-color: var(--black3); 
+    color: var(--myinterface);
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
 }
