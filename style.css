@@ -842,9 +842,15 @@ ul {
   font-size: 24px;
   color: var(--accent);
 }
+.services-list b {
+  font-family: 'Ubuntu', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300; 
+}
 .services-list span {
   background: var(--black3);
   color: var(--text);
+  font-family: 'DM Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
 }
