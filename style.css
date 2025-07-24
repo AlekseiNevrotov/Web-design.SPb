@@ -884,7 +884,7 @@ ul {
   padding: 12px 8px;
   background: var(--black3);
   color: var(--text);
-  border: 1px solid var(--grey);
+  border: 1px solid var(--grey2);
   font-weight: 300;
   border-radius: 20px;
   font-size: 16px;
@@ -893,7 +893,7 @@ ul {
 }
 .inline-form form input:focus,
 .inline-form form textarea:focus {
-  border: 1.5px solid var(--accent);
+  border: 1.5px solid var(--myinterface);
   outline: none;
   font-weight: 300;
 }
