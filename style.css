@@ -954,16 +954,13 @@ textarea::placeholder {
   color: var(--myinterface);                
   transform: scale(0.96);        
 }
-/* Примеры статусов */
-#form-status.sending {
-    display: block; /* Для статуса отправки */
-}
 
+
+}
 .success {
     background-color: #d4edda; /* Светлый зеленый фон для успешного сообщения */
     color: #155724; /* Темно-зеленый текст */
 }
-
 .error {
     background-color: #f8d7da; /* Светлый красный фон для ошибки */
     color: #721c24; /* Темно-красный текст */
