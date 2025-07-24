@@ -868,7 +868,7 @@ ul {
   color: var(--accent);
   font-family: 'Ubuntu', Arial, sans-serif;
   margin-bottom: 22px;
-  font-size: 1.22rem;
+  font-size: 24rem;
 }
 
 .inline-form form input,
@@ -879,8 +879,9 @@ ul {
   background: var(--black3);
   color: var(--text);
   border: 1px solid var(--grey);
+  font-weight: 300;
   border-radius: 20px;
-  font-size: 1em;
+  font-size: 16px;
   font-family: 'DM Sans', Arial, sans-serif;
   transition: border 0.2s, background 0.2s;
 }
@@ -898,6 +899,7 @@ ul {
   border: 1px solid var(--accent);
   font-size: 16px;
   font-family: 'DM Sans', Arial, sans-serif;
+  font-weight: 300;
   cursor: pointer;
   background: transparent;
   letter-spacing: 0.04em;
