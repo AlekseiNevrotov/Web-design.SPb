@@ -891,6 +891,20 @@ ul {
   font-family: 'DM Sans', Arial, sans-serif;
   transition: border 0.2s, background 0.2s;
 }
+input {
+    resize: none; 
+    height: 24px;
+}
+textarea {
+    resize: none; 
+    height: 24px;
+}
+input[type="text"]::placeholder {
+    color: var(--grey2);
+}
+textarea::placeholder {
+    color: var(--grey2);
+}
 .inline-form form input:focus,
 .inline-form form textarea:focus {
   border: 1.5px solid var(--myinterface);
