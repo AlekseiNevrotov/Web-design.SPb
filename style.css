@@ -889,6 +889,7 @@ ul {
 .inline-form form textarea:focus {
   border: 1.5px solid var(--accent);
   outline: none;
+  font-weight: 300;
 }
 .inline-form form button[type="submit"] {  
   color: var(--text);
