@@ -872,13 +872,7 @@ ul {
   margin-right: 24px;
   font-weight: 300;
 }
-.inline-form h2 {
-  color: var(--accent);
-  font-family: 'Ubuntu', Arial, sans-serif;
-  margin-bottom: 22px;
-  font-size: 24rem;
-  font-weight: 300;
-}
+
 
 .inline-form form input,
 .inline-form form textarea {
