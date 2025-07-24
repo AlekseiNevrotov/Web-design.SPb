@@ -893,11 +893,11 @@ ul {
 }
 input {
     resize: none; 
-    height: 24px;
+    height: 26px;
 }
 textarea {
     resize: none; 
-    height: 24px;
+    height: 26px;
 }
 input[type="text"]::placeholder {
     color: var(--grey2);
