@@ -148,28 +148,21 @@ document.fonts.ready.then(function() {
   status.className = 'sending';
   status.innerText = 'Отправка...';
   const form = e.target;
-
-  // Очищаем номер до цифр
   let digits = form.phone.value.replace(/\D/g, '');
-
-  // Если ввели "7" или "8" первым символом — удаляем
   if (digits.startsWith('7') || digits.startsWith('8')) {
     digits = digits.slice(1);
   }
-  // Проверяем, что ровно 10 цифр
   if (digits.length !== 10) {
     status.className = 'error';
     status.innerText = 'Пожалуйста, заполните телефон полностью!';
     form.phone.focus();
     return;
   }
-
   const data = {
     name: form.name.value,
     phone: digits,
     message: form.message.value
   };
-
   try {
     const res = await fetch('/api/sendMail', {
       method: 'POST',
@@ -193,11 +186,8 @@ document.fonts.ready.then(function() {
     status.innerText = 'Ошибка сети. Попробуйте позже.';
   }
 };
-  
     const phoneInput = document.getElementById('phone');
     const mask = '+7 (___) ___-__-__';
-
-    // Функция для применения маски к строке из цифр
     function applyMask(digits) {
       let output = '+7 (';
       output += digits.substring(0, 3);
@@ -215,20 +205,12 @@ document.fonts.ready.then(function() {
       }
       return output;
     }
-
     phoneInput.addEventListener('input', function(e) {
-  // Убираем всё, кроме цифр
   let digits = this.value.replace(/\D/g, '');
-
-  // Если ввели 7 или 8 первым символом, отрезаем
   if (digits.startsWith('7') || digits.startsWith('8')) {
     digits = digits.slice(1);
   }
-
-  // Ограничиваем до 10 цифр
   digits = digits.slice(0, 10);
-
-  // Формируем маску "+7 (___) ___-__-__"
   let masked = '+7 (';
   if (digits.length > 0) masked += digits.substring(0, 3);
   if (digits.length >= 3) masked += ') ';
@@ -237,7 +219,6 @@ document.fonts.ready.then(function() {
   if (digits.length >= 6) masked += digits.substring(6, 8);
   if (digits.length >= 8) masked += '-';
   if (digits.length >= 8) masked += digits.substring(8, 10);
-
   this.value = masked;
 });
 const servicesBlock = document.querySelector('.services-form-block');
