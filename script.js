@@ -301,7 +301,7 @@ const closeBtn = document.querySelector('.modal-close');
 const iframe = document.getElementById('calcIframe');
 openBtn.addEventListener('click', () => {
   modal.style.display = 'flex';
-  document.body.style.overflow = 'hidden'; 
+  document.body.style.overflow = 'auto'; 
 });
 closeBtn.addEventListener('click', () => closeModal());
 modal.addEventListener('click', (e) => {
