@@ -1056,7 +1056,6 @@ textarea::placeholder {
   border-radius: 16px;
   overflow: hidden; /* Чтобы скругления работали */
   animation: fadeIn 0.3s ease-out;
-  height: 100vh;
 }
 .modal-close {
   position: absolute;
