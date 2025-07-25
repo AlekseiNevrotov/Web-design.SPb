@@ -108,7 +108,7 @@
       font-size: 16px;
       color: var(--text);
       border: 1px solid var(--accent);
-      background: transparent;
+      background: var(--bg);
       border-radius: 60px;
       cursor: pointer;
       text-decoration: none;
@@ -121,12 +121,12 @@
     }
     .btn:hover {
       border: 1px solid var(--accent);
-      background: transparent; 
+      background: var(--bg);
       color: var(--accent);
     }
     .btn:active {
   border: 1px solid var(--myinterface);
-  background: transparent; 
+  background: var(--bg); 
   color: var(--myinterface);                
   transform: scale(0.96);        
 }
