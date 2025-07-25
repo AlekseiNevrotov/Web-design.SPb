@@ -311,7 +311,7 @@ modal.addEventListener('click', (e) => {
 });
 function closeModal() {
   modal.style.display = 'none';
-  document.body.style.overflow = 'auto'; 
+  document.body.style.overflow = 'hidden'; 
 }
 iframe.addEventListener('load', () => {
   try {

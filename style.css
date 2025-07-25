@@ -1049,7 +1049,6 @@ textarea::placeholder {
 }
 .modal-content {
   position: relative;
-  overflow: auto;
   z-index: 1001;
   max-width: 100%;
   width: 100%; /* Увеличьте, если нужно больше места */
