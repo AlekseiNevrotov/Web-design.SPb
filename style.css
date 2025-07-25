@@ -1029,7 +1029,7 @@ textarea::placeholder {
 }
 .modal {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 120;
   left: 0;
   width: 100%;
