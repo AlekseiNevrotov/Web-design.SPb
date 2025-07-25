@@ -1,4 +1,16 @@
-    document.addEventListener('DOMContentLoaded', function() {
+let isFontsLoaded = false;
+let isWeatherLoaded = false;
+
+function hidePreloader() {
+    if (isFontsLoaded && isWeatherLoaded) {
+        document.getElementById('preloader').classList.add('hide');
+        document.getElementById('main-content').classList.add('visible');
+        setTimeout(() => {
+            document.getElementById('preloader').style.display = 'none';
+        }, 600);
+    }
+}
+document.addEventListener('DOMContentLoaded', function() {
       const burgerBtn = document.getElementById('burgerBtn');
       const burgerMenu = document.getElementById('burgerMenu');
       burgerBtn.addEventListener('click', function() {
@@ -82,6 +94,9 @@
       document.getElementById("weather-temp").textContent = `${tempC}°C`;
     } catch (err) {
       console.error("Ошибка получения погоды:", err);
+    } finally {
+      isWeatherLoaded = true;
+      hidePreloader();
     }
   }
   fetchWeather();
@@ -136,12 +151,9 @@ function smoothScrollTo(targetId) {
     });
 }
 document.fonts.ready.then(function() {
-        document.getElementById('preloader').classList.add('hide');
-        document.getElementById('main-content').classList.add('visible');
-        setTimeout(() => {
-            document.getElementById('preloader').style.display = 'none';
-        }, 600);
-    });
+    isFontsLoaded = true;
+    hidePreloader();
+});
   document.getElementById('auditForm').onsubmit = async function(e) {
   e.preventDefault();
   const status = document.getElementById('form-status');
