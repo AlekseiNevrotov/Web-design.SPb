@@ -295,3 +295,35 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(sec => observer.observe(sec.element));
   const initialScroll = window.scrollY;
 });
+const modal = document.getElementById('modal');
+const openBtn = document.getElementById('openCalcBtn');
+const closeBtn = document.querySelector('.modal-close');
+const iframe = document.getElementById('calcIframe');
+openBtn.addEventListener('click', () => {
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden'; 
+});
+closeBtn.addEventListener('click', () => closeModal());
+modal.addEventListener('click', (e) => {
+  if (e.target === modal || e.target.classList.contains('modal-overlay')) {
+    closeModal();
+  }
+});
+function closeModal() {
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto'; 
+}
+iframe.addEventListener('load', () => {
+  try {
+    const iframeHeight = iframe.contentWindow.document.body.scrollHeight + 20; 
+    iframe.style.height = `${Math.min(iframeHeight, window.innerHeight * 0.8)}px`;
+  } catch (e) {
+    console.warn('Ошибка доступа к iframe (cross-origin?)');
+    iframe.style.height = '600px'; 
+  }
+});
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal.style.display === 'flex') {
+    closeModal();
+  }
+});

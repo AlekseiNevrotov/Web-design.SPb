@@ -1027,3 +1027,66 @@ textarea::placeholder {
     display: flex; 
     align-items: center;
 }
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+.modal-content {
+  position: relative;
+  z-index: 1001;
+  max-width: 100%;
+  width: 1000px; /* Увеличьте, если нужно больше места */
+  background: transparent;
+  border-radius: 16px;
+  overflow: hidden; /* Чтобы скругления работали */
+  animation: fadeIn 0.3s ease-out;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: #666; /* Или ваш var(--grey2) */
+  cursor: pointer;
+  z-index: 1002; /* Над iframe */
+  transition: color 0.2s;
+}
+.modal-close:hover {
+  color: #26D97C; /* Ваш var(--accent) */
+}
+#calcIframe {
+  width: 100%;
+  height: 100vh; /* Полная высота viewport, но ограничиваем */
+  max-height: 80vh; /* Чтобы не выходило за экран */
+  border: none;
+  background: transparent;
+  display: block;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+  }
+  #calcIframe {
+    max-height: 90vh; /* Больше места на мобильных */
+  }
+}

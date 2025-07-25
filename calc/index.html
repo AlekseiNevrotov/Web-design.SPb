@@ -40,7 +40,7 @@
       box-shadow: 0 4px 32px rgba(38,217,205,0.07);
       padding: 40px 36px 32px 36px;
       margin: 48px 0 32px 0;
-      max-width: 420px;
+      max-width: 860px;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -48,6 +48,25 @@
       gap: 24px;
       border: 1.5px solid var(--black2);
       position: relative;
+    }
+    .columns-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      align-items: flex-start;
+    }
+    .left-column,
+    .right-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .left-column {
+      min-width: 300px;
+    }
+    .right-column {
+      min-width: 300px;
     }
     .calc-title {
       font-family: 'Ubuntu', Arial, sans-serif;
@@ -169,6 +188,15 @@
         padding: 18px 4vw 18px 4vw;
         margin: 24px 0 16px 0;
         border-radius: 18px;
+        max-width: 420px;
+      }
+      .columns-wrapper {
+        flex-direction: column;
+        gap: 24px;
+      }
+      .left-column,
+      .right-column {
+        min-width: auto;
       }
       .calc-title {
         font-size: 1.3em;
@@ -185,31 +213,34 @@
 </head>
 <body>
   <div class="calc-container">
-    <div class="calc-title">Калькулятор стоимости</div>
+    
     <div class="calc-subtitle">Быстро рассчитайте примерную стоимость сайта и отправьте заявку</div>
-    <label>Количество страниц: <span id="pagesValue">1</span></label>
-    <input type="range" id="pages" min="1" max="20" value="1">
-
-    <div class="checkbox-group">
-      <label><input type="checkbox" id="design"> Дизайн</label>
-      <label><input type="checkbox" id="adaptive"> Адаптивность</label>
-      <label><input type="checkbox" id="cms"> CMS (админка)</label>
+    <div class="columns-wrapper">
+      <div class="left-column">
+        <label>Количество страниц: <span id="pagesValue">1</span></label>
+        <input type="range" id="pages" min="1" max="20" value="1">
+        <div class="checkbox-group">
+          <label><input type="checkbox" id="design"> Дизайн</label>
+          <label><input type="checkbox" id="adaptive"> Адаптивность</label>
+          <label><input type="checkbox" id="cms"> CMS (админка)</label>
+        </div>
+        <div class="total">Итого: <span id="total">0</span> ₽</div>
+      </div>
+      <div class="right-column">
+        <form id="auditForm">
+          <input type="text" name="name" placeholder="Имя">
+          <input type="text" id="phone" placeholder="+7 (___) ___-__-__" maxlength="18" autocomplete="off">
+          <textarea name="message" placeholder="Брифинг" rows="3"></textarea>
+          <input type="hidden" name="pages_count" id="pages_count">
+          <input type="hidden" name="design_selected" id="design_selected">
+          <input type="hidden" name="adaptive_selected" id="adaptive_selected">
+          <input type="hidden" name="cms_selected" id="cms_selected">
+          <input type="hidden" name="total_cost" id="total_cost">
+          <button type="submit">Отправить</button>
+        </form>
+        <div id="form-status"></div>
+      </div>
     </div>
-
-    <div class="total">Итого: <span id="total">0</span> ₽</div>
-
-    <form id="auditForm">
-      <input type="text" name="name" placeholder="Имя" >
-      <input type="text" id="phone" placeholder="+7 (___) ___-__-__" maxlength="18" autocomplete="off">
-      <textarea name="message" placeholder="Брифинг" rows="3"></textarea>
-      <input type="hidden" name="pages_count" id="pages_count">
-      <input type="hidden" name="design_selected" id="design_selected">
-      <input type="hidden" name="adaptive_selected" id="adaptive_selected">
-      <input type="hidden" name="cms_selected" id="cms_selected">
-      <input type="hidden" name="total_cost" id="total_cost">
-      <button type="submit">Отправить</button>
-    </form>
-    <div id="form-status"></div>
   </div>
   <script>
     const pages = document.getElementById('pages');

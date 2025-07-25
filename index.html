@@ -86,7 +86,15 @@
   <div class="hero-content">
     <h1>Веб-дизайн <br class="mobile-br">и создание сайтов</h1>
     <h2><p>Закажите современный сайт или веб-приложение под ключ <br>для бизнеса и продаж! </p></h2>
-    <a href="calc/" class="btn">Бесплатная консультация</a>
+    <!--<a href="calc/" class="btn">Бесплатная консультация</a>-->
+    <button class="btn" id="openCalcBtn">Бесплатная консультация</button>
+    <div id="modal" class="modal">
+  <div class="modal-overlay"></div> 
+  <div class="modal-content">
+    <span class="modal-close">&times;</span> 
+    <iframe id="calcIframe" src="calc/index.html" frameborder="0" title="Калькулятор стоимости"></iframe>
+  </div>
+</div>
   </div>
 </section>
   <nav class="mobile-menu" id="burgerMenu">
