@@ -255,3 +255,50 @@ const handleScroll = () => {
     }
 };
 window.addEventListener('scroll', handleScroll);
+document.addEventListener('DOMContentLoaded', () => {
+  const menuLinks = document.querySelectorAll('.nav .scroll-button');
+  const sections = [];
+  menuLinks.forEach(link => {
+    const href = link.getAttribute('href'); 
+    if (href && href.startsWith('#')) {
+      const targetId = href.substring(1); 
+      const targetElement = document.getElementById(targetId); 
+      if (targetElement) {
+        sections.push({ link, element: targetElement }); 
+      } else {
+        console.warn(`Секция с ID "${targetId}" не найдена!`);
+      }
+    }
+  });
+  if (sections.length === 0) return;
+  const setActiveLink = (activeLink) => {
+    menuLinks.forEach(link => link.classList.remove('active'));
+    if (activeLink) {
+      activeLink.classList.add('active');
+    }
+  };
+  const observer = new IntersectionObserver((entries) => {
+    let visibleEntries = entries.filter(entry => entry.isIntersecting); 
+    if (visibleEntries.length === 0) {
+      setActiveLink(null); 
+      return;
+    }
+    visibleEntries.sort((a, b) => {
+      if (b.intersectionRatio !== a.intersectionRatio) {
+        return b.intersectionRatio - a.intersectionRatio; 
+      }
+      return a.boundingClientRect.top - b.boundingClientRect.top;
+    });
+    const bestEntry = visibleEntries[0];
+    const activeSection = sections.find(sec => sec.element === bestEntry.target);
+    if (activeSection) {
+      setActiveLink(activeSection.link);
+    }
+  }, {
+    root: null, 
+    threshold: [0.1, 0.5], 
+    rootMargin: '-10% 0px -30% 0px' 
+  });
+  sections.forEach(sec => observer.observe(sec.element));
+  const initialScroll = window.scrollY;
+});
