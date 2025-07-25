@@ -1051,7 +1051,7 @@ textarea::placeholder {
   position: relative;
   z-index: 1001;
   max-width: 100%;
-  width: 1000px; /* Увеличьте, если нужно больше места */
+  width: 100%; /* Увеличьте, если нужно больше места */
   background: transparent;
   border-radius: 16px;
   overflow: hidden; /* Чтобы скругления работали */
