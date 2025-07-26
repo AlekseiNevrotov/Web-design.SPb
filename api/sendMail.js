@@ -8,6 +8,7 @@ export async function POST(request) {
       pages_count,
       design_selected,
       adaptive_selected,
+      seo_selected,
       cms_selected,
       total_cost
     } = await request.json();
@@ -29,6 +30,7 @@ export async function POST(request) {
       design_selected ? `Дизайн: ${design_selected}` : null,
       adaptive_selected ? `Адаптивность: ${adaptive_selected}` : null,
       cms_selected ? `CMS: ${cms_selected}` : null,
+      seo_selected ? `SEO настройки: ${seo_selected}` : null,
       total_cost ? `Итоговая стоимость: ${total_cost}` : null,
     ].filter(Boolean);
     const mailText =

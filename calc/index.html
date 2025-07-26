@@ -38,7 +38,7 @@
       background: var(--black3);
       border-radius: var(--radius);
       box-shadow: 0 4px 32px rgba(38,217,205,0.07);
-      padding: 40px 36px 32px 36px;
+      padding: 24px 24px 24px 24px;
       margin: 48px 0 32px 0;
       max-width: 860px;
       width: 100%;
@@ -213,16 +213,15 @@
 </head>
 <body>
   <div class="calc-container">
-    
-    
     <div class="columns-wrapper">
       <div class="left-column">
-        <label>Количество страниц: <span id="pagesValue">1</span></label>
+        <label>Рассчитайте примерную стоимость сайта! Количество страниц: <span id="pagesValue">1</span></label>
         <input type="range" id="pages" min="1" max="20" value="1">
         <div class="checkbox-group">
           <label><input type="checkbox" id="design"> Дизайн</label>
           <label><input type="checkbox" id="adaptive"> Адаптивность</label>
           <label><input type="checkbox" id="cms"> CMS (админка)</label>
+          <label><input type="checkbox" id="seo"> SEO настройки</label>
         </div>
         <div class="total">Итого: <span id="total">0</span> ₽</div>
       </div>
@@ -236,9 +235,9 @@
           <input type="hidden" name="adaptive_selected" id="adaptive_selected">
           <input type="hidden" name="cms_selected" id="cms_selected">
           <input type="hidden" name="total_cost" id="total_cost">
+          <div id="form-status"></div>
           <button type="submit">Отправить</button>
         </form>
-        <div id="form-status"></div>
       </div>
     </div>
   </div>
@@ -248,14 +247,16 @@
     const design = document.getElementById('design');
     const adaptive = document.getElementById('adaptive');
     const cms = document.getElementById('cms');
+    const seo = document.getElementById('seo');
     const total = document.getElementById('total');
 
     function calculate() {
       let cost = pages.value * 5000;
 
-      if (design.checked) cost += 5000;
-      if (adaptive.checked) cost += 3000;
+      if (design.checked) cost += 25000;
+      if (adaptive.checked) cost += 43000;
       if (cms.checked) cost += 7000;
+      if (seo.checked) cost += 15000;
 
       pagesValue.textContent = pages.value;
       total.textContent = cost.toLocaleString();
@@ -265,6 +266,7 @@
       document.getElementById('design_selected').value = design.checked ? 'Да' : 'Нет';
       document.getElementById('adaptive_selected').value = adaptive.checked ? 'Да' : 'Нет';
       document.getElementById('cms_selected').value = cms.checked ? 'Да' : 'Нет';
+      document.getElementById('seo_selected').value = seo.checked ? 'Да' : 'Нет';
       document.getElementById('total_cost').value = cost;
     }
 
@@ -272,6 +274,7 @@
     design.addEventListener('change', calculate);
     adaptive.addEventListener('change', calculate);
     cms.addEventListener('change', calculate);
+    seo.addEventListener('change', calculate);
 
     calculate(); // начальный расчёт
 
@@ -310,6 +313,7 @@ document.getElementById('auditForm').onsubmit = async function(e) {
     design_selected: form.design_selected.value,
     adaptive_selected: form.adaptive_selected.value,
     cms_selected: form.cms_selected.value,
+    seo_selected: form.seo_selected.value,
     total_cost: form.total_cost.value
   };
   try {
