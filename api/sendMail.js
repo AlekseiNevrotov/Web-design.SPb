@@ -8,8 +8,8 @@ export async function POST(request) {
       pages_count,
       design_selected,
       adaptive_selected,
-      seo_selected,
       cms_selected,
+      seo_selected,
       total_cost
     } = await request.json();
     if (!phone || phone.trim().length !== 10 || !/^\d{10}$/.test(phone)) {
