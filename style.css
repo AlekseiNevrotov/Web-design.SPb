@@ -1050,8 +1050,11 @@ textarea::placeholder {
 .modal-content {
   position: relative;
   z-index: 1001;
-  max-width: 100%;
-  width: 100%; /* Увеличьте, если нужно больше места */
+  width: 80%;
+  max-width: 600px; /* Максимальная ширина для больших экранов */
+  min-width: 300px; /* Минимальная ширина для меньших экранов */
+  height: auto; /* Высота подстраивается под содержимое */
+  max-height: 80vh; /* Максимальная высота по вьюпорту */
   background: transparent;
   border-radius: 16px;
   overflow: hidden; /* Чтобы скругления работали */
