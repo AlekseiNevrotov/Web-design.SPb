@@ -962,6 +962,8 @@ textarea::placeholder {
 @media (max-width: 1000px) {
   .modal-content {
     width: 100%;
+    height: 1200px;
+    max-height: 1200px;
   }
   #calcIframe {
     max-height: 100vh;
