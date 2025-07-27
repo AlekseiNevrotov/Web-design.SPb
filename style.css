@@ -1032,10 +1032,14 @@ textarea::placeholder {
   }
   .mobile-br {
     display: inline;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
   }
   .submenu-toggle {
   position: relative;
-  padding-right: 30px;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-weight: 300;
+  margin-top: -2px;
 }
 .submenu-toggle::after {
   content: '';
