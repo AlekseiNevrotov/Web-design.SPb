@@ -344,7 +344,8 @@
       color: var(--text);
       text-decoration: none;
       font-size: 14px;
-      font-weight: 500;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
       margin-bottom: 20px;
       transition: color 0.4s;
     }
@@ -354,13 +355,16 @@
     .submenu {
       position: relative;
       width: 100%;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
     }
     .submenu-toggle {
       background: none;
       border: none;
       color: var(--text);
       font-size: 14px;
-      font-weight: 500;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
       text-align: left;
       width: 100%;
       padding: 0;
@@ -376,12 +380,18 @@
       flex-direction: column;
       margin-left: 20px;
       margin-bottom: 0px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
     }
     .submenu.open .submenu-list {
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
       display: flex;
     }
     .submenu-list a {
       font-size: 14px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
       margin-bottom: 12px;
       color: var(--text);
     }
@@ -988,7 +998,11 @@ textarea::placeholder {
       :root {
     --header-height: 80px;
   }
-      .nav { display: none; }
+      .nav { display: none; 
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+      
+      }
       .header {
     padding: 0 20px;
     height: 80px
