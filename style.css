@@ -1005,9 +1005,14 @@ textarea::placeholder {
   }
   .hero-content h1 {
     font-size: 32px;
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 300;
+
   }
   .hero-content p {
     font-size: 20px;
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 300;
     margin-bottom: 40px;
   }
   .hero-content {
@@ -1015,6 +1020,8 @@ textarea::placeholder {
     padding-top: 200px;
   }
   .btn {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
     padding: 14px 28px;
     font-size: 14px;
     
