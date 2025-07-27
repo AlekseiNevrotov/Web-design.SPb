@@ -961,10 +961,10 @@ textarea::placeholder {
 }
 @media (max-width: 600px) {
   .modal-content {
-    width: 95%;
+    width: 100%;
   }
   #calcIframe {
-    max-height: 90vh;
+    max-height: 100vh;
   }
 }
 @media (max-width: 600px) {
@@ -1073,7 +1073,7 @@ textarea::placeholder {
   pointer-events: none;
 }
   main {
-    padding: 24px 4px 24px 4px;
+    padding: 40px 20px 40px 20px;
     max-width: 100vw;
   }
   .main-title,
