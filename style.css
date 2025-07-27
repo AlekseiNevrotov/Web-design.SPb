@@ -959,7 +959,7 @@ textarea::placeholder {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .modal-content {
     width: 100%;
   }
@@ -967,7 +967,7 @@ textarea::placeholder {
     max-height: 100vh;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
       main {
         padding: 24px 4vw 24px 4vw;
       }
@@ -984,7 +984,7 @@ textarea::placeholder {
         margin-bottom: 12px;
       }
     }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .services-form-block {
     flex-direction: column;
     max-width: 98vw;
