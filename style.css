@@ -1106,7 +1106,7 @@ textarea::placeholder {
 }
       .burger { display: flex; }
       .mobile-menu { top: var(--header-height); }
-      main { padding: calc(var(--header-height) + 24px) 8px 24px 8px; }
+      main { padding: 40px 20px 40px 20px; }
       .features { flex-direction: column; gap: 20px; }
     }
     .mobile-menu .submenu {
