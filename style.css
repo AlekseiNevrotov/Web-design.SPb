@@ -461,26 +461,9 @@ ul {
       box-shadow: 4px 0px 8px var(--accent);
     }
     .portfolio-link:active {
-    box-shadow: 4px 0px 8px var(--myinterface); /* Цвет тени при клике */
+    box-shadow: 4px 0px 8px var(--myinterface); 
     color: var(--text);
     transform: scale(0.96);
-    }
-    @media (max-width: 600px) {
-      main {
-        padding: 24px 4vw 24px 4vw;
-      }
-      h1 {
-        font-size: 1.2em;
-        margin-bottom: 20px;
-      }
-      .portfolio-link {
-        padding: 14px 10px;
-        border-radius: 12px;
-        font-size: 1em;
-      }
-      li {
-        margin-bottom: 12px;
-      }
     }
 .reviews-section {
     background: var(--bg);
@@ -680,8 +663,8 @@ ul {
     z-index: 1000; 
 }
 #scrollToTop.show {
-    right: 20px; /* Конечное положение */
-    opacity: 1; /* Делает кнопку видимой */
+    right: 20px; 
+    opacity: 1; 
 }
 #scrollToTop:hover {
     border-color: var(--accent);
@@ -710,139 +693,6 @@ ul {
 .flip-in {
   animation: flipIn 0.8s ease forwards; 
   opacity: 1; 
-}
-/* Адаптация под мобилки */
-@media (max-width: 800px) {
-  .services-form-block {
-    flex-direction: column;
-    max-width: 98vw;
-    margin: 18px auto 0 auto;
-  }
-  .services-list, .inline-form {
-    padding: 18px 10px;
-    border-radius: 0!important;
-  }
-}
-@media (max-width: 1000px) {
-      :root {
-    --header-height: 80px;
-  }
-      .nav { display: none; }
-      .header {
-    padding: 0 20px;
-    height: 80px
-  }
-  .logo {
-    height: 40px;
-    min-width: auto; 
-  }
-  .logo img {
-    height: 40px;
-  }
-  .header {
-    border-radius: 0; 
-  }
-  .header::after {
-    border-radius: 0;   
-  }
-  .footer {
-    border-radius: 0;  
-  }
-  .hero-content h1 {
-    font-size: 32px;
-  }
-  .hero-content p {
-    font-size: 20px;
-    margin-bottom: 40px;
-  }
-  .hero-content {
-    justify-content: flex-start;
-    padding-top: 200px;
-  }
-  .btn {
-    padding: 14px 28px;
-    font-size: 14px;
-    
-    max-width: 320px;
-    border-radius: 40px;
-  }
-  .mobile-br {
-    display: inline;
-  }
-  .submenu-toggle {
-  position: relative;
-  padding-right: 0px;
-}
-.submenu-toggle::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  right: 6.5px;
-  top: 50%;
-  width: 12px;
-  height: 12px;
-  border-right: 1px solid var(--text);
-  border-bottom: 1px solid var(--text);
-  transform: translateY(-60%) rotate(45deg);
-  transition: transform 0.4s;
-  pointer-events: none;
-}
-  main {
-    padding: 24px 4px 24px 4px;
-    max-width: 100vw;
-  }
-  .main-title,
-  .subtitle {
-    padding-left: 4px;
-    padding-right: 4px;
-    font-size: 24px;
-  }
-  .features,
-  .advantages-list {
-    flex-direction: column;
-    gap: 16px;
-    align-items: stretch;
-    margin-bottom: 32px;
-  }
-  .feature,
-  .advantage-item {
-    min-width: 0;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 16px 8px;
-  }
-  .advantages {
-    padding: 24px 4px;
-  }
-.submenu.open .submenu-toggle::after {
-  transform: translateY(-60%) rotate(-135deg);
-  border-right: 1px solid var(--accent);
-  border-bottom: 1px solid var(--accent);
-}
-      .burger { display: flex; }
-      .mobile-menu { top: var(--header-height); }
-      main { padding: calc(var(--header-height) + 24px) 8px 24px 8px; }
-      .features { flex-direction: column; gap: 20px; }
-    }
-    .mobile-menu .submenu {
-  margin-bottom: 8px;
-  margin-top: 0;
-}
-@media screen and (orientation: landscape) and (max-width: 1000px) {
-  body::before {
-    content: "Поверните устройство вертикально и обновите страницу.";
-    position: fixed;
-    z-index: 9999;
-    inset: 0;
-    background: var(--bg);
-    color: var(--text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    text-align: center;
-    pointer-events: all;
-  }
 }
 .services-title {
     font-size: 48px;
@@ -1058,13 +908,13 @@ textarea::placeholder {
   position: relative;
   z-index: 1001;
   width: 80%;
-  max-width: 1400px; /* Максимальная ширина для больших экранов */
-  min-width: 300px; /* Минимальная ширина для меньших экранов */
-  height: auto; /* Высота подстраивается под содержимое */
-  max-height: 100vh; /* Максимальная высота по вьюпорту */
+  max-width: 1400px;
+  min-width: 300px; 
+  height: auto; 
+  max-height: 100vh; 
   background: transparent;
   border-radius: 16px;
-  overflow: hidden; /* Чтобы скругления работали */
+  overflow: hidden; 
   animation: fadeIn 0.3s ease-out;
 }
 .modal-close {
@@ -1072,18 +922,18 @@ textarea::placeholder {
   top: 10px;
   right: 10px;
   font-size: 2rem;
-  color: #666; /* Или ваш var(--grey2) */
+  color: #666; 
   cursor: pointer;
-  z-index: 1002; /* Над iframe */
+  z-index: 1002; 
   transition: color 0.2s;
 }
 .modal-close:hover {
-  color: #26D97C; /* Ваш var(--accent) */
+  color: #26D97C; 
 }
 #calcIframe {
   width: 100%;
-  height: 100vh; /* Полная высота viewport, но ограничиваем */
-  max-height: 80vh; /* Чтобы не выходило за экран */
+  height: 100vh; 
+  max-height: 80vh; 
   border: none;
   background: transparent;
   display: block;
@@ -1097,6 +947,155 @@ textarea::placeholder {
     width: 95%;
   }
   #calcIframe {
-    max-height: 90vh; /* Больше места на мобильных */
+    max-height: 90vh;
+  }
+}
+@media (max-width: 600px) {
+      main {
+        padding: 24px 4vw 24px 4vw;
+      }
+      h1 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+      }
+      .portfolio-link {
+        padding: 14px 10px;
+        border-radius: 12px;
+        font-size: 1em;
+      }
+      li {
+        margin-bottom: 12px;
+      }
+    }
+@media (max-width: 800px) {
+  .services-form-block {
+    flex-direction: column;
+    max-width: 98vw;
+    margin: 18px auto 0 auto;
+  }
+  .services-list, .inline-form {
+    padding: 18px 10px;
+    border-radius: 0!important;
+  }
+}
+@media (max-width: 1000px) {
+      :root {
+    --header-height: 80px;
+  }
+      .nav { display: none; }
+      .header {
+    padding: 0 20px;
+    height: 80px
+  }
+  .logo {
+    height: 40px;
+    min-width: auto; 
+  }
+  .logo img {
+    height: 40px;
+  }
+  .header {
+    border-radius: 0; 
+  }
+  .header::after {
+    border-radius: 0;   
+  }
+  .footer {
+    border-radius: 0;  
+  }
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  .hero-content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .hero-content {
+    justify-content: flex-start;
+    padding-top: 200px;
+  }
+  .btn {
+    padding: 14px 28px;
+    font-size: 14px;
+    
+    max-width: 320px;
+    border-radius: 40px;
+  }
+  .mobile-br {
+    display: inline;
+  }
+  .submenu-toggle {
+  position: relative;
+  padding-right: 0px;
+}
+.submenu-toggle::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 6.5px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-right: 1px solid var(--text);
+  border-bottom: 1px solid var(--text);
+  transform: translateY(-60%) rotate(45deg);
+  transition: transform 0.4s;
+  pointer-events: none;
+}
+  main {
+    padding: 24px 4px 24px 4px;
+    max-width: 100vw;
+  }
+  .main-title,
+  .subtitle {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 24px;
+  }
+  .features,
+  .advantages-list {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+    margin-bottom: 32px;
+  }
+  .feature,
+  .advantage-item {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 16px 8px;
+  }
+  .advantages {
+    padding: 24px 4px;
+  }
+.submenu.open .submenu-toggle::after {
+  transform: translateY(-60%) rotate(-135deg);
+  border-right: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+      .burger { display: flex; }
+      .mobile-menu { top: var(--header-height); }
+      main { padding: calc(var(--header-height) + 24px) 8px 24px 8px; }
+      .features { flex-direction: column; gap: 20px; }
+    }
+    .mobile-menu .submenu {
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+@media screen and (orientation: landscape) and (max-width: 1000px) {
+  body::before {
+    content: "Поверните устройство вертикально и обновите страницу.";
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+    pointer-events: all;
   }
 }
