@@ -100,20 +100,32 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   fetchWeather();
-const scrollToTopButton = document.getElementById("scrollToTop");
-window.onscroll = function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopButton.style.display = "block"; 
+const scrollToTopButton = document.getElementById('scrollToTop');
+let lastScrollY = window.scrollY; // Переменная для отслеживания последней позиции скролла
+
+// Функция для отображения или скрытия кнопки
+window.addEventListener('scroll', () => {
+    // Проверяем текущее положение прокрутки
+    if (window.scrollY > lastScrollY) {
+        // Пользователь прокручивает вниз
+        if (window.scrollY > window.innerHeight * 0.8) { // Проверяем, находимся ли ниже 80% высоты окна
+            scrollToTopButton.classList.add('show'); // Показываем кнопку
+        }
     } else {
-        scrollToTopButton.style.display = "none"; 
+        // Пользователь прокручивает вверх
+        if (window.scrollY <= window.innerHeight * 0.8) { // Прячем кнопку, если находимся выше 80% высоты окна
+            scrollToTopButton.classList.remove('show'); // Скрываем кнопку
+        }
     }
-};
-scrollToTopButton.onclick = function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-};
+    
+    // Обновляем lastScrollY
+    lastScrollY = window.scrollY;
+});
+
+// Прокрутка страницы вверх
+scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Прокрутка плавно вверх
+});
 document.addEventListener('DOMContentLoaded', () => {
   const flipBlock = document.querySelector('.flip-block');
   const checkScroll = () => {

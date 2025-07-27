@@ -661,7 +661,8 @@ ul {
 #scrollToTop {
     position: fixed;
     bottom: 20px; 
-    right: 20px; 
+    right: -80px;
+    opacity: 0;
     display: none; 
     background-color: transparent;
     color: var(--text);
@@ -671,11 +672,16 @@ ul {
     height: 40px; 
     padding: 0; 
     cursor: pointer; 
-    transition: background-color 0.4s, color 0.4s;
+    transition: right 0.3s ease, opacity 0.3s ease;
     display: flex; 
     align-items: center; 
     justify-content: center; 
-    text-align: center; 
+    text-align: center;
+    z-index: 1000; 
+}
+#scrollToTop.show {
+    right: 20px; /* Конечное положение */
+    opacity: 1; /* Делает кнопку видимой */
 }
 #scrollToTop:hover {
     border-color: var(--accent);
