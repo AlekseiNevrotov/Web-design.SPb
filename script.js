@@ -169,7 +169,7 @@ document.fonts.ready.then(function() {
   }
   if (digits.length !== 10) {
     status.className = 'error';
-    status.innerText = 'Пожалуйста, заполните телефон полностью!';
+    status.innerText = 'Заполните пожалуйста телефон полностью!';
     form.phone.focus();
     return;
   }
