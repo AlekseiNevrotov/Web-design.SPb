@@ -961,6 +961,7 @@ textarea::placeholder {
 }
 @media (max-width: 1000px) {
   .modal-content {
+    margin-top: 80px;
     width: 100%;
     height: 1200px;
     max-height: 1200px;
