@@ -1077,7 +1077,7 @@ textarea::placeholder {
   pointer-events: none;
 }
   main {
-    padding: 40px 20px 40px 20px;
+    padding: 20px 20px 20px 20px;
     max-width: 100vw;
   }
   .main-title {
