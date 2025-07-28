@@ -1086,6 +1086,7 @@ textarea::placeholder {
     text-align: center;
     font-size: 20px;
     margin-bottom: 12px;
+    margin-top: 40px;
   }
   .subtitle {
     font-family: 'DM Sans', Arial, sans-serif;
