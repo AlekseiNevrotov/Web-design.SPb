@@ -1100,7 +1100,7 @@ textarea::placeholder {
     min-width: 0;
     max-width: 100%;
     box-sizing: border-box;  
-    flex: 1 0 600px; 
+    flex: 1 0 auto; 
     font-family: 'Ubuntu', Arial, sans-serif;
     font-weight: 300;   
   }
