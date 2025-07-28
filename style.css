@@ -1165,7 +1165,8 @@ textarea::placeholder {
     font-weight: 300;
     font-size: 16px;        
     margin-bottom: 16px;
-    margin-left: 16px;  
+    margin-left: 16px; 
+    margin-top: 20px; 
 }
 .submenu.open .submenu-toggle::after {
   transform: translateY(-60%) rotate(-135deg);
