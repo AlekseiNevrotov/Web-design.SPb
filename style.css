@@ -1094,6 +1094,22 @@ textarea::placeholder {
     font-size: 16px;
     margin-bottom: 20px;
   }
+  .feature {
+    margin: 0;
+    padding: 0;    /* Удаляем внутренний отступ */
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;      
+  }
+
+  .feature-image {
+    width: 100%;
+    padding: 0;
+    height: 200px;          
+    display: block;               
+    margin: 0 auto;  
+    margin-top: 0px;      
+  }
   .features,
   .advantages-list {
     flex-direction: column;
