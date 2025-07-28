@@ -1096,7 +1096,7 @@ textarea::placeholder {
   }
   .feature {
     margin: 0;
-    padding: 0;    /* Удаляем внутренний отступ */
+    padding: 0;    
     min-width: 0;
     max-width: 100%;
     box-sizing: border-box;      
@@ -1122,7 +1122,7 @@ textarea::placeholder {
     min-width: 0;
     max-width: 100%;
     box-sizing: border-box;
-    padding: 16px 8px;
+    padding: 0px 0px;
   }
   .advantages {
     padding: 24px 4px;
