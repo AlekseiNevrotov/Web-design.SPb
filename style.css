@@ -1099,7 +1099,8 @@ textarea::placeholder {
     padding: 0;    
     min-width: 0;
     max-width: 100%;
-    box-sizing: border-box;      
+    box-sizing: border-box;  
+    flex: 1 0 600px;    
   }
 
   .feature-image {
