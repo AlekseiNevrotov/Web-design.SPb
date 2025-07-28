@@ -1084,16 +1084,12 @@ textarea::placeholder {
     font-family: 'Ubuntu', Arial, sans-serif;
     font-weight: 300;
     text-align: center;
-    padding-left: 4px;
-    padding-right: 4px;
     font-size: 20px;
   }
   .subtitle {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     text-align: center;
-    padding-left: 4px;
-    padding-right: 4px;
     font-size: 16px;
     margin-top: -8px;
   }
