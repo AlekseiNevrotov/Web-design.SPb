@@ -1100,9 +1100,10 @@ textarea::placeholder {
     min-width: 0;
     max-width: 100%;
     box-sizing: border-box;  
-    flex: 1 0 600px;    
+    flex: 1 0 600px; 
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 300;   
   }
-
   .feature-image {
     width: 100%;
     padding: 0;
@@ -1118,6 +1119,21 @@ textarea::placeholder {
     align-items: stretch;
     margin-bottom: 32px;
   }
+  .feature-title {
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;        
+    margin-bottom: 12px;
+    margin-top: 20px;
+    margin-left: 20px;          
+}
+.feature-text {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;        
+    margin-bottom: 12px;
+    margin-left: 20px;          
+}
   .feature,
   .advantage-item {
     min-width: 0;
