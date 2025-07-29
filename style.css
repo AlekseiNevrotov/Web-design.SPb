@@ -1006,6 +1006,40 @@ textarea::placeholder {
       li {
         margin-bottom: 12px;
       }
+    .reviews-title {
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 28px; 
+}
+.review {
+    border-bottom: 1px solid var(--accent); 
+    padding: 10px 0; 
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(20px); 
+}
+.review.visible {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+.review:last-child {
+    border-bottom: none; 
+}
+.review-text {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;        
+    margin-bottom: 16px;
+}
+.review-author {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px; 
+    color: var(--grey2); 
+    text-align: right; 
+}
+
     }
 @media (max-width: 1000px) {
   .services-form-block {
