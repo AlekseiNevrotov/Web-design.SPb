@@ -1012,7 +1012,7 @@ textarea::placeholder {
     text-align: center;
     font-size: 28px; 
     margin-top: 6px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 .review {
     border-bottom: 1px solid var(--accent); 
