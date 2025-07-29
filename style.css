@@ -974,13 +974,6 @@ textarea::placeholder {
       main {
         padding: 24px 4vw 24px 4vw;
       }
-      h1 {
-        margin-bottom: 20px;
-      }
-      .portfolio-link {
-        padding: 14px 10px;
-        border-radius: 12px;
-      }
       .portfolio-link {
       display: block;
       background: var(--black3);
@@ -1007,7 +1000,7 @@ textarea::placeholder {
     font-weight: 300;
     text-align: center;
     font-size: 28px; 
-    margin-bottom: 0px; 
+    margin-bottom: 8px; 
     margin-top: -28px;
     }
       li {
