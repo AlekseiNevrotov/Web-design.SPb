@@ -21,7 +21,7 @@
       --grey: #404040;
       --grey2: #666666;
       --text: #FFFFFF;
-      --radius: 32px;
+      --radius: 20px;
     }
     body {
       background: var(--bg);
@@ -67,22 +67,6 @@
     }
     .right-column {
       min-width: 300px;
-    }
-    .calc-title {
-      font-family: 'Ubuntu', Arial, sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--accent);
-      text-align: center;
-      margin-bottom: 8px;
-      
-    }
-    .calc-subtitle {
-      color: var(--grey2);
-      font-size: 1.1rem;
-      text-align: center;
-      margin-bottom: 16px;
-      font-family: 'DM Sans', Arial, sans-serif;
     }
     label {
       font-family: 'Ubuntu', Arial, sans-serif;
@@ -217,7 +201,7 @@
   <div class="calc-container">
     <div class="columns-wrapper">
       <div class="left-column">
-        <label>Выберите необходимое количество страниц: <span id="pagesValue">1</span></label>
+        <label>Выберите количество страниц <br>и расчитайте примерную стоимость:<span id="pagesValue">1</span></label>
         <input type="range" id="pages" min="1" max="20" value="1">
         <div class="checkbox-group">
           <label><input type="checkbox" id="design"> Дизайн</label>
