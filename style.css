@@ -1041,7 +1041,17 @@ textarea::placeholder {
     color: var(--grey2); 
     text-align: right; 
 }
-
+.business-article {
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 16px;    
+      margin-top: 40px;
+      line-height: 24px;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
+}
     }
 @media (max-width: 1000px) {
   .services-form-block {
