@@ -1078,6 +1078,7 @@ textarea::placeholder {
   overflow: hidden;
   border-radius: 20px;
   font-weight: 300;
+  margin-bottom: -32px;
 }
 .services-list {
   flex: 1.6;
