@@ -1052,7 +1052,18 @@ textarea::placeholder {
       -ms-user-select: none;     
       user-select: none;
 }
-.services-title {
+    }
+@media (max-width: 1000px) {
+  .services-form-block {
+    flex-direction: column;
+    max-width: 98vw;
+    margin: 18px auto 0 auto;
+  }
+  .services-list, .inline-form {
+    padding: 18px 10px;
+    border-radius: 0!important;
+  }
+  .services-title {
     font-family: 'Ubuntu', Arial, sans-serif;
     font-weight: 300;
     text-align: center;
@@ -1120,17 +1131,6 @@ textarea::placeholder {
   margin-right: 24px;
   font-weight: 300;
 }
-    }
-@media (max-width: 1000px) {
-  .services-form-block {
-    flex-direction: column;
-    max-width: 98vw;
-    margin: 18px auto 0 auto;
-  }
-  .services-list, .inline-form {
-    padding: 18px 10px;
-    border-radius: 0!important;
-  }
 }
 @media (max-width: 1000px) {
       :root {
