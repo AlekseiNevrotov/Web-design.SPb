@@ -659,7 +659,7 @@ ul {
         }
 #scrollToTop {
     position: fixed;
-    bottom: 20px; 
+    bottom: 40px; 
     right: -80px;
     opacity: 0;
     display: none; 
@@ -1183,7 +1183,7 @@ textarea::placeholder {
   margin-top: 20px;
   font-family: 'Ubuntu', Arial, sans-serif;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   gap: 0px;
