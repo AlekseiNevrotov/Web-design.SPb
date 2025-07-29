@@ -1011,7 +1011,7 @@ textarea::placeholder {
     font-weight: 300;
     text-align: center;
     font-size: 28px; 
-    margin-top: 0px;
+    margin-top: 6px;
 }
 .review {
     border-bottom: 1px solid var(--accent); 
