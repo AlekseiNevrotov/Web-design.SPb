@@ -1138,7 +1138,7 @@ textarea::placeholder {
   border-radius: 40px 40px 0 0;
   background: var(--bg);
   color: var(--text);
-  padding: 60px 0px;
+  padding: 40px 0px 40px 0px;
   z-index: 5;
 }
 .footer__container {
@@ -1161,7 +1161,7 @@ textarea::placeholder {
 .footer__nav {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 .footer__nav a {
   color: var(--text);
@@ -1180,6 +1180,7 @@ textarea::placeholder {
   color: var(--myinterface);
 }
 .footer__contact {
+  margin-top: 20px;
   font-family: 'Ubuntu', Arial, sans-serif;
   font-weight: 300;
   font-size: 24px;
@@ -1195,6 +1196,7 @@ textarea::placeholder {
 
         .footer__socials a {
             text-decoration: none;
+            margin-top: 20px;
         }
 
         .footer__socials i {
