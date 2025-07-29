@@ -1092,6 +1092,7 @@ textarea::placeholder {
   justify-content: center;
 }
 .services-list ul {
+  text-align: center;
   list-style: none;
   padding: 10;
   margin: 0;
@@ -1129,9 +1130,7 @@ textarea::placeholder {
   font-weight: 300;
 }
 .inline-form form button[type="submit"] {  
-  
   margin-top: -1px;
-  
 }
 }
 @media (max-width: 1000px) {
