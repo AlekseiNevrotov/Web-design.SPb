@@ -844,7 +844,7 @@ textarea::placeholder {
 }
 .inline-form form input:focus,
 .inline-form form textarea:focus {
-  border: 1.5px solid var(--myinterface);
+  border: 1px solid var(--myinterface);
   outline: none;
   font-weight: 300;
 }
