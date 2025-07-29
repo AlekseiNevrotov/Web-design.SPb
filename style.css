@@ -64,6 +64,10 @@
   overflow: hidden;
   background: var(--bg);
   margin-bottom: 0px;
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none;
 }
 .hero canvas {
   position: absolute;
@@ -349,6 +353,10 @@
       font-weight: 300;
       margin-bottom: 20px;
       transition: color 0.4s;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
     }
     .mobile-menu a:hover {
       color: var(--myinterface);
@@ -1166,7 +1174,7 @@ textarea::placeholder {
 .footer__nav a {
   color: var(--text);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   transition: 0.4s;
   -webkit-user-select: none; 
   -moz-user-select: none;    
