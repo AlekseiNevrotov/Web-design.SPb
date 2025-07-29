@@ -111,6 +111,7 @@
   user-select: none;
 }
 .btn {
+      width: 260px;
       padding: 16px 32px;
       font-size: 16px;
       font-family: 'DM Sans', Arial, sans-serif;
@@ -852,6 +853,7 @@ textarea::placeholder {
   font-weight: 300;
 }
 .inline-form form button[type="submit"] {  
+  width: 152px;
   color: var(--text);
   padding: 16px 32px;
   border: none;
