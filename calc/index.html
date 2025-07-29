@@ -122,44 +122,70 @@
       gap: 16px;
       margin-top: 0px;
     }
+    .button-status-wrapper {
+  display: flex;
+  align-items: left; /* Вертикальное выравнивание */
+  /* Задайте отступ между кнопкой и статусом */
+}
     input[type="text"], input[type="text"], textarea {
-      background: var(--black2);
+      background: var(--black3);
       color: var(--text);
-      border: 1px solid var(--grey);
-      border-radius: 12px;
-      padding: 12px 14px;
-      font-size: 1em;
+      border: 1px solid var(--grey2);
+      border-radius: 20px;
+      padding: 12px 8px;
+      font-size: 16px;
       font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
       transition: border 0.2s, background 0.4s;
       resize: none;
+      height: 28px;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
     }
     input[type="text"]:focus, input[type="text"]:focus, textarea:focus {
-      border: 1.5px solid var(--accent);
+      border: 1px solid var(--myinterface);
       background: var(--black3);
       outline: none;
     }
     textarea {
-      min-height: 70px;
+      min-height: 72px;
       max-height: 180px;
+      height: 28px;
     }
     button[type="submit"] {
-      background: linear-gradient(90deg, var(--accent) 0%, var(--myinterface) 100%);
+      width: 151px;
+      flex: none;
       color: var(--text);
+      padding: 16px 32px;
       border: none;
-      border-radius: 32px;
-      padding: 15px 0;
-      font-size: 1.1em;
+      border-radius: 60px;
+      border-color: var(--accent);
+      border: 1px solid var(--accent);
+      font-size: 16px;
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
       cursor: pointer;
-      transition: background 0.2s, box-shadow 0.2s;
-      box-shadow: 0 2px 8px rgba(38,217,205,0.10);
+      text-decoration: none;
+      background: transparent;
       letter-spacing: 0.04em;
-      margin-top: 8px;
+      margin-top: 19px;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
     }
     button[type="submit"]:hover {
-      background: linear-gradient(90deg, var(--myinterface) 0%, var(--accent) 100%);
-      box-shadow: 0 4px 16px rgba(38,217,205,0.18);
+      border: 1px solid var(--accent);
+      background: transparent; 
+      color: var(--accent);
+    }
+    button[type="submit"]:active {
+      border: 1px solid var(--myinterface);
+  background: transparent; 
+  color: var(--myinterface);                
+  transform: scale(0.96);
     }
     #form-status {
       margin-top: 10px;
@@ -222,8 +248,9 @@
           <input type="hidden" name="cms_selected" id="cms_selected">
           <input type="hidden" name="seo_selected" id="seo_selected">
           <input type="hidden" name="total_cost" id="total_cost">
+          <div class="button-status-wrapper"><button type="submit">Отправить</button>
           <div id="form-status"></div>
-          <button type="submit">Отправить</button>
+          </div>
         </form>
       </div>
     </div>
@@ -288,7 +315,7 @@ document.getElementById('auditForm').onsubmit = async function(e) {
 
 
   if (digits.length !== 10) {
-    status.innerText = 'Пожалуйста, заполните телефон полностью!';
+    status.innerText = 'Заполните пожалуйста телефон полностью!';
     form.phone.focus();
     return;
   }
