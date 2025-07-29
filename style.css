@@ -1130,7 +1130,7 @@ textarea::placeholder {
 }
 .inline-form form button[type="submit"] {  
   
-  margin-top: 0px;
+  margin-top: -1px;
   
 }
 }
