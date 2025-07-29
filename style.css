@@ -1153,6 +1153,7 @@ textarea::placeholder {
   font-size: 14px;
   color: var(--grey2);
   max-width: 240px;
+  margin-bottom: 20px;
   -webkit-user-select: none; 
   -moz-user-select: none;    
   -ms-user-select: none;     
