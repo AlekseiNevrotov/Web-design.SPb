@@ -994,7 +994,7 @@ textarea::placeholder {
       font-weight: 300;
       box-shadow: 4px 0px 8px var(--black2);
       transition: color 0.4s;
-      margin-top: 20px;
+      margin-top: 12px;
       margin-bottom: 12px;
       text-align: center;
       -webkit-user-select: none; 
