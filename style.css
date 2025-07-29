@@ -1021,6 +1021,10 @@ textarea::placeholder {
     font-size: 28px; 
     margin-top: 6px;
     margin-bottom: 10px;
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none; 
 }
 .review {
     border-bottom: 1px solid var(--accent); 
@@ -1332,7 +1336,11 @@ textarea::placeholder {
     height: 200px;          
     display: block;               
     margin: 0 auto;  
-    margin-top: 0px;      
+    margin-top: 0px; 
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none;      
   }
   .features,
   .advantages-list {
