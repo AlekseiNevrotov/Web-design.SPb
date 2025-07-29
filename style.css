@@ -813,6 +813,7 @@ ul {
 .inline-form form input,
 .inline-form form textarea {
   width: 100%;
+  margin-top: 0px;
   margin-bottom: 16px;
   padding: 12px 8px;
   background: var(--black3);
@@ -829,7 +830,7 @@ ul {
   user-select: none;
 }
 input {
-  margin-top: 0px;
+    margin-top: 0px;
     resize: none; 
     height: 28px;
 }
