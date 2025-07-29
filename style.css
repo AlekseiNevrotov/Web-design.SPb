@@ -1180,7 +1180,7 @@ textarea::placeholder {
   color: var(--myinterface);
 }
 .footer__contact {
-  margin-top: 40px;
+  margin-top: 20px;
   font-family: 'Ubuntu', Arial, sans-serif;
   font-weight: 300;
   font-size: 24px;
