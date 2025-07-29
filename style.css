@@ -975,14 +975,41 @@ textarea::placeholder {
         padding: 24px 4vw 24px 4vw;
       }
       h1 {
-        font-size: 1.2em;
         margin-bottom: 20px;
       }
       .portfolio-link {
         padding: 14px 10px;
         border-radius: 12px;
-        font-size: 1em;
       }
+      .portfolio-link {
+      display: block;
+      background: var(--black3);
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 20px;
+      padding: 24px 24px;
+      font-size: 24px;
+      transition: box-shadow 0.4s;
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-weight: 300;
+      box-shadow: 4px 0px 8px var(--black2);
+      transition: color 0.4s;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
+    }
+    .portfolio-title {
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 28px; 
+    margin-bottom: 0px; 
+    margin-top: -28px;
+    }
       li {
         margin-bottom: 12px;
       }
@@ -1165,15 +1192,7 @@ textarea::placeholder {
     font-size: 16px;        
     margin-bottom: 4px;
     margin-top: 12px; 
-}
-.portfolio-title {
-    font-family: 'Ubuntu', Arial, sans-serif;
-    font-weight: 300;
-    text-align: center;
-    font-size: 28px; 
-    margin-bottom: 0px; 
-    margin-top: -28px;
-    }
+} 
 .submenu.open .submenu-toggle::after {
   transform: translateY(-60%) rotate(-135deg);
   border-right: 1px solid var(--accent);
