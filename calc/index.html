@@ -124,7 +124,7 @@
     }
     .button-status-wrapper {
   display: flex;
-  align-items: left; 
+  align-items: left;
 }
     input[type="text"], input[type="text"], textarea {
       background: var(--black3);
@@ -186,14 +186,33 @@
   color: var(--myinterface);                
   transform: scale(0.96);
     }
-    #form-status {
-      margin-top: 10px;
-      min-height: 22px;
-      font-size: 1em;
-      text-align: center;
-      color: var(--accent);
-      font-family: 'DM Sans', Arial, sans-serif;
-    }
+    .success {
+    margin-top: 20px;
+    background-color: var(--black3); 
+    color: var(--mylogo); 
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    margin-left: 12px;
+}
+.error {
+    margin-top: 16px;
+    margin-left: 12px;
+    background-color: var(--black3); 
+    color: var(--accent); 
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+.sending {
+    margin-top: 16px;
+    background-color: var(--black3); 
+    color: var(--myinterface);
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    margin-left: 12px;
+}
     @media (max-width: 600px) {
       .calc-container {
         padding: 18px 4vw 18px 4vw;
@@ -300,8 +319,8 @@
 document.getElementById('auditForm').onsubmit = async function(e) {
   e.preventDefault();
   const status = document.getElementById('form-status');
+  status.className = 'sending';
   status.innerText = 'Отправка...';
-
   const form = e.target;
 
   // Оставляем только цифры
@@ -314,6 +333,7 @@ document.getElementById('auditForm').onsubmit = async function(e) {
 
 
   if (digits.length !== 10) {
+    status.className = 'error';
     status.innerText = 'Заполните пожалуйста телефон полностью!';
     form.phone.focus();
     return;
@@ -336,12 +356,15 @@ document.getElementById('auditForm').onsubmit = async function(e) {
       body: JSON.stringify(data)
     });
     if (res.ok) {
+      status.className = 'success';
       status.innerText = 'Спасибо за заявку!';
       setTimeout(closeModal, 1500);
     } else {
+      status.className = 'error';
       status.innerText = 'Ошибка при отправке. Попробуйте позже.';
     }
   } catch {
+    status.className = 'error';
     status.innerText = 'Ошибка сети. Попробуйте позже.';
   }
 };
