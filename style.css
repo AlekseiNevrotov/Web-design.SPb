@@ -912,7 +912,7 @@ textarea::placeholder {
 }
 .modal {
   display: none;
-  margin-top: 20px;
+  margin-top: 60px;
   position: absolute;
   top: 160;
   left: 0;
