@@ -318,7 +318,7 @@ function closeModal() {
 }
 iframe.addEventListener('load', () => {
   try {
-    const iframeHeight = iframe.contentWindow.document.body.scrollHeight + 400; 
+    const iframeHeight = iframe.contentWindow.document.body.scrollHeight + 500; 
     iframe.style.height = `${Math.min(iframeHeight, window.innerHeight * 0.8)}px`;
   } catch (e) {
     console.warn('Ошибка доступа к iframe (cross-origin?)');
