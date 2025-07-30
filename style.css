@@ -836,6 +836,7 @@ input {
     height: 28px;
 }
 textarea {
+    margin-top: 0px;
     resize: none; 
     height: 28px;
 }
