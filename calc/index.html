@@ -280,19 +280,14 @@
     const cms = document.getElementById('cms');
     const seo = document.getElementById('seo');
     const total = document.getElementById('total');
-
     function calculate() {
       let cost = pages.value * 5000;
-
       if (design.checked) cost += 25000;
       if (adaptive.checked) cost += 43000;
       if (cms.checked) cost += 7000;
       if (seo.checked) cost += 15000;
-
       pagesValue.textContent = pages.value;
       total.textContent = cost.toLocaleString();
-
-      // Обновляем скрытые поля
       document.getElementById('pages_count').value = pages.value;
       document.getElementById('design_selected').value = design.checked ? 'Да' : 'Нет';
       document.getElementById('adaptive_selected').value = adaptive.checked ? 'Да' : 'Нет';
@@ -300,37 +295,27 @@
       document.getElementById('seo_selected').value = seo.checked ? 'Да' : 'Нет';
       document.getElementById('total_cost').value = cost;
     }
-
     pages.addEventListener('input', calculate);
     design.addEventListener('change', calculate);
     adaptive.addEventListener('change', calculate);
     cms.addEventListener('change', calculate);
     seo.addEventListener('change', calculate);
-
-    calculate(); // начальный расчёт
-
+    calculate();
     function closeModal() {
       document.getElementById('form-status').innerText = '';
       document.getElementById('auditForm').reset();
       calculate();
     }
-
 document.getElementById('auditForm').onsubmit = async function(e) {
   e.preventDefault();
   const status = document.getElementById('form-status');
   status.className = 'sending';
   status.innerText = 'Отправка...';
   const form = e.target;
-
-  // Оставляем только цифры
   let digits = form.phone.value.replace(/\D/g, '');
-
-  // Удаляем первый "7" или "8", если вдруг ввели
   if (digits.startsWith('7') || digits.startsWith('8')) {
     digits = digits.slice(1);
   }
-
-
   if (digits.length !== 10) {
     status.className = 'error';
     status.innerText = 'Заполните пожалуйста телефон полностью!';
@@ -339,7 +324,7 @@ document.getElementById('auditForm').onsubmit = async function(e) {
   }
   const data = {
     name: form.name.value,
-    phone: digits, // Используем уже очищенный номер
+    phone: digits,
     message: form.message.value,
     pages_count: form.pages_count.value,
     design_selected: form.design_selected.value,
@@ -369,8 +354,6 @@ document.getElementById('auditForm').onsubmit = async function(e) {
 };
 const phoneInput = document.getElementById('phone');
     const mask = '+7 (___) ___-__-__';
-
-    // Функция для применения маски к строке из цифр
     function applyMask(digits) {
       let output = '+7 (';
       output += digits.substring(0, 3);
@@ -388,20 +371,12 @@ const phoneInput = document.getElementById('phone');
       }
       return output;
     }
-
     phoneInput.addEventListener('input', function(e) {
-  // Убираем всё, кроме цифр
   let digits = this.value.replace(/\D/g, '');
-
-  // Если ввели 7 или 8 первым символом, отрезаем
   if (digits.startsWith('7') || digits.startsWith('8')) {
     digits = digits.slice(1);
   }
-
-  // Ограничиваем до 10 цифр
   digits = digits.slice(0, 10);
-
-  // Формируем маску "+7 (___) ___-__-__"
   let masked = '+7 (';
   if (digits.length > 0) masked += digits.substring(0, 3);
   if (digits.length >= 3) masked += ') ';
@@ -410,7 +385,6 @@ const phoneInput = document.getElementById('phone');
   if (digits.length >= 6) masked += digits.substring(6, 8);
   if (digits.length >= 8) masked += '-';
   if (digits.length >= 8) masked += digits.substring(8, 10);
-
   this.value = masked;
 });
   </script>
