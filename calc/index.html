@@ -29,6 +29,31 @@
       --text: #FFFFFF;
       --radius: 20px;
     }
+    .preloader {
+      position: fixed;
+      align-items: center; 
+      justify-content: center; 
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: var(--bg);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.4s;
+    }
+    .spinner {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--accent);
+      border-top: 1px solid var(--myinterface);
+      border-radius: 100%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
     body {
       background: var(--bg);
       color: var(--text);
@@ -247,6 +272,9 @@
   </style>
 </head>
 <body>
+  <div class="preloader">
+    <div class="spinner"></div>
+  </div>
   <div class="calc-container">
     <div class="columns-wrapper">
       <div class="left-column">
@@ -279,6 +307,9 @@
     </div>
   </div>
   <script>
+    document.fonts.ready.then(() => {
+        document.querySelector('.preloader').style.display = 'none';
+    });
     const pages = document.getElementById('pages');
     const pagesValue = document.getElementById('pagesValue');
     const design = document.getElementById('design');
