@@ -960,6 +960,7 @@ textarea::placeholder {
 }
 .modal-close:active {
   color: var(--myinterface); 
+  transform: scale(0.96);
 }
 #calcIframe {
   width: 100%;
