@@ -243,31 +243,166 @@
     font-size: 14px;
     margin-left: 12px;
 }
-    @media (max-width: 600px) {
+    @media (max-width: 1000px) {
       .calc-container {
-        padding: 18px 4vw 18px 4vw;
+        padding: 16px 16px 16px 16px;
         margin: 24px 0 16px 0;
-        border-radius: 18px;
-        max-width: 420px;
+        border-radius: 20x;
+        max-width: 400px;
       }
       .columns-wrapper {
         flex-direction: column;
-        gap: 24px;
+        gap: 12px;
       }
       .left-column,
       .right-column {
         min-width: auto;
       }
-      .calc-title {
-        font-size: 1.3em;
+      label {
+        font-family: 'Ubuntu', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      color: var(--accent);
+      margin-bottom: 0px;
+      margin-top: 0px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
       }
-      .total {
-        font-size: 1.1em;
-      }
-      button[type="submit"] {
-        font-size: 1em;
-        padding: 12px 0;
-      }
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent);
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+    .checkbox-group {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    .checkbox-group label {
+      margin: 0;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 16px; 
+      color: var(--text);
+      cursor: pointer;
+      gap: 8px;
+    }
+    input[type="checkbox"] {
+      accent-color: var(--accent);
+      width: 16px;
+      height: 16px;
+      border-radius: 8px;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+    .total {
+      margin-top: 0px;
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      color: var(--accent);
+      text-align: left;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 0px;
+    }
+    .button-status-wrapper {
+  display: flex;
+  align-items: left;
+}
+    input[type="text"], input[type="text"], textarea {
+      background: var(--black3);
+      color: var(--text);
+      border: 1px solid var(--grey2);
+      border-radius: 20px;
+      padding: 12px 8px;
+      font-size: 16px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+      transition: border 0.2s, background 0.4s;
+      resize: none;
+      height: 28px;
+      display: flex;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
+    }
+    input[type="text"]:focus, input[type="text"]:focus, textarea:focus {
+      border: 1px solid var(--myinterface);
+      background: var(--black3);
+      outline: none;
+    }
+    textarea {
+      min-height: 72px;
+      max-height: 180px;
+      height: 28px;
+    }
+    button[type="submit"] {
+      flex: none;
+      color: var(--text);
+      padding: 16px 32px;
+      border: none;
+      border-radius: 60px;
+      border-color: var(--accent);
+      border: 1px solid var(--accent);
+      font-size: 16px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+      cursor: pointer;
+      text-decoration: none;
+      background: transparent;
+      letter-spacing: 0.04em;
+      margin-top: 24px;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
+    }
+    button[type="submit"]:hover {
+      border: 1px solid var(--accent);
+      background: transparent; 
+      color: var(--accent);
+    }
+    button[type="submit"]:active {
+      border: 1px solid var(--myinterface);
+  background: transparent; 
+  color: var(--myinterface);                
+  transform: scale(0.96);
+    }
+    .success {
+    margin-top: 24px;
+    background-color: var(--black3); 
+    color: var(--mylogo); 
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    margin-left: 12px;
+}
+.error {
+    margin-top: 24px;
+    margin-left: 12px;
+    background-color: var(--black3); 
+    color: var(--accent); 
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+.sending {
+    margin-top: 24px;
+    background-color: var(--black3); 
+    color: var(--myinterface);
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    margin-left: 12px;
+}
     }
   </style>
 </head>
