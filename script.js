@@ -1,6 +1,5 @@
 let isFontsLoaded = false;
 let isWeatherLoaded = false;
-
 function hidePreloader() {
     if (isFontsLoaded && isWeatherLoaded) {
         document.getElementById('preloader').classList.add('hide');
