@@ -1387,6 +1387,9 @@ textarea::placeholder {
     margin-top: 16px;
     margin-left: 16px;          
 }
+.feature-title br {
+        display: none; /* Скрываем переносы */
+    }
 .feature-text br {
         display: none; /* Скрываем переносы */
     }
