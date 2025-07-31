@@ -95,7 +95,6 @@
   color: var(--accent);
   margin-bottom: 0px;
   margin-top: 40px;
-  animation: zoomIn 1s ease forwards;
   -webkit-user-select: none; 
   -moz-user-select: none;    
   -ms-user-select: none;     
@@ -106,8 +105,7 @@
   color: var(--text);
   max-width: 1000px;
   margin-bottom: 60px;
-  animation: zoomIn 1s ease forwards; 
-  animation-delay: 0.4s; 
+  animation: zoomIn 1.2s ease forwards; 
   -webkit-user-select: none; 
   -moz-user-select: none;    
   -ms-user-select: none;     
