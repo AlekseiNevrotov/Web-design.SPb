@@ -988,7 +988,7 @@ textarea::placeholder {
   .modal-close {
   position: absolute;
   top: 20px;
-  right: 40px;
+  right: 20px;
   font-size: 24px;
   color: var(--grey2); 
   cursor: pointer;
