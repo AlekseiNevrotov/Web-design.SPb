@@ -1176,7 +1176,7 @@ textarea::placeholder {
   margin-top: -1px;
 }
 .success {
-    margin-top: -10px;
+    margin-top: -22px;
     background-color: var(--black3); 
     color: var(--mylogo); 
     font-family: 'DM Sans', Arial, sans-serif;
@@ -1185,7 +1185,7 @@ textarea::placeholder {
     margin-left: 12px;
 }
 .error {
-    margin-top: -24px;
+    margin-top: -22px;
     margin-left: 12px;
     background-color: var(--black3); 
     color: var(--accent); 
@@ -1194,7 +1194,7 @@ textarea::placeholder {
     font-size: 14px;
 }
 .sending {
-    margin-top: -10px;
+    margin-top: -22px;
     background-color: var(--black3); 
     color: var(--myinterface);
     font-family: 'DM Sans', Arial, sans-serif;
