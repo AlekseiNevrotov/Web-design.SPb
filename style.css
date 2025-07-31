@@ -1433,9 +1433,6 @@ textarea::placeholder {
 .feature-title br {
         display: none;
     }
-.feature-text br {
-        display: none;
-    }
 .feature-text {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
