@@ -1388,10 +1388,10 @@ textarea::placeholder {
     margin-left: 16px;          
 }
 .feature-title br {
-        display: none; /* Скрываем переносы */
+        display: none;
     }
 .feature-text br {
-        display: none; /* Скрываем переносы */
+        display: none;
     }
 .feature-text {
     font-family: 'DM Sans', Arial, sans-serif;
