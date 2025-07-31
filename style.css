@@ -51,7 +51,7 @@
     border-radius: 50%; 
     border: 4px solid transparent; 
     border-top-color: var(--myinterface); 
-    animation: spin 0.1s linear infinite; 
+    animation: spin 0.4s linear infinite; 
 }
 @keyframes spin {
     0% {
@@ -397,7 +397,7 @@
       outline: none;
     }
     .submenu-toggle:hover {
-  color: var(--myinterface);
+  color: var(--accent);
 }
     .submenu-list {
       display: none;
