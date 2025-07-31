@@ -1080,7 +1080,7 @@ textarea::placeholder {
     text-align: right; 
 }
 .business-article br {
-        display: none; /* Скрываем переносы */
+        display: none;
     }
 .business-article {
       font-family: 'DM Sans', Arial, sans-serif;
@@ -1435,7 +1435,7 @@ textarea::placeholder {
     margin-top: 12px; 
 } 
 .submenu.open .submenu-toggle::after {
-  transform: translateY(-60%) rotate(-135deg);
+  transform: translateY(-60%) rotate(225deg);
   border-right: 1px solid var(--accent);
   border-bottom: 1px solid var(--accent);
 }
