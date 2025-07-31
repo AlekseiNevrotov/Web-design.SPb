@@ -1103,7 +1103,7 @@ textarea::placeholder {
       font-size: 16px;    
       margin-top: 20px;
       line-height: 24px;
-      text-align: justify;
+      text-align: center;
       -webkit-user-select: none; 
       -moz-user-select: none;    
       -ms-user-select: none;     
@@ -1424,7 +1424,8 @@ textarea::placeholder {
   .feature-title {
     font-family: 'Ubuntu', Arial, sans-serif;
     font-weight: 300;
-    font-size: 20px;        
+    font-size: 20px;  
+    text-align: center;       
     margin-bottom: 8px;
     margin-top: 16px;
     margin-left: 16px;          
@@ -1439,7 +1440,7 @@ textarea::placeholder {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 16px;   
-    text-align: justify;     
+    text-align: center;     
     margin-bottom: 16px;
     margin-left: 16px;   
     margin-right: 16px;       
