@@ -981,6 +981,7 @@ textarea::placeholder {
     max-width: 100%;
     height: 1200px;
     max-height: 1200px;
+    justify-content: center;
   }
   #calcIframe {
     max-height: 100vh;
