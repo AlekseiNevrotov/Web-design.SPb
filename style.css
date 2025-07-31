@@ -1094,9 +1094,6 @@ textarea::placeholder {
     color: var(--grey2); 
     text-align: right; 
 }
-.business-article br {
-        display: none;
-    }
 .business-article {
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
