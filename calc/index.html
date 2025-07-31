@@ -43,17 +43,21 @@
       transition: color 0.4s;
     }
     .spinner {
-      width: 32px;
-      height: 32px;
-      border: 1px solid var(--accent);
-      border-top: 1px solid var(--myinterface);
-      border-radius: 100%;
-      animation: spin 1s linear infinite;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%; 
+    border: 4px solid transparent; 
+    border-top-color: var(--myinterface); 
+    animation: spin 0.1s linear infinite; 
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); 
     }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    100% {
+        transform: rotate(360deg);
     }
+}
     body {
       background: var(--bg);
       color: var(--text);
