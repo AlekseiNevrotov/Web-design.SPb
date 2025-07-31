@@ -1079,12 +1079,16 @@ textarea::placeholder {
     color: var(--grey2); 
     text-align: right; 
 }
+.business-article br {
+        display: none; /* Скрываем переносы */
+    }
 .business-article {
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
       font-size: 16px;    
       margin-top: 20px;
       line-height: 24px;
+      text-align: justify;
       -webkit-user-select: none; 
       -moz-user-select: none;    
       -ms-user-select: none;     
