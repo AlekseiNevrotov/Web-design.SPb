@@ -336,7 +336,7 @@
       width: 32px;
       background: var(--text);
       margin: 4px 0;
-      border-radius: 4px;
+      border-radius: 0px;
       transition: 0.4s;
       transform-origin: right;
     }
@@ -746,7 +746,6 @@ ul {
   display: flex;
   gap: 0;
   background: var(--black3);
-  border-radius: var(--radius);
   box-shadow: 4px 0px 8px var(--black2);
   margin: 40px auto 0 auto;
   overflow: hidden;
@@ -836,7 +835,7 @@ ul {
   color: var(--text);
   border: 1px solid var(--grey2);
   font-weight: 300;
-  border-radius: 20px;
+  border-radius: 32px;
   font-size: 16px;
   font-family: 'DM Sans', Arial, sans-serif;
   transition: border 0.2s, background 0.2s;
@@ -1128,7 +1127,6 @@ textarea::placeholder {
   display: flex;
   gap: 0;
   background: var(--black3);
-  border-radius: var(--radius);
   box-shadow: 4px 0px 8px var(--black2);
   margin: 40px auto 0 auto;
   overflow: hidden;
@@ -1218,7 +1216,6 @@ textarea::placeholder {
 }
 .footer {
   border-top: 1px solid var(--grey);
-  border-radius: 40px 40px 0 0;
   background: var(--bg);
   color: var(--text);
   padding: 40px 0px 40px 0px;
@@ -1346,7 +1343,7 @@ textarea::placeholder {
     padding: 16px 32px;
     font-size: 16px;
     max-width: 320px;
-    border-radius: 40px;
+    border-radius: 60px;
   }
   .mobile-br {
     display: inline;
