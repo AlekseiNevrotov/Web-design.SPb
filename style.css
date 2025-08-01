@@ -926,6 +926,7 @@ textarea::placeholder {
     align-items: center;
 }
 .modal {
+  border-radius: 20px;
   display: none;
   margin-top: 60px;
   position: absolute;
@@ -938,6 +939,7 @@ textarea::placeholder {
   justify-content: center;
 }
 .modal-overlay {
+  border-radius: 40px;
   position: absolute;
   top: 0;
   left: 0;
