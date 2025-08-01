@@ -425,6 +425,9 @@
       color: var(--text);
     }
     .submenu-list a:hover {
+      color: var(--accent);
+    }
+    .submenu-list a:active {
       color: var(--myinterface);
     }
     .advantages {
