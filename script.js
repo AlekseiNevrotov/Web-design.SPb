@@ -160,7 +160,7 @@ document.fonts.ready.then(function() {
   e.preventDefault();
   const status = document.getElementById('form-status');
   status.className = 'sending';
-  status.innerText = 'Отправка...';
+  status.innerText = 'Отправляя форму, Вы даёте согласие на обработку персональных данных.';
   const form = e.target;
   let digits = form.phone.value.replace(/\D/g, '');
   if (digits.startsWith('7') || digits.startsWith('8')) {
