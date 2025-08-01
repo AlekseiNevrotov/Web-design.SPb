@@ -489,7 +489,7 @@ document.getElementById('auditForm').onsubmit = async function(e) {
   e.preventDefault();
   const status = document.getElementById('form-status');
   status.className = 'sending';
-  status.innerText = 'Отправляя форму, Вы даёте согласие на обработку персональных данных.';
+  status.innerText = 'Cогласие на обработку персональных данных.';
   const form = e.target;
   let digits = form.phone.value.replace(/\D/g, '');
   if (digits.startsWith('7') || digits.startsWith('8')) {
