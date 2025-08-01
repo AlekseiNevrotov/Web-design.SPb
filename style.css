@@ -1510,19 +1510,3 @@ textarea::placeholder {
   margin-bottom: 8px;
   margin-top: 0;
 }
-@media screen and (orientation: landscape) and (max-width: 1000px) {
-  body::before {
-    content: "Поверните устройство вертикально и обновите страницу.";
-    position: fixed;
-    z-index: 9999;
-    inset: 0;
-    background: var(--bg);
-    color: var(--text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    text-align: center;
-    pointer-events: all;
-  }
-}
