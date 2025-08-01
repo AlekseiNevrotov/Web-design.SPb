@@ -374,6 +374,9 @@
       user-select: none;
     }
     .mobile-menu a:hover {
+      color: var(--accent);
+    }
+    .mobile-menu a:active {
       color: var(--myinterface);
     }
     .submenu {
@@ -398,6 +401,8 @@
     }
     .submenu-toggle:hover {
   color: var(--accent);
+}.submenu-toggle:active {
+  color: var(--myinterface);
 }
     .submenu-list {
       display: none;
