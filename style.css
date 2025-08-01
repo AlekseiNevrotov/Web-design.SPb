@@ -835,7 +835,7 @@ ul {
   color: var(--text);
   border: 1px solid var(--grey2);
   font-weight: 300;
-  border-radius: 32px;
+  border-radius: 24px;
   font-size: 16px;
   font-family: 'DM Sans', Arial, sans-serif;
   transition: border 0.2s, background 0.2s;
