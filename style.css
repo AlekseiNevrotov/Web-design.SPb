@@ -991,6 +991,9 @@ textarea::placeholder {
   to { opacity: 1; transform: translateY(0); }
 }
 @media (max-width: 1000px) {
+  .modal {
+  border-radius: 20px;
+}
   .modal-content {
     margin-top: 0px;
     width: 420px;
