@@ -191,6 +191,13 @@
       max-height: 180px;
       height: 28px;
     }
+    .privacy-notice {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px; /* Размер шрифта */
+    color: var(--grey2); /* Цвет текста */
+    margin-top: 0px; /* Отступ сверху */
+}
     button[type="submit"] {
       flex: none;
       color: var(--text);
@@ -441,6 +448,9 @@
           <input type="hidden" name="cms_selected" id="cms_selected">
           <input type="hidden" name="seo_selected" id="seo_selected">
           <input type="hidden" name="total_cost" id="total_cost">
+          <p class="privacy-notice">
+    Отправляя форму, Вы даёте согласие на обработку персональных данных.
+</p>
           <div class="button-status-wrapper"><button type="submit">Отправить</button>
           <div id="form-status"></div>
           </div>
