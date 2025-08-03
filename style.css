@@ -877,6 +877,8 @@ textarea::placeholder {
   font-weight: 300;
 }
 .inline-form form button[type="submit"] {  
+  width: 152px;
+  height: 56px;
   color: var(--text);
   padding: 16px 32px;
   border: none;
