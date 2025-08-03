@@ -1001,7 +1001,7 @@ textarea::placeholder {
 }
 @media (max-width: 1000px) {
   .modal {
-  border-radius: 20px;
+  border-radius: 0px;
   display: none;
   margin-top: 60px;
   position: absolute;
