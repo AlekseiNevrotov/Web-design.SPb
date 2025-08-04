@@ -8,7 +8,7 @@
       --grey: #404040;
       --grey2: #666666;
       --text: #FFFFFF;
-      --header-height: 140px;
+      --header-height: 100px;
     }
     html {
     scroll-behavior: smooth;
