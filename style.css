@@ -358,8 +358,19 @@
       background: var(--bg);
       z-index: 100;
       padding: 12px 24px 12px 20px;
-      animation: fadeIn 0.2s;
+      transform-origin: top;
+      animation: rotateInFromTop 0.4s forwards;
     }
+    @keyframes rotateInFromTop {
+    0% {
+        transform: rotateX(-90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0);
+        opacity: 1;
+    }
+}
     .mobile-menu.open {
       display: flex;
     }
@@ -414,6 +425,8 @@
       margin-bottom: 0px;
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
+      transform-origin: top;
+      animation: rotateInFromTop 0.4s forwards;
     }
     .submenu.open .submenu-list {
       font-family: 'DM Sans', Arial, sans-serif;
