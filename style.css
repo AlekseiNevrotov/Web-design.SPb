@@ -293,7 +293,9 @@
       z-index: 200;
       flex-direction: column;
       padding: 4px 0px;
-      overflow: hidden
+      overflow: hidden;
+      transform-origin: top;
+      animation: rotateInFromTop 0.4s forwards;
     }
     .nav-submenu-list a {
       display: block;
