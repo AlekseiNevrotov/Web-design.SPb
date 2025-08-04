@@ -8,7 +8,7 @@
       --grey: #404040;
       --grey2: #666666;
       --text: #FFFFFF;
-      --header-height: 100px;
+      --header-height: 140px;
     }
     html {
     scroll-behavior: smooth;
@@ -177,6 +177,7 @@
       background: var(--bg);
       display: flex;
       align-items: center;
+      box-sizing: border-box;
       justify-content: space-between;
       padding: 0 80px;
       z-index: 100;
@@ -614,6 +615,7 @@ ul {
       user-select: none;
 }
     .footer {
+  box-sizing: border-box;
   border-top: 1px solid var(--grey);
   border-radius: 40px 40px 0 0;
   background: var(--bg);
