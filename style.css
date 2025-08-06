@@ -110,7 +110,7 @@
   font-size: 32px;
   color: var(--text);
   max-width: 1000px;
-  margin-bottom:58px;
+  margin-bottom: 60px;
   animation: zoomIn 1.2s ease forwards; 
   -webkit-user-select: none; 
   -moz-user-select: none;    
