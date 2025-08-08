@@ -79,7 +79,6 @@
         resultDiv.innerHTML = '<span class="error">Введите URL!</span>';
         return;
       }
-      // Добавляем https:// если пользователь не указал протокол
       if (!/^https?:\/\//i.test(url)) {
         url = 'https://' + url;
       }
@@ -92,7 +91,6 @@
         });
         const data = await response.json();
         if (!response.ok) throw new Error(data.error || 'Ошибка API');
-        // Структурированный вывод с подсветкой синтаксиса
         resultDiv.innerHTML = '';
         const pre = document.createElement('pre');
         const code = document.createElement('code');
