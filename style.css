@@ -171,7 +171,7 @@
 }
 .buttn {
       padding: 16px 32px;
-      
+      width: 132px;
       height: 56px;
       font-size: 16px;
       font-family: 'DM Sans', Arial, sans-serif;
@@ -1429,6 +1429,14 @@ textarea::placeholder {
     padding-top: 200px;
   }
   .btn {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+    padding: 16px 32px;
+    font-size: 16px;
+    max-width: 320px;
+    border-radius: 60px;
+  }
+  .buttn {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     padding: 16px 32px;
