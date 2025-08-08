@@ -919,6 +919,7 @@ textarea::placeholder {
   transform: scale(0.96);        
 }
 .success {
+    margin-top: 12px;
     background-color: var(--black3); 
     color: var(--mylogo); 
     font-family: 'DM Sans', Arial, sans-serif;
@@ -927,6 +928,7 @@ textarea::placeholder {
     margin-left: 12px;
 }
 .error {
+    margin-top: 12px;
     margin-left: 12px;
     background-color: var(--black3); 
     color: var(--accent); 
