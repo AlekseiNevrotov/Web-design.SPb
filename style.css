@@ -1551,10 +1551,10 @@ textarea::placeholder {
   }
 }
 #portfolio-title, #services-title, #reviews-title {
-  scroll-margin-top: 200px;
+  scroll-margin-top: 100px;
 }
 @media (max-width: 1000px) {
   #portfolio-title, #services-title, #reviews-title {
-    scroll-margin-top: 160px;
+    scroll-margin-top: 80px;
   }
 }
