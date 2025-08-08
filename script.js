@@ -32,6 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
           submenu.classList.toggle('open');
         });
       });
+      const menuLinks = document.querySelectorAll('.mobile-menu a:not(.submenu-toggle):not(.nav-submenu-toggle)');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          burgerMenu.classList.remove('open');
+          burgerBtn.classList.remove('open');
+          document.body.classList.remove('lock-scroll');
+        });
+      });
     });
     const canvas = document.getElementById('bg');
   const ctx = canvas.getContext('2d');
