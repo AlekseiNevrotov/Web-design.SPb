@@ -858,7 +858,7 @@ ul {
   width: 100%;
   margin-top: 0px;
   margin-bottom: 16px;
-  padding: 12px 8px;
+  padding: 16px 8px;
   background: var(--black3);
   color: var(--text);
   border: 1px solid var(--grey2);
@@ -867,20 +867,11 @@ ul {
   font-size: 16px;
   font-family: 'DM Sans', Arial, sans-serif;
   transition: border 0.2s, background 0.2s;
+  resize: none; 
   -webkit-user-select: none; 
   -moz-user-select: none;    
   -ms-user-select: none;     
   user-select: none;
-}
-input {
-    margin-top: 0px;
-    resize: none; 
-    height: 28px;
-}
-textarea {
-    margin-top: 0px;
-    resize: none; 
-    height: 28px;
 }
 input[type="text"]::placeholder {
     color: var(--grey2);
