@@ -1550,3 +1550,11 @@ textarea::placeholder {
     pointer-events: all;
   }
 }
+#portfolio-title, #services-title, #reviews-title {
+  scroll-margin-top: 200px;
+}
+@media (max-width: 1000px) {
+  #portfolio-title, #services-title, #reviews-title {
+    scroll-margin-top: 160px;
+  }
+}
