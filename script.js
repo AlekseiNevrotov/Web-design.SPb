@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function smoothScrollTo(targetId) {
     const targetElement = document.getElementById(targetId);
-    const offset = 140;
+    const offset = window.innerWidth <= 1000 ? 100 : 140;
     const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
     const offsetPosition = elementPosition - offset;
     window.scrollTo({
