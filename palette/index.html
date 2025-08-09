@@ -30,14 +30,14 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     </noscript>
   <meta property="og:site_name" content="Веб-дизайн.СПб" />
-  <title>Документы Web-design.SPb</title>
+  <title>Генератор палитр Web-design.SPb</title>
   <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon">
   <link rel="manifest" href="/favicons/site.webmanifest">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
   <meta name="theme-color" content="#121212">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="keywords" content="Веб-дизайн, создание сайтов, создание сайтов спб, заказать сайт, разработка сайтов под ключ.">
-  <meta name="description" content="Документы для работы" />
+  <meta name="description" content="Генератор цветовых палитр онлайн для дизайнеров и разработчиков." />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
@@ -52,11 +52,10 @@
       <img src="/Logo.svg" alt="Logo" />
     </a>
     <div id="weather-widget" class="weather">
-  <img id="weather-icon" src="" alt="weather" />
-  <span id="weather-temp">--°C</span>
-</div>
+      <img id="weather-icon" src="" alt="weather" />
+      <span id="weather-temp">--°C</span>
+    </div>
     <nav class="nav">
-      <!-- <a href="#about" class="active">Главная</a> -->
        <a href="/#portfolio-title">Портфолио</a>
        <a href="/#reviews-title">Отзывы</a>
        <a href="/#services-title">Услуги</a>
@@ -77,58 +76,80 @@
       <span></span><span></span><span></span>
     </button>
   </header>
-  <section class="hero">
-  <canvas id="bg"></canvas>
-  <div class="hero-content">
-    <h1>503 <br class="mobile-br">Страница в разработке</h1>
-    <h2><p>Извините, мы не можем <br class="mobile-br">найти то, что Вы ищете.</p></h2>
-    <button class="buttn" onclick="location.href='/'">Главная</button>
-  </div>
-</div>
-  </div>
-</section>
+
+  <!-- Удаляем секцию hero и вставляем приложение -->
+  <main>
+    <h1>Умный генератор <span class="mobile-br"><br></span>палитр для UI</h1>
+    <div class="palette" id="palette"></div>
+    <button class="buttn" id="generatePaletteBtn">Сгенерировать</button>
+    <p class="palette-desc">
+      Генератор цветовых палитр онлайн — это простой и эффективный инструмент для дизайнеров, разработчиков и всех, кто работает с цветом. Вы можете создавать аналоговые, комплементарные, триадные, контрастные и смежные палитры в один клик. Наш генератор поможет подобрать гармоничные цветовые сочетания для сайтов, логотипов, интерфейсов и иллюстраций. Сохраняйте готовые схемы, копируйте коды цветов, вдохновляйтесь идеями и улучшайте визуальную эстетику своих проектов. Генератор работает прямо в браузере, не требует установки и абсолютно бесплатен. Оптимизирован для мобильных устройств. Создайте идеальную палитру уже сейчас — быстро, удобно и точно.
+    </p>
+  </main>
+
   <nav class="mobile-menu" id="burgerMenu">
        <a href="/#portfolio-title">Портфолио</a>
        <a href="/#reviews-title">Отзывы</a>
        <a href="/#services-title">Услуги</a>
       <div class="submenu">
-    <button class="submenu-toggle" type="button">Приложения</button>
-    <div class="submenu-list">
-      <a href="/palette/">Генератор палитр</a>
-      <a href="/style-parser/">Парсер стиля</a>
-      <a href="/filter/">Фильтр</a>
-      <a href="https://artplacejungle.vercel.app">Лабиринт</a>
+        <button class="submenu-toggle" type="button">Приложения</button>
+        <div class="submenu-list">
+          <a href="/palette/">Генератор палитр</a>
+          <a href="/style-parser/">Парсер стиля</a>
+          <a href="/filter/">Фильтр</a>
+          <a href="https://artplacejungle.vercel.app">Лабиринт</a>
+        </div>
       </div>
-    </div>
-    <a href="/blog/">Блог</a>
+      <a href="/blog/">Блог</a>
       <a href="/education/">База знаний</a>
       <a href="/contacts/">Контакты</a>
   </nav>
-  <main>
-    <article class="business-article">
-    <p>
-      Генератор цветовых палитр онлайн — это простой и эффективный инструмент для дизайнеров, разработчиков и всех, кто работает с цветом. Вы можете создавать аналоговые, комплементарные, триадные, контрастные и смежные палитры в один клик. Наш генератор поможет подобрать гармоничные цветовые сочетания для сайтов, логотипов, интерфейсов и иллюстраций. Сохраняйте готовые схемы, копируйте коды цветов, вдохновляйтесь идеями и улучшайте визуальную эстетику своих проектов. Генератор работает прямо в браузере, не требует установки и абсолютно бесплатен. Оптимизирован для мобильных устройств. Создайте идеальную палитру уже сейчас — быстро, удобно и точно.</p>
-</article>
-  </main>
   <footer class="footer">
-  <div class="footer__container">
-    <div class="footer__left">
-      <p class="footer__tagline">© 2025<br>Web-design.SPb</p>
-    </div>
-    <div class="footer__nav">
-      <a href="https://drive.google.com/drive/folders/1j4LEJkGatGyukRBsE6ubfp5TWB5Jvm_6?usp=drive_link" target="_blank">Файлы</a>
-      <a href="/documents/">Документы</a>
-    </div>
-<div class="footer__socials">
+    <div class="footer__container">
+      <div class="footer__left">
+        <p class="footer__tagline">© 2025<br>Web-design.SPb</p>
+      </div>
+      <div class="footer__nav">
+        <a href="https://drive.google.com/drive/folders/1j4LEJkGatGyukRBsE6ubfp5TWB5Jvm_6?usp=drive_link" target="_blank">Файлы</a>
+        <a href="/documents/">Документы</a>
+      </div>
+      <div class="footer__socials">
         <a href="https://t.me/elazarofficial" target="_blank"><i class="fab fa-telegram-plane"></i></a>
         <a href="https://www.behance.net/aleksey_nevrotov" target="_blank"><i class="fab fa-behance-square"></i></a>
         <a href="https://github.com/AlekseiNevrotov" target="_blank"><i class="fab fa-github-square"></i></a>
       </div>
-    <div class="footer__contact">
-      <p>+7 950 014–37–77</p>
+      <div class="footer__contact">
+        <p>+7 950 014–37–77</p>
+      </div>
     </div>
-  </div>
-</footer>
-<script src="/script.js"></script>
+  </footer>
+  <script src="/script.js"></script>
+  <!-- Ваш JS генератора палитр -->
+  <script>
+    // Пример простого генератора палитр (замените на ваш код из index1.html)
+    function getRandomColor() {
+      return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+    }
+    function generatePalette() {
+      const palette = document.getElementById('palette');
+      palette.innerHTML = '';
+      for (let i = 0; i < 5; i++) {
+        const color = getRandomColor();
+        const div = document.createElement('div');
+        div.style.background = color;
+        div.style.width = '100px';
+        div.style.height = '100px';
+        div.style.display = 'inline-block';
+        div.style.margin = '8px';
+        div.style.borderRadius = '12px';
+        div.title = color;
+        div.innerHTML = `<span style="color:#fff;font-size:14px;position:relative;top:70px;left:10px;text-shadow:0 1px 4px #000">${color}</span>`;
+        palette.appendChild(div);
+      }
+    }
+    document.getElementById('generatePaletteBtn').onclick = generatePalette;
+    // Генерируем палитру при загрузке
+    generatePalette();
+  </script>
 </body>
 </html>
