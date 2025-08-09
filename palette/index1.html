@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Генератор палитр</title>
+  <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/favicons/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+  <meta name="theme-color" content="#121212">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="keywords" content="Генератор палитры, генератор цветовой палитры, генератор палитр, генератор цветовых схем, подбор цветов, палитра онлайн, цвета для дизайна, подбор цветовой гаммы, цветовая палитра, цветовой генератор, инструменты для дизайнера, палитры для сайтов, цветовые комбинации, онлайн генератор цветов, гармония цветов, цветовые схемы, генератор цветовых сочетаний.">
+  <meta name="description" content="Онлайн-генератор цветовых палитр: создавай гармоничные цветовые схемы по цветовому кругу Иттена. Идеально для дизайнеров, веб-разработчиков и всех, кто работает с цветом.">
+  <style>
+    :root {
+      --mylogo: #26D9CD;
+      --accent: #26D97C;
+      --myinterface: #16847D;
+      --bg: #121212;
+      --black2: #191919;
+      --black3: #1C1C1C;
+      --grey: #404040;
+      --grey2: #666666;
+      --text: #FFFFFF;
+      --header-height: 100px;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 60px;
+      margin: 0;
+      -webkit-text-size-adjust: 100%;
+    }
+    .color-box-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      touch-action: none;
+    }
+    .color-label {
+      margin-top: 40px;
+      font-size: 16px;
+      color: #ccc;
+      font-family: monospace;
+      touch-action: none;
+      -webkit-text-size-adjust: 100%;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      text-align: center;
+      -webkit-text-size-adjust: 100%;
+    }
+    .palette {
+      display: flex;
+      margin: 30px 0;
+      gap: 50px;
+      touch-action: none;
+      -webkit-text-size-adjust: 100%;
+    }
+    .color-box {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border: 2px solid #ffffff22;
+      transition: transform 0.2s ease;
+      touch-action: none;
+      -webkit-text-size-adjust: 100%;
+    }
+    .color-box:hover {
+      transform: scale(1.05);
+      touch-action: none;
+      -webkit-text-size-adjust: 100%;
+    }
+    button {
+      padding: 16px 32px;
+      font-size: 1rem;
+      color: var(--text);
+      border: 1px solid var(--text);
+      background: transparent;
+      border-radius: 60px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.4s ease;
+    }
+    button:hover {
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+    button:active {
+  background: var(--myinterface);
+  color: var(--black3);                 
+  transform: scale(0.96);
+    }
+    .color-box.cube3d {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cube-rotate 3s linear infinite;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  background: none;
+}
+.cube-face {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 1;
+  border: 1px solid #404040;
+  box-sizing: border-box;
+}
+.cube-face.front  { transform: rotateY(  0deg) translateZ(40px);}
+.cube-face.back   { transform: rotateY(180deg) translateZ(40px);}
+.cube-face.right  { transform: rotateY( 90deg) translateZ(40px);}
+.cube-face.left   { transform: rotateY(-90deg) translateZ(40px);}
+.cube-face.top    { transform: rotateX( 90deg) translateZ(40px);}
+.cube-face.bottom { transform: rotateX(-90deg) translateZ(40px);}
+@keyframes cube-rotate {
+  0%   { transform: rotateX(0deg) rotateY(0deg);}
+  100% { transform: rotateX(360deg) rotateY(360deg);}
+}
+.color-name-label {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #aaa;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+  <h1>Умный генератор <span class="mobile-br"><br></span>палитр для UI</h1>
+  <div class="palette" id="palette"></div>
+  <button onclick="generatePalette()">Сгенерировать</button>
+  <script src="unique_by_hex.js"></script>
+  <script>
+    function hslToHex(h, s, l) {
+      s /= 100;
+      l /= 100;
+      let c = (1 - Math.abs(2 * l - 1)) * s;
+      let x = c * (1 - Math.abs((h / 60) % 2 - 1));
+      let m = l - c / 2;
+      let r = 0, g = 0, b = 0;
+      if (0 <= h && h < 60) [r, g, b] = [c, x, 0];
+      else if (60 <= h && h < 120) [r, g, b] = [x, c, 0];
+      else if (120 <= h && h < 180) [r, g, b] = [0, c, x];
+      else if (180 <= h && h < 240) [r, g, b] = [0, x, c];
+      else if (240 <= h && h < 300) [r, g, b] = [x, 0, c];
+      else if (300 <= h && h < 360) [r, g, b] = [c, 0, x];
+      r = Math.round((r + m) * 255);
+      g = Math.round((g + m) * 255);
+      b = Math.round((b + m) * 255);
+      return "#" + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+    }
+    function getNearestColorName(hex) {
+      function hexToRgb(h) {
+        h = h.replace('#', '');
+        return [
+          parseInt(h.substring(0,2),16),
+          parseInt(h.substring(2,4),16),
+          parseInt(h.substring(4,6),16)
+        ];
+      }
+      const [r1, g1, b1] = hexToRgb(hex);
+      let minDist = Infinity;
+      let nearest = COLOR_DICTIONARY[0].name;
+      for (const color of COLOR_DICTIONARY) {
+        const [r2, g2, b2] = hexToRgb(color.hex);
+        const dist = Math.sqrt(
+          Math.pow(r1 - r2, 2) +
+          Math.pow(g1 - g2, 2) +
+          Math.pow(b1 - b2, 2)
+        );
+        if (dist < minDist) {
+          minDist = dist;
+          nearest = color.name;
+        }
+      }
+      return nearest;
+    }
+
+    function generatePalette() {
+      const palette = document.getElementById('palette');
+      palette.innerHTML = '';
+      const schemeType = [
+        'analogous', 'complementary', 'triadic', 'adjacent',
+        'blackShades', 'whiteShades', 'contrastingTriadic'
+      ];
+      const selectedScheme = schemeType[Math.floor(Math.random() * schemeType.length)];
+      const now = new Date();
+const ms = now.getMilliseconds();
+const randomFactor = Math.floor(Math.random() * 360);
+const baseHue = Math.round(
+  ((Date.now() / 1000) + Math.random() + ms / 1000 + randomFactor / 360)
+  * 360
+) % 360;
+      const saturation = 70;
+      const lightness = 50;
+      let hues = [];
+      switch (selectedScheme) {
+        case 'analogous':
+          hues = [baseHue, (baseHue + 30) % 360, (baseHue + 60) % 360];
+          break;
+        case 'complementary':
+          hues = [baseHue, (baseHue + 180) % 360];
+          break;
+        case 'triadic':
+          hues = [baseHue, (baseHue + 120) % 360, (baseHue + 240) % 360];
+          break;
+        case 'adjacent':
+          hues = [
+            (baseHue + 15) % 360,
+            (baseHue - 15 + 360) % 360
+          ];
+          break;
+        case 'contrastingTriadic':
+          hues = [
+            baseHue,
+            (baseHue + 120) % 360,
+            (baseHue + 240) % 360
+          ];
+          break;
+        case 'blackShades':
+          const paletteShades = [];
+          const ranges = [
+            [17, 45],
+            [46, 75],
+            [76, 102]
+          ];
+          for (const [min, max] of ranges) {
+            const value = Math.floor(Math.random() * (max - min + 1)) + min;
+            const hex = value.toString(16).padStart(2, '0');
+            paletteShades.push(`#${hex}${hex}${hex}`);
+          }
+          paletteShades.forEach(hex => {
+            const boxContainer = document.createElement('div');
+            boxContainer.className = 'color-box-container';
+            const box = document.createElement('div');
+            box.className = 'color-box cube3d';
+            ['front','back','right','left','top','bottom'].forEach(face => {
+              const faceDiv = document.createElement('div');
+              faceDiv.className = 'cube-face ' + face;
+              faceDiv.style.background = hex;
+              box.appendChild(faceDiv);
+            });
+            const label = document.createElement('div');
+            label.className = 'color-label';
+            label.textContent = hex;
+            const nameLabel = document.createElement('div');
+            nameLabel.className = 'color-name-label';
+            const value = parseInt(hex.slice(1, 3), 16);
+            if (value < 30) nameLabel.textContent = 'Чёрный';
+            else if (value < 60) nameLabel.textContent = 'Тёмно-серый';
+            else nameLabel.textContent = 'Серый';
+            boxContainer.appendChild(box);
+            boxContainer.appendChild(label);
+            boxContainer.appendChild(nameLabel);
+            palette.appendChild(boxContainer);
+          });
+          return;
+        case 'whiteShades':
+          const paletteWhites = [];
+          const whiteRanges = [
+            [220, 240],
+            [241, 250],
+            [251, 255]
+          ];
+          for (const [min, max] of whiteRanges) {
+            const value = Math.floor(Math.random() * (max - min + 1)) + min;
+            const hex = value.toString(16).padStart(2, '0');
+            paletteWhites.push(`#${hex}${hex}${hex}`);
+          }
+          paletteWhites.forEach(hex => {
+            const boxContainer = document.createElement('div');
+            boxContainer.className = 'color-box-container';
+            const box = document.createElement('div');
+            box.className = 'color-box cube3d';
+            ['front','back','right','left','top','bottom'].forEach(face => {
+              const faceDiv = document.createElement('div');
+              faceDiv.className = 'cube-face ' + face;
+              faceDiv.style.background = hex;
+              box.appendChild(faceDiv);
+            });
+            const label = document.createElement('div');
+            label.className = 'color-label';
+            label.textContent = hex;
+            const nameLabel = document.createElement('div');
+            nameLabel.className = 'color-name-label';
+            const value = parseInt(hex.slice(1, 3), 16);
+            if (value > 245) nameLabel.textContent = 'Белый';
+            else if (value > 235) nameLabel.textContent = 'Очень светло-серый';
+            else nameLabel.textContent = 'Светло-серый';
+            boxContainer.appendChild(box);
+            boxContainer.appendChild(label);
+            boxContainer.appendChild(nameLabel);
+            palette.appendChild(boxContainer);
+          });
+          return;
+      }
+      for (let h of hues) {
+        const s = saturation + (Math.random() - 0.5) * 30; 
+        const l = lightness + (Math.random() - 0.5) * 30; 
+        const hex = hslToHex(h, Math.max(40, Math.min(100, s)), Math.max(30, Math.min(80, l)));
+        const boxContainer = document.createElement('div');
+        boxContainer.className = 'color-box-container';
+        const box = document.createElement('div');
+        box.className = 'color-box cube3d';
+        ['front','back','right','left','top','bottom'].forEach(face => {
+          const faceDiv = document.createElement('div');
+          faceDiv.className = 'cube-face ' + face;
+          faceDiv.style.background = hex;
+          box.appendChild(faceDiv);
+        });
+        const label = document.createElement('div');
+        label.className = 'color-label';
+        label.textContent = hex;
+
+        const nameLabel = document.createElement('div');
+        nameLabel.className = 'color-name-label';
+        nameLabel.textContent = getNearestColorName(hex);
+        boxContainer.appendChild(box);
+        boxContainer.appendChild(label);
+        boxContainer.appendChild(nameLabel);
+        palette.appendChild(boxContainer);
+      }
+    }
+    generatePalette();
+  </script>
+    <script>
+    let lastTap = 0;
+    document.querySelectorAll('.palette-box').forEach(box => {
+      box.addEventListener('touchend', (e) => {
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - lastTap;
+        if (tapLength < 400 && tapLength > 0) {
+          e.preventDefault();
+        }
+        lastTap = currentTime;
+      });
+    });
+  </script>
+  <main>
+    <p>Генератор цветовых палитр онлайн — это простой и эффективный инструмент для дизайнеров, разработчиков и всех, кто работает с цветом. Вы можете создавать аналоговые, комплементарные, триадные, контрастные и смежные палитры в один клик. Наш генератор поможет подобрать гармоничные цветовые сочетания для сайтов, логотипов, интерфейсов и иллюстраций.
+
+Сохраняйте готовые схемы, копируйте коды цветов, вдохновляйтесь идеями и улучшайте визуальную эстетику своих проектов. Генератор работает прямо в браузере, не требует установки и абсолютно бесплатен. Оптимизирован для мобильных устройств. Создайте идеальную палитру уже сейчас — быстро, удобно и точно.</p>
+
+  </main>
+  <footer>© 2025 Web-design.SPb</footer>
+</body>
+</html>
