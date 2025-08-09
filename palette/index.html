@@ -24,14 +24,19 @@
       --text: #FFFFFF;
       --header-height: 100px;
     }
+     main {
+      padding: 80px 24px 0px 24px;
+      max-width: 1076px;
+      margin: 0 auto;
+    }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #1a1a1a;
-      color: #ffffff;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+      background-color: var(--bg);
+      color: var(--text);
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 60px;
       margin: 0;
       -webkit-text-size-adjust: 100%;
     }
@@ -50,8 +55,11 @@
       -webkit-text-size-adjust: 100%;
     }
     h1 {
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-weight: 300;
       margin-bottom: 20px;
-      font-size: 28px;
+      margin-top: 20px;
+      font-size: 48px;
       text-align: center;
       -webkit-text-size-adjust: 100%;
     }
@@ -79,24 +87,42 @@
     }
     button {
       padding: 16px 32px;
-      font-size: 1rem;
+      
+      height: 56px;
+      font-size: 16px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
       color: var(--text);
-      border: 1px solid var(--text);
-      background: transparent;
+      border: 1px solid var(--accent);
+      background: var(--bg);
       border-radius: 60px;
       cursor: pointer;
       text-decoration: none;
       transition: all 0.4s ease;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
     }
     button:hover {
       border: 1px solid var(--accent);
+      background: var(--bg);
       color: var(--accent);
     }
     button:active {
-  background: var(--myinterface);
-  color: var(--black3);                 
-  transform: scale(0.96);
+  border: 1px solid var(--myinterface);
+  background: var(--bg); 
+  color: var(--myinterface);                
+  transform: scale(0.96);  
     }
+    .business-article {
+      margin-top: 52px;
+      line-height: 24px;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
+}
     .color-box.cube3d {
   width: 80px;
   height: 80px;
@@ -136,7 +162,7 @@
   </style>
 </head>
 <body>
-  <h1>Умный генератор <span class="mobile-br"><br></span>палитр для UI</h1>
+  <h1>Умный генератор палитр для UI</h1>
   <div class="palette" id="palette"></div>
   <button onclick="generatePalette()">Сгенерировать</button>
   <script src="unique_by_hex.js"></script>
@@ -345,9 +371,10 @@ const baseHue = Math.round(
     });
   </script>
   <main>
+    <article class="business-article">
     <p>Генератор цветовых палитр онлайн — это простой и эффективный инструмент для дизайнеров, разработчиков и всех, кто работает с цветом. Вы можете создавать аналоговые, комплементарные, триадные, контрастные и смежные палитры в один клик. Наш генератор поможет подобрать гармоничные цветовые сочетания для сайтов, логотипов, интерфейсов и иллюстраций.
 Сохраняйте готовые схемы, копируйте коды цветов, вдохновляйтесь идеями и улучшайте визуальную эстетику своих проектов. Генератор работает прямо в браузере, не требует установки и абсолютно бесплатен. Оптимизирован для мобильных устройств. Создайте идеальную палитру уже сейчас — быстро, удобно и точно.</p>
-  </main>
-  <footer>© 2025 Web-design.SPb</footer>
+  </article>
+</main>
 </body>
 </html>
