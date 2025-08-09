@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Веб-дизайн.СПб",
-  "url": "https://web-design.spb.ru"
-}
-</script>
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=103479784', 'ym');
-
-    ym(103479784, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/103479784" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Ubuntu:wght@300&display=swap" as="style" onload="this.rel='stylesheet'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    </noscript>
-  <meta property="og:site_name" content="Веб-дизайн.СПб" />
-  <title>Документы Web-design.SPb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Генератор палитр</title>
   <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon">
   <link rel="manifest" href="/favicons/site.webmanifest">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
   <meta name="theme-color" content="#121212">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="keywords" content="Веб-дизайн, создание сайтов, создание сайтов спб, заказать сайт, разработка сайтов под ключ.">
-  <meta name="description" content="Документы для работы" />
-  <link rel="stylesheet" href="/style.css" />
+  <meta name="keywords" content="Генератор палитры, генератор цветовой палитры, генератор палитр, генератор цветовых схем, подбор цветов, палитра онлайн, цвета для дизайна, подбор цветовой гаммы, цветовая палитра, цветовой генератор, инструменты для дизайнера, палитры для сайтов, цветовые комбинации, онлайн генератор цветов, гармония цветов, цветовые схемы, генератор цветовых сочетаний.">
+  <meta name="description" content="Онлайн-генератор цветовых палитр: создавай гармоничные цветовые схемы по цветовому кругу Иттена. Идеально для дизайнеров, веб-разработчиков и всех, кто работает с цветом.">
   <style>
+    :root {
+      --mylogo: #26D9CD;
+      --accent: #26D97C;
+      --myinterface: #16847D;
+      --bg: #121212;
+      --black2: #191919;
+      --black3: #1C1C1C;
+      --grey: #404040;
+      --grey2: #666666;
+      --text: #FFFFFF;
+      --header-height: 100px;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 60px;
+      margin: 0;
+      -webkit-text-size-adjust: 100%;
+    }
     .color-box-container {
       display: flex;
       flex-direction: column;
@@ -52,6 +47,12 @@
       color: #ccc;
       font-family: monospace;
       touch-action: none;
+      -webkit-text-size-adjust: 100%;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      text-align: center;
       -webkit-text-size-adjust: 100%;
     }
     .palette {
@@ -75,6 +76,26 @@
       transform: scale(1.05);
       touch-action: none;
       -webkit-text-size-adjust: 100%;
+    }
+    button {
+      padding: 16px 32px;
+      font-size: 1rem;
+      color: var(--text);
+      border: 1px solid var(--text);
+      background: transparent;
+      border-radius: 60px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.4s ease;
+    }
+    button:hover {
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+    button:active {
+  background: var(--myinterface);
+  color: var(--black3);                 
+  transform: scale(0.96);
     }
     .color-box.cube3d {
   width: 80px;
@@ -115,90 +136,10 @@
   </style>
 </head>
 <body>
-    <div id="preloader">
-        <div>
-            <div class="spinner"></div>
-        </div>
-    </div>
-  <button id="scrollToTop" title="Наверх">↑</button>
-  <header class="header">
-    <a href="/" class="logo">
-      <img src="/Logo.svg" alt="Logo" />
-    </a>
-    <div id="weather-widget" class="weather">
-  <img id="weather-icon" src="" alt="weather" />
-  <span id="weather-temp">--°C</span>
-</div>
-    <nav class="nav">
-      <!-- <a href="#about" class="active">Главная</a> -->
-       <a href="/#portfolio-title">Портфолио</a>
-       <a href="/#reviews-title">Отзывы</a>
-       <a href="/#services-title">Услуги</a>
-      <div class="nav-submenu">
-        <a class="nav-submenu-toggle">Приложения</a>
-        <div class="nav-submenu-list">
-          <a href="/palette/">Генератор палитр</a>
-          <a href="/style-parser/">Парсер стиля</a>
-          <a href="/filter/">Фильтр</a>
-          <a href="https://artplacejungle.vercel.app">Лабиринт</a>
-        </div>
-      </div>
-      <a href="/blog/">Блог</a>
-      <a href="/education/">База знаний</a>
-      <a href="/contacts/">Контакты</a>
-    </nav>
-    <button class="burger" id="burgerBtn" aria-label="Открыть меню">
-      <span></span><span></span><span></span>
-    </button>
-  <nav class="mobile-menu" id="burgerMenu">
-       <a href="/#portfolio-title">Портфолио</a>
-       <a href="/#reviews-title">Отзывы</a>
-       <a href="/#services-title">Услуги</a>
-      <div class="submenu">
-    <button class="submenu-toggle" type="button">Приложения</button>
-    <div class="submenu-list">
-      <a href="/palette/">Генератор палитр</a>
-      <a href="/style-parser/">Парсер стиля</a>
-      <a href="/filter/">Фильтр</a>
-      <a href="https://artplacejungle.vercel.app">Лабиринт</a>
-      </div>
-    </div>
-    <a href="/blog/">Блог</a>
-      <a href="/education/">База знаний</a>
-      <a href="/contacts/">Контакты</a>
-  </nav>
-  <main>
-    <h1 class="main-title">Умный генератор <span class="mobile-br"><br></span>палитр для UI</h1>
+  <h1>Умный генератор <span class="mobile-br"><br></span>палитр для UI</h1>
   <div class="palette" id="palette"></div>
-  <button class="buttn" onclick="generatePalette()">Сгенерировать</button>
-  <article class="business-article">
-    <p>
-      Генератор цветовых палитр онлайн — это простой и эффективный инструмент для дизайнеров, разработчиков и всех, кто работает с цветом. Вы можете создавать аналоговые, комплементарные, триадные, контрастные и смежные палитры в один клик. Наш генератор поможет подобрать гармоничные цветовые сочетания для сайтов, логотипов, интерфейсов и иллюстраций.
-Сохраняйте готовые схемы, копируйте коды цветов, вдохновляйтесь идеями и улучшайте визуальную эстетику своих проектов. Генератор работает прямо в браузере, не требует установки и абсолютно бесплатен. Оптимизирован для мобильных устройств. Создайте идеальную палитру уже сейчас — быстро, удобно и точно.</p>
-</p>
-</article>
-  </main>
-  <footer class="footer">
-  <div class="footer__container">
-    <div class="footer__left">
-      <p class="footer__tagline">© 2025<br>Web-design.SPb</p>
-    </div>
-    <div class="footer__nav">
-      <a href="https://drive.google.com/drive/folders/1j4LEJkGatGyukRBsE6ubfp5TWB5Jvm_6?usp=drive_link" target="_blank">Файлы</a>
-      <a href="/documents/" class="footer__nav-link active">Документы</a>
-    </div>
-<div class="footer__socials">
-        <a href="https://t.me/elazarofficial" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-        <a href="https://www.behance.net/aleksey_nevrotov" target="_blank"><i class="fab fa-behance-square"></i></a>
-        <a href="https://github.com/AlekseiNevrotov" target="_blank"><i class="fab fa-github-square"></i></a>
-      </div>
-    <div class="footer__contact">
-      <p>+7 950 014–37–77</p>
-    </div>
-  </div>
-</footer>
-<script src="/script.js"></script>
- <script src="unique_by_hex.js"></script>
+  <button onclick="generatePalette()">Сгенерировать</button>
+  <script src="unique_by_hex.js"></script>
   <script>
     function hslToHex(h, s, l) {
       s /= 100;
@@ -405,5 +346,12 @@ const baseHue = Math.round(
       });
     });
   </script>
+  <main>
+    <p>Генератор цветовых палитр онлайн — это простой и эффективный инструмент для дизайнеров, разработчиков и всех, кто работает с цветом. Вы можете создавать аналоговые, комплементарные, триадные, контрастные и смежные палитры в один клик. Наш генератор поможет подобрать гармоничные цветовые сочетания для сайтов, логотипов, интерфейсов и иллюстраций.
+
+Сохраняйте готовые схемы, копируйте коды цветов, вдохновляйтесь идеями и улучшайте визуальную эстетику своих проектов. Генератор работает прямо в браузере, не требует установки и абсолютно бесплатен. Оптимизирован для мобильных устройств. Создайте идеальную палитру уже сейчас — быстро, удобно и точно.</p>
+
+  </main>
+  <footer>© 2025 Web-design.SPb</footer>
 </body>
 </html>
