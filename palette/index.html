@@ -185,7 +185,6 @@
       }
       return nearest;
     }
-
     function generatePalette() {
       const palette = document.getElementById('palette');
       palette.innerHTML = '';
@@ -321,7 +320,6 @@ const baseHue = Math.round(
         const label = document.createElement('div');
         label.className = 'color-label';
         label.textContent = hex;
-
         const nameLabel = document.createElement('div');
         nameLabel.className = 'color-name-label';
         nameLabel.textContent = getNearestColorName(hex);
@@ -348,9 +346,7 @@ const baseHue = Math.round(
   </script>
   <main>
     <p>Генератор цветовых палитр онлайн — это простой и эффективный инструмент для дизайнеров, разработчиков и всех, кто работает с цветом. Вы можете создавать аналоговые, комплементарные, триадные, контрастные и смежные палитры в один клик. Наш генератор поможет подобрать гармоничные цветовые сочетания для сайтов, логотипов, интерфейсов и иллюстраций.
-
 Сохраняйте готовые схемы, копируйте коды цветов, вдохновляйтесь идеями и улучшайте визуальную эстетику своих проектов. Генератор работает прямо в браузере, не требует установки и абсолютно бесплатен. Оптимизирован для мобильных устройств. Создайте идеальную палитру уже сейчас — быстро, удобно и точно.</p>
-
   </main>
   <footer>© 2025 Web-design.SPb</footer>
 </body>
