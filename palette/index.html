@@ -76,11 +76,20 @@
     .color-label {
       margin-top: 40px;
       font-size: 16px;
-      color: #ccc;
-      font-family: monospace;
+      color: var(--text);
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
       touch-action: none;
       -webkit-text-size-adjust: 100%;
     }
+    .color-name-label {
+  margin-top: 4px;
+  color: var(--grey2);
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+}
     h1 {
       font-family: 'Ubuntu', Arial, sans-serif;
       font-weight: 300;
@@ -176,13 +185,6 @@
 @keyframes cube-rotate {
   0%   { transform: rotateX(0deg) rotateY(0deg);}
   100% { transform: rotateX(360deg) rotateY(360deg);}
-}
-.color-name-label {
-  margin-top: 4px;
-  font-size: 14px;
-  color: #aaa;
-  font-family: 'Segoe UI', sans-serif;
-  text-align: center;
 }
   </style>
 </head>
