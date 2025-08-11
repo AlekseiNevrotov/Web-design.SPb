@@ -186,6 +186,42 @@
   0%   { transform: rotateX(0deg) rotateY(0deg);}
   100% { transform: rotateX(360deg) rotateY(360deg);}
 }
+@media (max-width: 1000px) {
+  h1 {
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-weight: 300;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      font-size: 28px;
+      text-align: center;
+      -webkit-text-size-adjust: 100%;
+    }
+  .color-box.cube3d {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cube-rotate 3s linear infinite;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  background: none;
+}
+.cube-face {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  border: 1px solid var(--black3);
+  box-sizing: border-box;
+}
+.cube-face.front  { transform: rotateY(  0deg) translateZ(20px);}
+.cube-face.back   { transform: rotateY(180deg) translateZ(20px);}
+.cube-face.right  { transform: rotateY( 90deg) translateZ(20px);}
+.cube-face.left   { transform: rotateY(-90deg) translateZ(20px);}
+.cube-face.top    { transform: rotateX( 90deg) translateZ(20px);}
+.cube-face.bottom { transform: rotateX(-90deg) translateZ(20px);}
+    }
   </style>
 </head>
 <body>
