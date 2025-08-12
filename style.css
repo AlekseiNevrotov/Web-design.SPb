@@ -1216,7 +1216,7 @@ textarea::placeholder {
 }
 .services-list {
   flex: 1.6;
-  padding: 13px 16px 16px 16px;
+  padding: 16px 16px 16px 16px;
   background: var(--black3);
   color: var(--text);
   display: flex;
