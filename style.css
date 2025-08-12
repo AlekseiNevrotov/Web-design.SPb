@@ -529,6 +529,7 @@ ul {
     }
     li {
       margin-bottom: -20px;
+      line-height: 1;
     }
     .portfolio-title {
     font-size: 48px; 
@@ -1132,6 +1133,7 @@ textarea::placeholder {
     }
       li {
         margin-bottom: 12px;
+        line-height: 1;
       }
     .reviews-title {
     font-family: 'Ubuntu', Arial, sans-serif;
