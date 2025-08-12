@@ -340,5 +340,4 @@ window.addEventListener('keydown', (e) => {
 const preview = document.getElementById('preview');
 if (preview) {
   const ctx = preview.getContext('2d');
-  // ...весь код, который работает с preview...
 }

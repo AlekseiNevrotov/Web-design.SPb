@@ -26,9 +26,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Ubuntu:wght@300&display=swap" as="style" onload="this.rel='stylesheet'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    </noscript>
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</noscript>
   <meta property="og:site_name" content="Веб-дизайн.СПб" />
   <title>Генератор палитры</title>
   <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon">
@@ -51,6 +51,39 @@
       --text: #FFFFFF;
       --header-height: 100px;
     }
+    #preloader {
+            position: fixed;
+            align-items: center; 
+            justify-content: center; 
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: var(--bg);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.4s;
+        }
+        #preloader.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+       .spinner {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%; 
+    border: 4px solid transparent; 
+    border-top-color: var(--myinterface); 
+    animation: spin 0.4s linear infinite; 
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
      main {
       padding: 0px 24px 0px 24px;
       max-width: 1076px;
@@ -241,6 +274,11 @@
   </style>
 </head>
 <body>
+  <div id="preloader">
+        <div>
+            <div class="spinner"></div>
+        </div>
+    </div>
   <h1>Генератор палитры для UI</h1>
   <div class="palette" id="palette"></div>
   <button onclick="generatePalette()">Сгенерировать</button>
@@ -250,6 +288,29 @@
 Сохраняйте готовые схемы, копируйте коды цветов, вдохновляйтесь идеями и улучшайте визуальную эстетику своих проектов. Генератор работает прямо в браузере и не требует установки.</p>
   </article>
 </main>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const preloader = document.getElementById('preloader');
+  if (preloader && !localStorage.getItem('preloaderShown')) {
+    document.body.style.overflow = 'hidden';
+    function hidePreloaderWhenFontsReady() {
+      if (document.fonts && document.fonts.check('1em "DM Sans"') && document.fonts.check('1em Ubuntu')) {
+        setTimeout(() => {
+          preloader.classList.add('hide');
+          document.body.style.overflow = '';
+          localStorage.setItem('preloaderShown', '1');
+        }, 1200);
+      } else {
+        setTimeout(hidePreloaderWhenFontsReady, 50);
+      }
+    }
+    hidePreloaderWhenFontsReady();
+  } else if (preloader) {
+    preloader.classList.add('hide');
+    document.body.style.overflow = '';
+  }
+});
+  </script>
   <script src="unique_by_hex.js"></script>
   <script>
     function hslToHex(h, s, l) {
