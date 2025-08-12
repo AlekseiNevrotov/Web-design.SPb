@@ -835,7 +835,6 @@ ul {
   font-size: 24px;
   color: var(--accent);
   font-weight: 300;
-  padding: 3px;
 }
 .services-list li:last-child {
     margin-bottom: 0;
