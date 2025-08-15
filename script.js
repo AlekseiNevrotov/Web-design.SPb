@@ -41,22 +41,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
     });
-    const canvas = document.getElementById('bg');
-  const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+    const bgCanvas = document.getElementById('bg');
+if (bgCanvas) {
+  const ctx = bgCanvas.getContext('2d');
+  bgCanvas.width = window.innerWidth;
+  bgCanvas.height = window.innerHeight;
   const dots = [];
   const DOT_COUNT = 100;
   for (let i = 0; i < DOT_COUNT; i++) {
     dots.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
+      x: Math.random() * bgCanvas.width,
+      y: Math.random() * bgCanvas.height,
       vx: (Math.random() - 0.5) * 0.5,
       vy: (Math.random() - 0.5) * 0.5
     });
   }
   function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
     ctx.fillStyle = '#26D9CD';
     ctx.strokeStyle = '#16847D';
     ctx.lineWidth = 0.4;
@@ -64,8 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
       let p = dots[i];
       p.x += p.vx;
       p.y += p.vy;
-      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+      if (p.x < 0 || p.x > bgCanvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > bgCanvas.height) p.vy *= -1;
       ctx.beginPath();
       ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
       ctx.fill();
@@ -86,9 +87,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   draw();
   window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    bgCanvas.width = window.innerWidth;
+    bgCanvas.height = window.innerHeight;
   });
+}
   async function fetchWeather() {
     const apiKey = "304be0f6672349579dc131530250707";
     const city = "Saint Petersburg";
