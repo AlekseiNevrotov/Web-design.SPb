@@ -1,19 +1,33 @@
+:root {
+      --mylogo: #26D9CD;
+      --accent: #26D97C;
+      --myinterface: #16847D;
+      --bg: #121212;
+      --black2: #191919;
+      --black3: #1C1C1C;
+      --grey: #404040;
+      --grey2: #666666;
+      --text: #FFFFFF;
+    }
 body {
       background-color: #121212;
       color: #26C5D9;
-      font-family: monospace;
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-weight: 300;
       margin: 0;
-      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
     h1 {
-      color: #D4D4D4;
-      margin-top: 40px;
-      font-size: 30px;
-      margin-bottom: 30px;
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-weight: 300;
+      margin-bottom: 12px;
+      margin-top: 20px;
+      font-size: 48px;
       text-align: center;
+      color: var(--text);
+      -webkit-text-size-adjust: 100%;
     }
     canvas {
       max-width: 100%;
