@@ -39,6 +39,108 @@
   <meta name="keywords" content="Веб-дизайн, создание сайтов, создание сайтов спб, заказать сайт, разработка сайтов под ключ.">
   <meta name="description" content="Связаться с нами" />
   <link rel="stylesheet" href="../style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;500;700&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+    :root {
+      --mylogo: #26D9CD;
+      --accent: #26D97C;
+      --myinterface: #16847D;
+      --bg: #121212;
+      --black2: #191919;
+      --black3: #1C1C1C;
+      --grey: #404040;
+      --grey2: #666666;
+      --text: #FFFFFF;
+      --radius: 32px;
+    }
+
+    .contact-info {
+      background: var(--black3);
+      border-radius: 20px;
+      padding: 28px 24px 18px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(38,217,205,0.07);
+      border: 1.5px solid var(--black2);
+      width: 100%; /* Можно указать конкретную ширину */
+      font-size: 1.08rem;
+      line-height: 1.7;
+      flex: 1; /* Для Flexbox */
+    }
+
+    .map-container {
+      flex: 1; /* Для Flexbox */
+      border-radius: 20px;
+      overflow: hidden;
+      margin-left: 24px;
+    }
+
+    .map {
+      width: 100%;
+      height: 300px; /* Задайте необходимую высоту */
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: space-between; /* Разделяем контакты и карту */
+      margin: 0 24px; /* Добавить отступы */
+    }
+
+    .contact-info a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+    .contact-info a:hover {
+      color: var(--mylogo);
+      text-decoration: underline;
+    }
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .social-links a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: var(--black2);
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 60px;
+      border: 1.5px solid var(--accent);
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: background 0.2s, color 0.2s, border 0.2s;
+      letter-spacing: 0.03em;
+    }
+    .social-links a:hover {
+      background: var(--accent);
+      color: var(--black3);
+      border-color: var(--accent);
+    }
+    @media (max-width: 600px) {
+      .contact-info {
+        padding: 14px 8px 10px 8px;
+        border-radius: 14px;
+        margin-bottom: 14px;
+        font-size: 1em;
+      }
+      .social-links a {
+        font-size: 0.98em;
+        padding: 0.5rem 1rem;
+      }
+      .contact-container {
+        flex-direction: column; /* Изменяем направление на столбик на маленьких экранах */
+      }
+      .map-container {
+        margin-left: 0;
+        margin-top: 24px; /* Отступ сверху для мобильных устройств */
+      }
+    }
+  </style>
 </head>
 <body>
     <div id="preloader">
@@ -79,9 +181,15 @@
   </header>
   <section class="hero">
   <div class="hero-content">
-    <h1>503 <br class="mobile-br">Страница в разработке</h1>
-    <h2><p>Извините, мы не можем <br class="mobile-br">найти то, что Вы ищете.</p></h2>
-    <button class="buttn" onclick="location.href='/'">Главная</button>
+    <h1>Связаться с нами</h1>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:slim31240@inbox.ru">slim31240@inbox.ru</a></p>
+      <p><strong>Телефон:</strong> <a href="tel:+79500143777">+7 (950) 014-37-77</a></p>
+      <p><strong>Адрес:</strong> Санкт-Петербург</p>
+    <div class="social-links">
+      <a href="https://t.me/yourstudio" target="_blank">Telegram</a>
+      <a href="https://instagram.com/yourstudio" target="_blank">Instagram</a>
+      <a href="https://behance.net/yourstudio" target="_blank">Behance</a>
   </div>
 </div>
   </div>
