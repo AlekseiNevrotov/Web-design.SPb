@@ -39,6 +39,32 @@
   <meta name="keywords" content="Веб-дизайн, создание сайтов, создание сайтов спб, заказать сайт, разработка сайтов под ключ.">
   <meta name="description" content="Связаться с нами" />
   <link rel="stylesheet" href="../style.css" />
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <style>
+    .hero {
+  position: relative; /* Чтобы содержимое размещалось относительно карты */
+  height: 100vh; /* Высота на весь экран */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Цвет текста на фоне карты */
+  z-index: 2; /* Обеспечьте, чтобы текст был выше карты */
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Позиционируйте карту ниже содержимого */
+}
+  </style>
 </head>
 <body>
     <div id="preloader">
@@ -77,12 +103,10 @@
       <span></span><span></span><span></span>
     </button>
   </header>
-  <section class="hero">
+  <section class="hero" id="map">
   <div class="hero-content">
     <h1>Санкт-Петербург</h1>
     <h2><p>E-mail: slim31240@inbox.ru</p></h2>
-  </div>
-</div>
   </div>
 </section>
   <nav class="mobile-menu" id="burgerMenu">
@@ -124,5 +148,24 @@
   </div>
 </footer>
 <script src="../script.js"></script>
+<script>
+        function init() {
+            // Инициализация карты с использованием темного стиля
+            var myMap = new ymaps.Map("map", {
+                center: [59.934280, 30.335099],
+                zoom: 10,
+                controls: ['zoomControl', 'typeSelector', 'fullscreenControl'],
+                type: 'yandex#dark' // Установите темную тему карты
+            });
+
+            // Добавление метки на карту
+            var myPlacemark = new ymaps.Placemark([59.934280, 30.335099], {
+                balloonContent: 'Санкт-Петербург'
+            });
+            myMap.geoObjects.add(myPlacemark);
+        }
+
+        ymaps.ready(init);
+    </script>
 </body>
 </html>
