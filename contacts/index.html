@@ -105,8 +105,6 @@
   </header>
   <section class="hero" id="map">
   <div class="hero-content">
-    <h1>Санкт-Петербург</h1>
-    <h2><p>E-mail: slim31240@inbox.ru</p></h2>
   </div>
 </section>
   <nav class="mobile-menu" id="burgerMenu">
@@ -150,21 +148,19 @@
 <script src="../script.js"></script>
 <script>
         function init() {
-            // Инициализация карты с использованием темного стиля
             var myMap = new ymaps.Map("map", {
                 center: [59.934280, 30.335099],
                 zoom: 10,
-                controls: ['zoomControl', 'typeSelector', 'fullscreenControl'],
-                type: 'yandex#dark' // Установите темную тему карты
+                controls: ['zoomControl', 'typeSelector', 'fullscreenControl']
             });
-
-            // Добавление метки на карту
-            var myPlacemark = new ymaps.Placemark([59.934280, 30.335099], {
-                balloonContent: 'Санкт-Петербург'
+            var myPlacemark = new ymaps.Placemark([59.841220, 30.347740], {
+                balloonContent: 'Телефон: +7 950 014–37–77 <br> E-mail: <a href="mailto:slim31240@inbox.ru">slim31240@inbox.ru</a>'
+            }, {
+                preset: 'islands#icon',
+                iconColor: '#26D9CD'
             });
             myMap.geoObjects.add(myPlacemark);
         }
-
         ymaps.ready(init);
     </script>
 </body>
