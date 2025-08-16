@@ -468,7 +468,7 @@
     const total = document.getElementById('total');
     function calculate() {
       let cost = pages.value * 10000;
-      if (design.checked) cost += 25000;
+      if (design.checked) cost += pages.value * 5000;
       if (adaptive.checked) cost += pages.value * 3500;
       if (cms.checked) cost += 10000;
       if (dop.checked) cost += 15000;
