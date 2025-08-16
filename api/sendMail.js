@@ -31,7 +31,7 @@ export async function POST(request) {
       design_selected ? `Дизайн: ${design_selected}` : null,
       adaptive_selected ? `Адаптивность: ${adaptive_selected}` : null,
       cms_selected ? `CMS: ${cms_selected}` : null,
-      dop_selected ? `Доп. разработка: ${dop_selected}` : null,
+      dop_selected ? `Кастомизация: ${dop_selected}` : null,
       seo_selected ? `SEO настройки: ${seo_selected}` : null,
       total_cost ? `Итоговая стоимость: ${total_cost}` : null,
     ].filter(Boolean);
