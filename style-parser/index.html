@@ -260,7 +260,7 @@
         resultDiv.appendChild(pre);
         hljs.highlightElement(code);
       } catch (e) {
-        resultDiv.innerHTML = `<span class="error">Ошибка: ${e.message}</span>`;
+        resultDiv.innerHTML = `<span class="error">${e.message}</span>`;
       }
     }
   </script>
