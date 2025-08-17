@@ -57,7 +57,9 @@
       color: var(--text);
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
-      max-width: 100%
+      max-width: 100%;
+      margin: 0; 
+      padding: 0px 24px 0px 24px;
     }
     h1 {
       font-family: 'Ubuntu', Arial, sans-serif;
@@ -72,16 +74,21 @@
       width: 100%;
       padding: 20px;
       margin-bottom: 12px;
-      border: none;
+      border: 1px solid var(--bg);
       border-radius: 24px;
       font-size: 16px;
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
+      box-sizing: border-box;
+      outline: none;
     }
+    input:focus {
+    border: 1px solid var(--myinterface); 
+}
     input {
       background: var(--black3);
       color: var(--text);
-      width: 600px;
+      width: 100%;
       display: block;
       margin: 0 auto;
     }
@@ -119,8 +126,7 @@
     #result {
       background: var(--bg);
       color: var(--text);
-      padding: 12px;
-      margin-top: 10px;
+      margin-top: 12px;
       font-size: 16px;
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
@@ -185,10 +191,11 @@
     input {
       background: var(--black3);
       color: var(--text);
-      width: 400px;
+      width: 100%;
       display: block;
       margin: 0 auto;
     }
+  }
   </style>
 </head>
 <body>
