@@ -40,24 +40,28 @@ body {
     }
     .custom-button {
       display: inline-block;
-      font-family: monospace;
-      font-size: 20px;
-      padding: 20px 40px;
-      background: #26D97C;
-      color: #121212;
-      margin: 10px auto;
-      border-radius: 50px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      border: 1px solid var(--accent);
+      padding: 16px 32px;
+      background: var(--bg);
+      color: var(--text);
+      margin: 40px auto;
+      border-radius: 60px;
       cursor: pointer;
-      transition: background-color 0.3s, transform 0.1s;
+      transition: all 0.4s ease;
     }
     .custom-button:hover {
-      background: #6A9955;
-      transform: scale(1.05);
+      border: 1px solid var(--accent);
+      background: var(--bg);
+      color: var(--accent);
     }
     .custom-button:active {
-      background: #6A9955;
-      transform: scale(0.95);
-      box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+      border: 1px solid var(--myinterface);
+      background: var(--bg); 
+      color: var(--myinterface);                
+      transform: scale(0.96); 
     }
     #asciiOutput {
       white-space: pre;
@@ -72,35 +76,37 @@ body {
     }
     button {
       display: inline-block;
-      font-family: monospace;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 16px;
       position: relative;
-      font-size: 20px;
-      padding: 20px 40px;
-      background: #121212;
-      color: #6A9955;
-      margin: 10px auto;
-      border: 1px solid #6A9955; 
-      border-radius: 50px;
+      padding: 16px 32px;
+      background: var(--bg);
+      color: var(--text);
+      margin: 12px auto;
+      border: 1px solid var(--accent);
+      border-radius: 60px;
       cursor: pointer;
-      transition: background-color 0.3s, transform 0.1s;
+      transition: all 0.4s ease;
       user-select: none;
     }
     button:hover {
-      background: #6A9955; 
-      color: #121212;
-      transform: scale(1.05);
+      border: 1px solid var(--accent);
+      background: var(--bg);
+      color: var(--accent);
     }
     button:active {
-      background: #6A9955; 
-      transform: scale(0.95);
-      box-shadow: inset 0 2px 4px #00000033;
+      border: 1px solid var(--myinterface);
+      background: var(--bg); 
+      color: var(--myinterface);                
+      transform: scale(0.96); 
     }
     button.loading {
       color: transparent !important;
       pointer-events: none;
     }
     button.loading:hover {
-      background: #121212 !important;
+      background: var(--bg) !important;
       color: transparent !important;
       transform: none !important;
       cursor: default;
@@ -110,17 +116,17 @@ body {
       position: relative;
       display: inline-block;
       width: fit-content;
-      margin: 10px auto;
+      margin: 12px auto;
     }
     #downloadPngProgress {
       position: absolute;
-      bottom: -6px;
+      bottom: -8px;
       left: 0;
       height: 4px;
       width: 0;
-      background: #6A9955;
+      background: var(--myinterface);
       border-radius: 2px;
-      transition: width 0.3s ease;
+      transition: width 0.4s ease;
     }
     @keyframes spin {
       to {
@@ -137,4 +143,13 @@ body {
     overflow: hidden !important;
     display: block;
   }
+   h1 {
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-weight: 300;
+      margin-bottom: -12px;
+      margin-top: 40px;
+      font-size: 28px;
+      text-align: center;
+      -webkit-text-size-adjust: 100%;
+    }
 }
