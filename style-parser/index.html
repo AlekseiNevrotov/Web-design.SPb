@@ -7,39 +7,78 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
   <style>
+    :root {
+      --mylogo: #26D9CD;
+      --accent: #26D97C;
+      --myinterface: #16847D;
+      --bg: #121212;
+      --black2: #191919;
+      --black3: #1C1C1C;
+      --grey: #404040;
+      --grey2: #666666;
+      --text: #FFFFFF;
+    }
     body {
-      background: #181818;
-      color: #fff;
+      background: var(--bg);
+      color: var(--text);
       font-family: Arial, sans-serif;
       max-width: 420px;
-      margin: 40px auto;
+      margin: 0px auto;
       padding: 20px;
     }
     h1 {
-      font-size: 1.3em;
-      margin-bottom: 1em;
+      font-family: 'Ubuntu', Arial, sans-serif;
+      font-weight: 300;
+      margin-bottom: 12px;
+      margin-top: 0px;
+      font-size: 48px;
       text-align: center;
+      -webkit-text-size-adjust: 100%;
     }
     input, button {
       width: 100%;
-      padding: 10px;
+      padding: 20px;
       margin-bottom: 10px;
       border: none;
-      border-radius: 4px;
-      font-size: 1em;
+      border-radius: 24px;
+      font-size: 16px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
     }
     input {
-      background: #232323;
-      color: #fff;
+      background: var(--black3);
+      color: var(--text);
+      width: 100%;
     }
+    input, button, #result {
+  box-sizing: border-box; 
+  display: block; 
+}
     button {
-      background: #26D97C;
-      color: #fff;
+      width: auto;
+      padding: 16px 32px;
+      border-radius: 60px;
+      background: var(--bg);
+      color: var(--text);
       cursor: pointer;
-      transition: background 0.2s;
+      border: 1px solid var(--accent);
+      transition: all 0.4s ease;
+      font-size: 16px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+      display: block;
+      margin: 0 auto;
     }
     button:hover {
-      background: #005fa3;
+      border: 1px solid var(--accent);
+      background: var(--bg);
+      color: var(--accent);
+    }
+    button:active {
+  border: 1px solid var(--myinterface);
+  background: var(--bg); 
+  color: var(--myinterface);                
+  transform: scale(0.96);  
     }
     #result {
       background: #232323;
