@@ -85,18 +85,38 @@
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
     }
-    .post a {     
-      display: flex;
-      justify-content: flex-end; 
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 300;
-      transition: color 0.2s, border-bottom 0.2s;
-    }
-    .post a:hover {
-      color: var(--accent);
-      border-bottom: 1px solid var(--accent);
-    }
+   .post a {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 300;
+  overflow: hidden; 
+  padding-bottom: 2px;
+  box-sizing: border-box;
+  
+  transition: color 0.2s;
+}
+.post a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  transform: scaleX(0); 
+  transform-origin: left; 
+  transition: transform 0.3s ease-in-out;
+}
+.post a:hover {
+  color: var(--accent);
+}
+.post a:hover::after {
+  transform: scaleX(1);
+}
     @media (max-width: 700px) {
       main {
         padding: 24px 4vw 24px 4vw;
@@ -177,6 +197,16 @@
     <div class="post">
       <h2>5 типичных ошибок на лендингах</h2>
       <p>Разбираем слабые места, которые часто мешают конверсии и портят пользовательский опыт.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
       <a href="#">Читать дальше →</a>
     </div>
     <div class="post">
