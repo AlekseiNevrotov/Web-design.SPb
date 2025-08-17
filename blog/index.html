@@ -39,6 +39,8 @@
   <meta name="keywords" content="Веб-дизайн, создание сайтов, создание сайтов спб, заказать сайт, разработка сайтов под ключ.">
   <meta name="description" content="Документы для работы" />
   <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 <style>
     :root {
@@ -117,6 +119,31 @@
 .post a:hover::after {
   transform: scaleX(1);
 }
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.pagination button {
+    padding: 12px 24px;
+    margin: 0 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.pagination button:hover {
+    background: darken(var(--accent), 10%);
+}
+
+.page-info {
+    margin: 0 24px;
+    color: var(--text);
+}
     @media (max-width: 700px) {
       main {
         padding: 24px 4vw 24px 4vw;
@@ -189,6 +216,7 @@
   </nav>
     <main>
     <h1>Блог нашей студии</h1>
+    <div class="posts-container">
     <div class="post">
       <h2>Как мы создаём дизайн, который работает</h2>
       <p>Погружаемся в бриф, понимаем аудиторию и создаём продукт, который не только красив, но и эффективен.</p>
@@ -214,6 +242,72 @@
       <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
       <a href="#">Читать дальше →</a>
     </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    <div class="post">
+      <h2>Что важно при работе с клиентом</h2>
+      <p>Открытость, точные сроки и чёткая коммуникация — вот ключ к успешному проекту.</p>
+      <a href="#">Читать дальше →</a>
+    </div>
+    </div>
+    <div class="pagination">
+            <button class="prev-page">← Предыдущая</button>
+            <span class="page-info">Страница 1 из 1</span>
+            <button class="next-page">Следующая →</button>
+        </div>
   </main>
   <footer class="footer">
   <div class="footer__container">
@@ -235,5 +329,46 @@
   </div>
 </footer>
 <script src="../script.js"></script>
+<script>
+        // Количество постов на странице
+        const postsPerPage = 10;
+        let currentPage = 1;
+        let totalPages = 0;
+
+        // Функция для отображения постов
+        function showPosts(page) {
+            const posts = $('.post');
+            const start = (page - 1) * postsPerPage;
+            const end = start + postsPerPage;
+            
+            posts.hide().slice(start, end).show();
+            
+            // Обновляем информацию о страницах
+            totalPages = Math.ceil(posts.length / postsPerPage);
+            $('.page-info').text(`Страница ${page} из ${totalPages}`);
+        }
+
+        // Обработчики кнопок навигации
+        $('.next-page').click(function() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPosts(currentPage);
+            }
+        });
+
+        $('.prev-page').click(function() {
+            if (currentPage > 1) {
+                currentPage--;
+                showPosts(currentPage);
+            }
+        });
+
+        // Инициализация
+        $(document).ready(function() {
+            // Перемещаем все посты в контейнер
+            $('.post').appendTo('.posts-container');
+            showPosts(currentPage);
+        });
+    </script>
 </body>
 </html>
