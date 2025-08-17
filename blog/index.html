@@ -64,6 +64,9 @@
       margin-top: 80px;
       margin-bottom: 40px;
     }
+    html {
+    scroll-behavior: smooth;
+}
     .post {
       background: var(--black3);
       border-radius: 20px;
@@ -346,6 +349,14 @@
             // Обновляем информацию о страницах
             totalPages = Math.ceil(posts.length / postsPerPage);
             $('.page-info').text(`Страница ${page} из ${totalPages}`);
+            
+            // Прокрутка к первому посту
+            const firstPost = $('.post:visible:first');
+            if (firstPost.length) {
+                $('html, body').animate({
+                    scrollTop: firstPost.offset().top - 1000
+                }, 500);
+            }
         }
 
         // Обработчики кнопок навигации
@@ -365,8 +376,6 @@
 
         // Инициализация
         $(document).ready(function() {
-            // Перемещаем все посты в контейнер
-            $('.post').appendTo('.posts-container');
             showPosts(currentPage);
         });
     </script>
