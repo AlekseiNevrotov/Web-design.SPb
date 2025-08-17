@@ -333,24 +333,16 @@
 </footer>
 <script src="../script.js"></script>
 <script>
-        // Количество постов на странице
         const postsPerPage = 10;
         let currentPage = 1;
         let totalPages = 0;
-
-        // Функция для отображения постов
         function showPosts(page) {
             const posts = $('.post');
             const start = (page - 1) * postsPerPage;
             const end = start + postsPerPage;
-            
             posts.hide().slice(start, end).show();
-            
-            // Обновляем информацию о страницах
             totalPages = Math.ceil(posts.length / postsPerPage);
             $('.page-info').text(`Страница ${page} из ${totalPages}`);
-            
-            // Прокрутка к первому посту
             const firstPost = $('.post:visible:first');
             if (firstPost.length) {
                 $('html, body').animate({
@@ -358,23 +350,18 @@
                 }, 500);
             }
         }
-
-        // Обработчики кнопок навигации
         $('.next-page').click(function() {
             if (currentPage < totalPages) {
                 currentPage++;
                 showPosts(currentPage);
             }
         });
-
         $('.prev-page').click(function() {
             if (currentPage > 1) {
                 currentPage--;
                 showPosts(currentPage);
             }
         });
-
-        // Инициализация
         $(document).ready(function() {
             showPosts(currentPage);
         });
