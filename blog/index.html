@@ -127,10 +127,10 @@
 }
 
 .pagination button {
-    padding: 16px 32px;
-    width: 200px;
+    
+    width: 40px;
     margin: 0 12px;
-    height: 56px;
+    height: 40px;
       font-size: 16px;
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
@@ -171,7 +171,7 @@
     font-weight: 300;
     text-align: center;
     font-size: 28px; 
-    margin-top: 100px;
+    margin-top: 96px;
     margin-bottom: 20px;
       }
       .post {
@@ -180,8 +180,61 @@
         margin-bottom: 20px;
       }
       .post h2 {
-        font-size: 1.1em;
+        font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;         
+    margin-bottom: 16px;
       }
+      .post p {
+      margin-bottom: 8px;
+      color: var(--grey2);
+      font-size: 16px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+    }
+    .pagination {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    font-size: 14px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+}
+
+.pagination button {
+    margin: 0 12px;
+    height: 40px;
+      font-size: 14px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+      color: var(--text);
+      border: 1px solid var(--accent);
+      background: var(--bg);
+      border-radius: 60px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      -webkit-user-select: none; 
+      -moz-user-select: none;    
+      -ms-user-select: none;     
+      user-select: none;
+    margin-bottom: 40px;
+}
+.pagination button:hover {
+    border: 1px solid var(--accent);
+      background: var(--bg);
+      color: var(--accent);
+}
+.pagination button:active {
+    border: 1px solid var(--myinterface);
+  background: var(--bg); 
+  color: var(--myinterface);                
+  transform: scale(0.96);
+}
+.page-info {
+    margin: 8px 16px;
+    color: var(--text);
+}
     }
   </style>
 <body>
@@ -326,9 +379,9 @@
     </div>
     </div>
     <div class="pagination">
-            <button class="prev-page">← Предыдущая</button>
+            <button class="prev-page">ᐸ</button>
             <span class="page-info">Страница 1 из 1</span>
-            <button class="next-page">Следующая →</button>
+            <button class="next-page">ᐳ</button>
         </div>
   </main>
   <footer class="footer">
