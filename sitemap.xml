@@ -7,107 +7,58 @@
 
   <url>
     <loc>https://web-design.spb.ru/</loc>
-    <lastmod>2025-06-16</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
 
   <url>
-    <loc>https://web-design.spb.ru/create/</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://web-design.spb.ru/optimization-ux-ui/</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://web-design.spb.ru/analysis/</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://web-design.spb.ru/portfolio/</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://web-design.spb.ru/education/</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://web-design.spb.ru/palette/</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://web-design.spb.ru/image/</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://web-design.spb.ru/synth/</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://web-design.spb.ru/tree/</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://web-design.spb.ru/geo/</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://web-design.spb.ru/trends/</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://web-design.spb.ru/blog/</loc>
-    <lastmod>2025-06-16</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://web-design.spb.ru/reviews/</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>2.00</priority>
   </url>
 
   <url>
     <loc>https://web-design.spb.ru/contacts/</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>2.00</priority>
+  </url>
+
+  <url>
+    <loc>https://web-design.spb.ru/documents/</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>2.00</priority>
+  </url>
+
+  <url>
+    <loc>https://web-design.spb.ru/palette/</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>3.00</priority>
+  </url>
+
+  <url>
+    <loc>https://web-design.spb.ru/style-parser/</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>3.00</priority>
+  </url>
+
+  <url>
+    <loc>https://web-design.spb.ru/filter/</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>3.00</priority>
+  </url>
+
+  <url>
+    <loc>https://web-design.spb.ru/blog/privetstvie/</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>2.00</priority>
   </url>
 
 </urlset>
