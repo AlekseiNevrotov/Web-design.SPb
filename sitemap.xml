@@ -68,4 +68,11 @@
     <priority>2.00</priority>
   </url>
 
+  <url>
+    <loc>https://web-design.spb.ru/documents/politics/</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>2.00</priority>
+  </url>
+
 </urlset>

@@ -4,7 +4,9 @@ Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /private/
 Disallow: /draft/
-
+Disallow: /*?
+Disallow: /*.php?
+Disallow: /search/
 Allow: /
 
 Sitemap: https://web-design.spb.ru/sitemap.xml
