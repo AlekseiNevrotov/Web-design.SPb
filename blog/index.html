@@ -120,14 +120,21 @@
 .post a:hover::after {
   transform: scaleX(1);
 }
+.post a:active {
+  color: var(--myinterface);
+  transition: width 0.4s;
+}
+.post a:active::after {
+  transform: scaleX(1); 
+  background: var(--myinterface);
+  transition: width 0.4s;
+}
 .pagination {
     display: flex;
     justify-content: center;
     margin: 40px 0;
 }
-
 .pagination button {
-    
     width: 40px;
     margin: 0 12px;
     height: 40px;
@@ -200,7 +207,6 @@
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
 }
-
 .pagination button {
     margin: 0 12px;
     height: 40px;
@@ -232,7 +238,7 @@
   transform: scale(0.96);
 }
 .page-info {
-    margin: 8px 16px;
+    margin: 12px 8px;
     color: var(--text);
 }
     }
