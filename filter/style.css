@@ -125,7 +125,7 @@ body {
       height: 4px;
       width: 0;
       background: var(--myinterface);
-      border-radius: 2px;
+      border-radius: 8px;
       transition: width 0.4s ease;
     }
     @keyframes spin {
