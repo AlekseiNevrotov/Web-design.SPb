@@ -152,21 +152,30 @@
 <script src="../script.js"></script>
 <script>
         function init() {
-            var myMap = new ymaps.Map("map", {
-                center: [59.934280, 30.335099],
-                zoom: 10,
-                type: 'yandex#night',
-                controls: ['zoomControl', 'typeSelector', 'fullscreenControl']
-            });
-            var myPlacemark = new ymaps.Placemark([59.841220, 30.347740], {
-                balloonContent: 'E-mail: <a href="mailto:slim31240@inbox.ru">slim31240@inbox.ru</a><br>Телефон: +7 950 014–37–77'
-            }, {
-                preset: 'islands#icon',
-                iconColor: '#26D9CD'
-            });
-            myMap.geoObjects.add(myPlacemark);
-        }
-        ymaps.ready(init);
+    var myMap = new ymaps.Map("map", {
+        center: [59.934280, 30.335099],
+        zoom: 10,
+        // Добавляем параметр для темного стиля карты
+        // Используем правильный синтаксис
+        type: 'yandex#night',
+        controls: [
+            'zoomControl',
+            'typeSelector',
+            'fullscreenControl'
+        ]
+    });
+    
+    var myPlacemark = new ymaps.Placemark([59.841220, 30.347740], {
+        balloonContent: 'E-mail: <a href="mailto:slim31240@inbox.ru">slim31240@inbox.ru</a><br>Телефон: +7 950 014–37–77'
+    }, {
+        preset: 'islands#icon',
+        iconColor: '#26D9CD'
+    });
+    
+    myMap.geoObjects.add(myPlacemark);
+}
+
+ymaps.ready(init);
     </script>
 </body>
 </html>
