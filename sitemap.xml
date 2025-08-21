@@ -75,4 +75,11 @@
     <priority>2.00</priority>
   </url>
 
+  <url>
+    <loc>https://web-design.spb.ru/blog/evristiki/</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>2.00</priority>
+  </url>
+
 </urlset>
