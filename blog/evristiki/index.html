@@ -93,7 +93,7 @@
       }
 .image-container img {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 28px;
     margin-bottom: 20px;
     height: auto;
     display: block;
@@ -103,16 +103,50 @@
 .business-article {
       margin-bottom: 40px;
 }
+.view-counter {
+  color: var(--grey2);
+  text-align: right;
+}
+.breadcrumbs {
+ display: flex;
+ flex-wrap: wrap;
+ list-style: none;
+ padding: 0;
+ margin-top: 10px;
+ font-size: 16px;
+ color: var(--grey2);
+ gap: 4px;
+}
+.breadcrumbs li:not(:last-child)::after {
+ content: "›";
+ color: var(--grey);
+ margin: 0 4px;
+}
+.breadcrumbs a {
+ color: var(--myinterface);
+ text-decoration: none;
+ font-size: 16px;
+ font-family: 'DM Sans', Arial, sans-serif;
+ font-weight: 300;
+}
+.breadcrumbs a:hover {
+ text-decoration: underline;
+}
+.breadcrumbs a:active {
+ text-decoration: none;
+}
+.breadcrumbs span {
+ color: var(--grey2);
+ font-size: 16px;
+ font-family: 'DM Sans', Arial, sans-serif;
+ font-weight: 300;
+}
 @media (max-width: 700px) {
       .business-article {
       margin-bottom: 0px;
       text-align: left;
-
 }
- .business-article br {
-        display: block; 
-    }
-    h1 {
+h1 {
     font-family: 'Ubuntu', Arial, sans-serif;
     font-weight: 300;
     text-align: center;
@@ -121,6 +155,32 @@
     margin-bottom: 12px;
     line-height: 1
       }
+      .breadcrumbs {
+ display: flex;
+ flex-wrap: wrap;
+ list-style: none;
+ padding: 0;
+ margin-top: 54px;
+ font-size: 14px;
+ color: var(--grey2);
+ gap: 4px;
+}
+.breadcrumbs a {
+ color: var(--myinterface);
+ text-decoration: none;
+ font-size: 14px;
+ font-family: 'DM Sans', Arial, sans-serif;
+ font-weight: 300;
+}
+.image-container img {
+    width: 100%;
+    margin-top: -16px;
+    margin-bottom: 20px;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 4px 0px 8px var(--black2);
+}
     }  
 </style>
 </head>
@@ -178,6 +238,9 @@
   </nav>
   <main>
     <article class="business-article">
+      <nav aria-label="Хлебные крошки">
+ <ol class="breadcrumbs" id="breadcrumbs"></ol>
+</nav>
     <div class="image-container">
     <img src="../../content/uxui.jpg" alt="Интерфейс" title="Ux Ui">
 </div>
@@ -236,5 +299,47 @@
   </div>
 </footer>
 <script src="../../script.js"></script>
+<script>
+let viewCount = localStorage.getItem('viewCount') ? parseInt(localStorage.getItem('viewCount')) : 0;
+viewCount++;
+localStorage.setItem('viewCount', viewCount);
+document.getElementById('view-count').innerText = viewCount;</script>
+<script>
+const titlesMap = {
+ 'blog': 'Блог',
+ 'tech': 'Технологии',
+ 'news': 'Новости',
+ 'privetstvie': 'Приветствие',
+ 'kak-rabotaet-ii': 'Как работает ИИ',
+ 'sposoby-optimizacii': 'Способы оптимизации',
+ 'oshibki-novichkov': 'Ошибки новичков',
+};
+function toTitle(slug) {
+ if (titlesMap[slug]) return titlesMap[slug];
+ return slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ');
+}
+function generateBreadcrumbs() {
+ const pathSegments = window.location.pathname.split('/').filter(seg => seg);
+ const breadcrumbsList = document.getElementById('breadcrumbs');
+ if (!breadcrumbsList) return;
+ let url = '';
+ const home = document.createElement('li');
+ home.innerHTML = `<a href="/">Главная</a>`;
+ breadcrumbsList.appendChild(home);
+ pathSegments.forEach((segment, index) => {
+ url += '/' + segment;
+ const isLast = index === pathSegments.length - 1;
+ const li = document.createElement('li');
+ const title = toTitle(segment);
+ if (isLast) {
+ li.innerHTML = `<span aria-current="page">${title}</span>`;
+ } else {
+ li.innerHTML = `<a href="${url}">${title}</a>`;
+ }
+ breadcrumbsList.appendChild(li);
+ });
+}
+document.addEventListener('DOMContentLoaded', generateBreadcrumbs);
+</script>
 </body>
 </html>
