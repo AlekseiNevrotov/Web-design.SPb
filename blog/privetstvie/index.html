@@ -107,6 +107,37 @@
   color: var(--grey2);
   text-align: right;
 }
+.breadcrumbs {
+ display: flex;
+ flex-wrap: wrap;
+ list-style: none;
+ padding: 0;
+ margin: 16px 0;
+ font-size: 14px;
+ color: #555;
+ gap: 8px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+ content: "›";
+ color: #999;
+ margin: 0 6px;
+}
+
+.breadcrumbs a {
+ color: #0066cc;
+ text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+ text-decoration: underline;
+}
+
+.breadcrumbs span {
+ color: #333;
+ font-weight: 600;
+}
+
 @media (max-width: 700px) {
       .business-article {
       margin-bottom: 0px;
@@ -178,6 +209,9 @@ h1 {
   </nav>
   <main>
     <article class="business-article">
+      <nav aria-label="Хлебные крошки">
+ <ol class="breadcrumbs" id="breadcrumbs"></ol>
+</nav>
     <div class="image-container">
     <img src="../../content/privetstvie.png" alt="Невротов Алексей" title="Основатель">
 </div>
@@ -215,5 +249,57 @@ let viewCount = localStorage.getItem('viewCount') ? parseInt(localStorage.getIte
 viewCount++;
 localStorage.setItem('viewCount', viewCount);
 document.getElementById('view-count').innerText = viewCount;</script>
+<script>
+// Словарь для перевода "человекочитаемых" названий
+const titlesMap = {
+ 'blog': 'Блог',
+ 'tech': 'Технологии',
+ 'news': 'Новости',
+ 'reviews': 'Обзоры',
+ 'kak-rabotaet-ii': 'Как работает ИИ',
+ 'sposoby-optimizacii': 'Способы оптимизации',
+ 'oshibki-novichkov': 'Ошибки новичков',
+ // Добавьте сюда все свои slug → читаемое название
+};
+
+// Функция для преобразования slug в текст
+function toTitle(slug) {
+ // Сначала ищем в словаре
+ if (titlesMap[slug]) return titlesMap[slug];
+ // Или делаем заглавную букву и заменяем дефисы на пробелы
+ return slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ');
+}
+
+// Генерация хлебных крошек
+function generateBreadcrumbs() {
+ const pathSegments = window.location.pathname.split('/').filter(seg => seg);
+ const breadcrumbsList = document.getElementById('breadcrumbs');
+ if (!breadcrumbsList) return;
+
+ let url = '';
+ const home = document.createElement('li');
+ home.innerHTML = `<a href="/">Главная</a>`;
+ breadcrumbsList.appendChild(home);
+
+ pathSegments.forEach((segment, index) => {
+ url += '/' + segment;
+ const isLast = index === pathSegments.length - 1;
+ const li = document.createElement('li');
+ const title = toTitle(segment);
+
+ if (isLast) {
+ li.innerHTML = `<span aria-current="page">${title}</span>`;
+ } else {
+ li.innerHTML = `<a href="${url}">${title}</a>`;
+ }
+
+ breadcrumbsList.appendChild(li);
+ });
+}
+
+// Запуск после загрузки страницы
+document.addEventListener('DOMContentLoaded', generateBreadcrumbs);
+</script>
+
 </body>
 </html>
