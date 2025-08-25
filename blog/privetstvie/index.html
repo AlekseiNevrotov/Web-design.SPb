@@ -250,7 +250,6 @@ viewCount++;
 localStorage.setItem('viewCount', viewCount);
 document.getElementById('view-count').innerText = viewCount;</script>
 <script>
-// Словарь для перевода "человекочитаемых" названий
 const titlesMap = {
  'blog': 'Блог',
  'tech': 'Технологии',
@@ -259,45 +258,32 @@ const titlesMap = {
  'kak-rabotaet-ii': 'Как работает ИИ',
  'sposoby-optimizacii': 'Способы оптимизации',
  'oshibki-novichkov': 'Ошибки новичков',
- // Добавьте сюда все свои slug → читаемое название
 };
-
-// Функция для преобразования slug в текст
 function toTitle(slug) {
- // Сначала ищем в словаре
  if (titlesMap[slug]) return titlesMap[slug];
- // Или делаем заглавную букву и заменяем дефисы на пробелы
  return slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ');
 }
-
-// Генерация хлебных крошек
 function generateBreadcrumbs() {
  const pathSegments = window.location.pathname.split('/').filter(seg => seg);
  const breadcrumbsList = document.getElementById('breadcrumbs');
  if (!breadcrumbsList) return;
-
  let url = '';
  const home = document.createElement('li');
  home.innerHTML = `<a href="/">Главная</a>`;
  breadcrumbsList.appendChild(home);
-
  pathSegments.forEach((segment, index) => {
  url += '/' + segment;
  const isLast = index === pathSegments.length - 1;
  const li = document.createElement('li');
  const title = toTitle(segment);
-
  if (isLast) {
  li.innerHTML = `<span aria-current="page">${title}</span>`;
  } else {
  li.innerHTML = `<a href="${url}">${title}</a>`;
  }
-
  breadcrumbsList.appendChild(li);
  });
 }
-
-// Запуск после загрузки страницы
 document.addEventListener('DOMContentLoaded', generateBreadcrumbs);
 </script>
 
