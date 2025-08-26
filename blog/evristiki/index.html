@@ -343,6 +343,11 @@ const firebaseConfig = {
  db.transaction(current => (current || 0) + 1);
  sessionStorage.setItem('hasViewed', 'true');
  }
+  document.getElementById('view-count').textContent = '...';
+dbRef.on('value', (snapshot) => {
+ const count = snapshot.val() || 0;
+ document.getElementById('view-count').textContent = count;
+});
 </script>
 <script>
 const titlesMap = {
