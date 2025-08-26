@@ -319,11 +319,32 @@ h1 {
   </div>
 </footer>
 <script src="../../script.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
 <script>
-let viewCount = localStorage.getItem('viewCount') ? parseInt(localStorage.getItem('viewCount')) : 0;
-viewCount++;
-localStorage.setItem('viewCount', viewCount);
-document.getElementById('view-count').innerText = viewCount;</script>
+const firebaseConfig = {
+  apiKey: "AIzaSyDhv_mPCOHgwByW7shHZqkOAYsSgzZpDTU",
+  authDomain: "webdesignspb-ab729.firebaseapp.com",
+  databaseURL: "https://webdesignspb-ab729-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "webdesignspb-ab729",
+  storageBucket: "webdesignspb-ab729.firebasestorage.app",
+  messagingSenderId: "916482521315",
+  appId: "1:916482521315:web:c76470572939312b2f2dd6",
+  measurementId: "G-6VG7P9E8DJ"
+};
+firebase.initializeApp(firebaseConfig);
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+const dbRef = firebase.database().ref('pageViews').child(currentPage);
+dbRef.on('value', (snapshot) => {
+  const count = snapshot.val() || 0;
+  document.getElementById('view-count').textContent = count;
+});
+const hasViewed = sessionStorage.getItem('hasViewed_' + currentPage);
+if (!hasViewed) {
+  dbRef.transaction(current => (current || 0) + 1);
+  sessionStorage.setItem('hasViewed_' + currentPage, 'true');
+}
+</script>
 <script>
 const titlesMap = {
  'blog': 'Блог',

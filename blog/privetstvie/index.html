@@ -303,17 +303,18 @@ const firebaseConfig = {
   appId: "1:916482521315:web:c76470572939312b2f2dd6",
   measurementId: "G-6VG7P9E8DJ"
 };
- firebase.initializeApp(firebaseConfig);
- const db = firebase.database().ref('viewCount');
- db.on('value', (snapshot) => {
- const count = snapshot.val() || 0;
- document.getElementById('view-count').textContent = count;
- });
- const hasViewed = sessionStorage.getItem('hasViewed');
- if (!hasViewed) {
- db.transaction(current => (current || 0) + 1);
- sessionStorage.setItem('hasViewed', 'true');
- }
+firebase.initializeApp(firebaseConfig);
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+const dbRef = firebase.database().ref('pageViews').child(currentPage);
+dbRef.on('value', (snapshot) => {
+  const count = snapshot.val() || 0;
+  document.getElementById('view-count').textContent = count;
+});
+const hasViewed = sessionStorage.getItem('hasViewed_' + currentPage);
+if (!hasViewed) {
+  dbRef.transaction(current => (current || 0) + 1);
+  sessionStorage.setItem('hasViewed_' + currentPage, 'true');
+}
 </script>
 <script>
 const titlesMap = {
