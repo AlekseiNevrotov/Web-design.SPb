@@ -231,6 +231,18 @@
       -ms-user-select: none;     
       user-select: none;
     }
+    .logo {
+    transition: transform 1s; 
+    transform-style: preserve-3d;
+}
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg); 
+    }
+    to {
+        transform: rotateY(360deg); 
+    }
+}
     .logo:hover {
   transform: scale(1.04);  
 }

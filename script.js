@@ -343,3 +343,12 @@ const preview = document.getElementById('preview');
 if (preview) {
   const ctx = preview.getContext('2d');
 }
+window.onload = function() {
+    var logo = document.querySelector('.logo');
+    setInterval(function() {
+        logo.style.animation = 'rotate 1s forwards';
+        setTimeout(function() {
+            logo.style.animation = '';
+        }, 1000);
+    }, 16000);
+};
