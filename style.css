@@ -733,6 +733,21 @@ ul {
   gap: 0px;
   color: var(--mylogo);
 }
+.phone-link {
+  color: inherit;           
+  text-decoration: none;    
+  font: inherit;     
+}
+
+.phone-link:hover {
+  color: var(--myinterface);           
+  text-decoration: none;
+}
+.phone-link:active {
+  color: var(--myinterface);           
+  text-decoration: none;
+  transform: scale(0.96);
+}
 .footer__socials {
             display: flex;
             gap: 16px;
