@@ -453,6 +453,7 @@
     .submenu {
       position: relative;
       width: 100%;
+      line-height: 16px;
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
     }
@@ -460,6 +461,7 @@
       background: none;
       border: none;
       color: var(--text);
+      line-height: 16px;
       font-size: 14px;
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
