@@ -257,7 +257,7 @@
     .weather {
   display: flex;
   align-items: center;
-  gap: 0px;
+  gap: 4px;
   font-size: 14px;
   line-height: 16px;
   color: var(--grey2);
