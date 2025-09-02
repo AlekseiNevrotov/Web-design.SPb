@@ -273,7 +273,7 @@
 }
     .nav {
       display: flex;
-      gap: 24px;
+      gap: 28px;
       font-family: 'DM Sans', Arial, sans-serif;
       line-height: 20px;
       font-weight: 300;
