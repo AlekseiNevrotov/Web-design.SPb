@@ -257,7 +257,7 @@
     .weather {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0px;
   font-size: 14px;
   line-height: 16px;
   color: var(--grey2);
@@ -761,7 +761,7 @@ ul {
 }
 .footer__socials {
             display: flex;
-            gap: 16px;
+            gap: 20px;
         }
         .footer__socials a {
             text-decoration: none;
@@ -1346,7 +1346,7 @@ textarea::placeholder {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 .footer__tagline {
   font-size: 14px;
@@ -1392,7 +1392,7 @@ textarea::placeholder {
 }
 .footer__socials {
             display: flex;
-            gap: 16px;
+            gap: 20px;
         }
 
         .footer__socials a {
