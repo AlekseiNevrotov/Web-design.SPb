@@ -487,6 +487,9 @@
       transform-origin: top;
       animation: rotateInFromTop 0.4s forwards;
     }
+.submenu-list > a:last-child {   
+    margin-bottom: 12px;
+}
     .submenu.open .submenu-list {
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
