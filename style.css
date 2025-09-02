@@ -326,7 +326,7 @@
       text-decoration: none;
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
-      font-size: 1em;
+      font-size: 16px;
       transition: color 0.4s;
       padding: 0 0px;
     }
@@ -351,7 +351,8 @@
       color: var(--text);
       padding: 8px 8px 0px 8px;
       text-decoration: none;
-      font-size: 1em;
+      font-size: 16px;
+      line-height: 20px;
       white-space: nowrap;
       transition: color 0.4s;
     }
