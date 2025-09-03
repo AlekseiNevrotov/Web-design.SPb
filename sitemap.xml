@@ -103,4 +103,11 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://web-design.spb.ru/documents/certificate/</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
