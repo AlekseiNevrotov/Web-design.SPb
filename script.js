@@ -90,6 +90,9 @@ if (bgCanvas) {
     bgCanvas.width = window.innerWidth;
     bgCanvas.height = window.innerHeight;
   });
+  document.addEventListener('touchmove', (e) => {
+  e.preventDefault();
+}, { passive: false });
 }
   async function fetchWeather() {
     const apiKey = "304be0f6672349579dc131530250707";
