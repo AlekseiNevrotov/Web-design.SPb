@@ -896,7 +896,6 @@ ul {
 }
 .services-list li {
   margin-bottom: 16px;
-  font-size: 24px;
   color: var(--accent);
   font-weight: 300;
 }
@@ -961,6 +960,7 @@ ul {
   color: var(--text);
   border: 1px solid var(--grey2);
   font-weight: 300;
+  height: 52px;
   border-radius: 24px;
   font-size: 16px;
   line-height: 20px;
