@@ -884,7 +884,6 @@ ul {
   display: flex;
   font-family: 'Ubuntu', Arial, sans-serif;
   font-size: 24px;
-  line-height: 28px;
   font-weight: 300;
   flex-direction: column;
   justify-content: center;
@@ -898,7 +897,6 @@ ul {
 .services-list li {
   margin-bottom: 16px;
   font-size: 24px;
-  line-height: 28px;
   color: var(--accent);
   font-weight: 300;
 }
@@ -917,7 +915,7 @@ ul {
   font-family: 'DM Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 12px;
 }
 .inline-form {
   flex: 1.3;
