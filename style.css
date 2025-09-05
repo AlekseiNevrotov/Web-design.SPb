@@ -1178,7 +1178,7 @@ textarea::placeholder {
       background: var(--black3);
       color: var(--text);
       text-decoration: none;
-      border-radius: 20px;
+      border-radius: 60px;
       padding: 20px 20px;
       font-size: 20px;
       transition: box-shadow 0.4s;
