@@ -1019,7 +1019,7 @@ textarea::placeholder {
   transform: scale(0.96);        
 }
 .success {
-    margin-top: 15px;
+    margin-top: 17px;
     background-color: var(--black3); 
     color: var(--mylogo); 
     font-family: 'DM Sans', Arial, sans-serif;
@@ -1029,7 +1029,7 @@ textarea::placeholder {
     margin-left: 12px;
 }
 .error {
-    margin-top: 15px;
+    margin-top: 17px;
     margin-left: 12px;
     background-color: var(--black3); 
     color: var(--accent); 
@@ -1039,7 +1039,7 @@ textarea::placeholder {
     line-height: 20px;
 }
 .sending {
-    margin-top: 15px;
+    margin-top: 17px;
     background-color: var(--black3); 
     color: var(--myinterface);
     font-family: 'DM Sans', Arial, sans-serif;
