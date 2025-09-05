@@ -618,7 +618,7 @@ ul {
 }
 .review {
     border-bottom: 1px solid var(--accent); 
-    padding: 10px 0; 
+    padding: 10px 0 9px 0; 
     opacity: 0;
     transition: opacity 0.4s ease, transform 0.4s ease;
     transform: translateY(20px); 
