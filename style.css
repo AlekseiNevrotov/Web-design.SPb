@@ -539,12 +539,14 @@
 }
 .advantage-item h3 {
   font-size: 24px;
+  line-height: 28px;
   margin-bottom: 20px;
   margin-top: 0px;
   color: var(--accent);
 }
 .advantage-item p {
   font-size: 16px;
+  line-height: 20px;
   color: var(--text);
 }
 p {
@@ -576,6 +578,7 @@ ul {
       border-radius: 20px;
       padding: 24px 24px;
       font-size: 24px;
+      line-height: 28px;
       transition: box-shadow 0.4s;
       font-family: 'Ubuntu', Arial, sans-serif;
       font-weight: 300;
@@ -629,10 +632,12 @@ ul {
 }
 .review-text {
     font-size: 16px; 
+    line-height: 20px;
     color: var(--text); 
 }
 .review-author {
     font-size: 16px; 
+    line-height: 20px;
     color: var(--grey2); 
     text-align: right; 
 }
@@ -687,9 +692,13 @@ ul {
       font-family: 'Ubuntu', Arial, sans-serif;
       font-weight: 300;
       font-size: 24px;
+      line-height: 28px;
       color: var(--accent);
       margin-bottom: 8px;
     }
+    .feature-text {
+    line-height: 20px;       
+}
     .business-article {
       margin-top: 52px;
       line-height: 24px;
@@ -872,6 +881,7 @@ ul {
   display: flex;
   font-family: 'Ubuntu', Arial, sans-serif;
   font-size: 24px;
+  line-height: 28px;
   font-weight: 300;
   flex-direction: column;
   justify-content: center;
@@ -885,6 +895,7 @@ ul {
 .services-list li {
   margin-bottom: 28px;
   font-size: 24px;
+  line-height: 28px;
   color: var(--accent);
   font-weight: 300;
 }
@@ -894,6 +905,7 @@ ul {
 .services-list b {
   font-family: 'Ubuntu', Arial, sans-serif;
   font-size: 24px;
+  line-height: 36px;
   font-weight: 300; 
 }
 .services-list span {
@@ -902,6 +914,7 @@ ul {
   font-family: 'DM Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
+  line-height: 16px;
 }
 .inline-form {
   flex: 1.3;
@@ -949,6 +962,7 @@ ul {
   font-weight: 300;
   border-radius: 24px;
   font-size: 16px;
+  line-height: 20px;
   font-family: 'DM Sans', Arial, sans-serif;
   transition: border 0.2s, background 0.2s;
   resize: none; 
@@ -979,6 +993,7 @@ textarea::placeholder {
   border-color: var(--accent);
   border: 1px solid var(--accent);
   font-size: 16px;
+  line-height: 20px;
   font-family: 'DM Sans', Arial, sans-serif;
   font-weight: 300;
   cursor: pointer;
@@ -1009,6 +1024,7 @@ textarea::placeholder {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
+    line-height: 20px;
     margin-left: 12px;
 }
 .error {
@@ -1019,6 +1035,7 @@ textarea::placeholder {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
+    line-height: 20px;
 }
 .sending {
     margin-top: 15px;
@@ -1028,6 +1045,7 @@ textarea::placeholder {
     font-weight: 300;
     font-size: 14px;
     margin-left: 12px;
+    line-height: 20px;
 }
 .button-wrapper {
     display: flex; 
