@@ -1460,7 +1460,7 @@ textarea::placeholder {
   }
   .hero-content p {
     line-height: 24px;
-    margin-top: -8px;
+    margin-top: 0px;
     font-size: 20px;
     font-family: 'Ubuntu', Arial, sans-serif;
     font-weight: 300;
