@@ -1347,7 +1347,7 @@ textarea::placeholder {
   margin-top: -1px;
 }
 .success {
-    margin-top: 0px;
+    margin-top: -1px;
     background-color: var(--black3); 
     color: var(--mylogo); 
     font-family: 'DM Sans', Arial, sans-serif;
@@ -1357,7 +1357,7 @@ textarea::placeholder {
     margin-left: 12px;
 }
 .error {
-    margin-top: 0px;
+    margin-top: -1px;
     margin-left: 12px;
     background-color: var(--black3); 
     color: var(--accent); 
@@ -1367,7 +1367,7 @@ textarea::placeholder {
     line-height: 20px;
 }
 .sending {
-    margin-top: 0px;
+    margin-top: -1px;
     background-color: var(--black3); 
     color: var(--myinterface);
     font-family: 'DM Sans', Arial, sans-serif;
