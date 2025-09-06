@@ -1310,13 +1310,14 @@ textarea::placeholder {
   font-weight: 300;
 }
 .services-list li {
+  margin-top: 0px;
   margin-bottom: 12px;
   color: var(--accent);
   font-weight: 300;
 }
 .services-list li:last-child {
     margin-bottom: 0;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 .services-list b {
   font-family: 'Ubuntu', Arial, sans-serif;
