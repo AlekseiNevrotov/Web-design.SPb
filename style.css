@@ -921,6 +921,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   padding: 24px 24px 24px 24px;
+  margin-right: 18px;
   font-weight: 300;
 }
 @keyframes fadeInScale {
