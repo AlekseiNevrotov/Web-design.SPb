@@ -96,11 +96,11 @@
   padding: 0px;
 }
 .hero-content h1 {
-  font-size: 58px;
+  font-size: 64px;
   line-height: 1;
   color: var(--accent);
   margin-bottom: 0px;
-  margin-top: 64px;
+  margin-top: 76px;
   -webkit-user-select: none; 
   -moz-user-select: none;    
   -ms-user-select: none;     
