@@ -1296,7 +1296,7 @@ textarea::placeholder {
 }
 .services-list li:last-child {
     margin-bottom: 0;
-    padding-bottom: 6px;
+    padding-bottom: 4px;
 }
 .services-list b {
   font-family: 'Ubuntu', Arial, sans-serif;
