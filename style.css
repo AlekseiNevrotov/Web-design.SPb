@@ -629,7 +629,7 @@ ul {
 }
 .review:last-child {
     border-bottom: none; 
-    padding-bottom: 10px;
+    padding-bottom: 0px;
 }
 .review-text {
     font-size: 16px; 
@@ -703,7 +703,7 @@ ul {
     line-height: 20px;       
 }
     .business-article {
-      margin-top: 52px;
+      margin-top: 62px;
       line-height: 24px;
       -webkit-user-select: none; 
       -moz-user-select: none;    
