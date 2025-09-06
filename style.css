@@ -376,7 +376,9 @@
       display: flex;
     }
     #burgerBtn {
-  margin-left: 6px;
+  margin-right: 6px;
+  height: 40px;
+  width: 32px;
 }
     .burger {
       display: none;
