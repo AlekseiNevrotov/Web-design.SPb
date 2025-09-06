@@ -1276,7 +1276,6 @@ textarea::placeholder {
   margin: 40px auto 0 auto;
   overflow: hidden;
   border-radius: 20px;
-  font-weight: 300;
   margin-bottom: -32px;
 }
 .services-list {
@@ -1285,23 +1284,15 @@ textarea::placeholder {
   background: var(--black3);
   color: var(--text);
   display: flex;
-  font-family: 'Ubuntu', Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 300;
-  flex-direction: column;
   justify-content: center;
 }
 .services-list ul {
   text-align: center;
-  padding: 0;
-  margin: 0;
-  font-weight: 300;
 }
 .services-list li {
   margin-top: 0px;
   margin-bottom: 12px;
   color: var(--accent);
-  font-weight: 300;
 }
 .services-list li:last-child {
     margin-bottom: 0;
