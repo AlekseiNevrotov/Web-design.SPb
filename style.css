@@ -375,6 +375,9 @@
     .nav-submenu:focus-within .nav-submenu-list {
       display: flex;
     }
+    #burgerBtn {
+  margin-left: 6px;
+}
     .burger {
       display: none;
       flex-direction: column;
