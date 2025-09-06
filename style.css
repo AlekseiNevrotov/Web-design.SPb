@@ -883,7 +883,8 @@ ul {
   display: flex;
 }
 .services-list li {
-  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 20px;
   color: var(--accent);
 }
 .services-list li:last-child {
@@ -892,7 +893,7 @@ ul {
 .services-list b {
   font-family: 'Ubuntu', Arial, sans-serif;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 28px;
   font-weight: 300; 
 }
 .services-list span {
@@ -901,7 +902,7 @@ ul {
   font-family: 'DM Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 12px;
+  line-height: 20px;
 }
 .inline-form {
   flex: 1.315;
