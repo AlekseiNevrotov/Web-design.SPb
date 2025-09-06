@@ -1347,30 +1347,33 @@ textarea::placeholder {
   margin-top: -1px;
 }
 .success {
-    margin-top: 2px;
+    margin-top: 0px;
     background-color: var(--black3); 
     color: var(--mylogo); 
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
+    line-height: 20px;
     margin-left: 12px;
 }
 .error {
-    margin-top: 2px;
+    margin-top: 0px;
     margin-left: 12px;
     background-color: var(--black3); 
     color: var(--accent); 
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
+    line-height: 20px;
 }
 .sending {
-    margin-top: 2px;
+    margin-top: 0px;
     background-color: var(--black3); 
     color: var(--myinterface);
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
+    line-height: 20px;
     margin-left: 12px;
 }
 .footer {
