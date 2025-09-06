@@ -1300,7 +1300,7 @@ textarea::placeholder {
 .services-list b {
   font-family: 'Ubuntu', Arial, sans-serif;
   font-size: 20px;
-  line-height: 28px;
+  line-height: 24px;
   font-weight: 300; 
 }
 .services-list span {
@@ -1309,7 +1309,7 @@ textarea::placeholder {
   font-family: 'DM Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 20px;
 }
 .inline-form {
   flex: 1;
@@ -1317,7 +1317,7 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 8px 16px 16px 16px;
+  padding: 4px 16px 16px 16px;
   margin-right: 16px;
   font-weight: 300;
 }
