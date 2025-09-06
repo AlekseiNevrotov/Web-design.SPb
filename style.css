@@ -899,7 +899,7 @@ ul {
   font-weight: 300;
 }
 .services-list li:last-child {
-    margin-bottom: 0;
+    margin-bottom: 2px;
 }
 .services-list b {
   font-family: 'Ubuntu', Arial, sans-serif;
