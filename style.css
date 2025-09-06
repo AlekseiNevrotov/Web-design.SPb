@@ -375,18 +375,12 @@
     .nav-submenu:focus-within .nav-submenu-list {
       display: flex;
     }
-    #burgerBtn {
-  margin-right: 6px;
-  height: 40px;
-  width: 32px;
-}
     .burger {
       display: none;
       flex-direction: column;
       justify-content: center;
       width: 32px;
       height: 40px;
-      margin-right: 6px;
       background: none;
       border: none;
       cursor: pointer;
@@ -398,6 +392,7 @@
       width: 32px;
       background: var(--text);
       margin: 4px 0;
+      margin-left: -6px;
       border-radius: 0px;
       transition: 0.4s;
       transform-origin: right;
