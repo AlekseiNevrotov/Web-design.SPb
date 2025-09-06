@@ -1355,6 +1355,7 @@ textarea::placeholder {
     margin-left: 12px;
 }
 .footer {
+  box-sizing: border-box;
   border-top: 1px solid var(--grey);
   background: var(--bg);
   color: var(--text);
@@ -1444,6 +1445,7 @@ textarea::placeholder {
       
       }
       .header {
+    box-sizing: border-box;
     padding: 0 20px;
     height: 80px
   }
@@ -1456,9 +1458,11 @@ textarea::placeholder {
   }
   .header {
     border-radius: 0; 
+    box-sizing: border-box;
   }
   .header::after {
     border-radius: 0;   
+    box-sizing: border-box;
   }
   .footer {
     border-radius: 0;  
