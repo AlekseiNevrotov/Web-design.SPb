@@ -1201,7 +1201,7 @@ textarea::placeholder {
     text-align: center;
     font-size: 28px; 
     line-height: 29px;
-    margin-top: 6px;
+    margin-top: -4px;
     margin-bottom: 10px;
     -webkit-user-select: none; 
     -moz-user-select: none;    
