@@ -1202,7 +1202,7 @@ textarea::placeholder {
     font-size: 28px; 
     line-height: 29px;
     margin-top: -4px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     -webkit-user-select: none; 
     -moz-user-select: none;    
     -ms-user-select: none;     
