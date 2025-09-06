@@ -1181,6 +1181,7 @@ textarea::placeholder {
       border-radius: 60px;
       padding: 20px 20px;
       font-size: 20px;
+      line-height: 24px;
       transition: box-shadow 0.4s;
       font-family: 'Ubuntu', Arial, sans-serif;
       font-weight: 300;
@@ -1199,6 +1200,7 @@ textarea::placeholder {
     font-weight: 300;
     text-align: center;
     font-size: 28px; 
+    line-height: 32px;
     margin-bottom: 20px; 
     margin-top: -28px;
     }
@@ -1211,6 +1213,7 @@ textarea::placeholder {
     font-weight: 300;
     text-align: center;
     font-size: 28px; 
+    line-height: 32px;
     margin-top: 6px;
     margin-bottom: 10px;
     -webkit-user-select: none; 
@@ -1235,13 +1238,15 @@ textarea::placeholder {
 .review-text {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
-    font-size: 16px;        
+    font-size: 16px;   
+    line-height: 20px;     
     margin-bottom: 4px;
 }
 .review-author {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 16px; 
+    line-height: 20px;
     color: var(--grey2); 
     text-align: right; 
 }
@@ -1251,9 +1256,9 @@ textarea::placeholder {
 .business-article {
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
-      font-size: 16px;    
+      font-size: 16px; 
+      line-height: 28px;   
       margin-top: 20px;
-      line-height: 24px;
       text-align: center;
       -webkit-user-select: none; 
       -moz-user-select: none;    
@@ -1272,6 +1277,7 @@ textarea::placeholder {
     font-weight: 300;
     text-align: center;
     font-size: 28px; 
+    line-height: 32px;
     margin-top: 20px;
     margin-bottom: -40px;
     }
@@ -1545,6 +1551,7 @@ textarea::placeholder {
     font-weight: 300;
     text-align: center;
     font-size: 28px;
+    line-height: 32px;
     margin-bottom: 4px;
     margin-top: 40px;
   }
@@ -1553,6 +1560,7 @@ textarea::placeholder {
     font-weight: 300;
     text-align: center;
     font-size: 16px;
+    line-height: 20px;
     margin-bottom: 20px;
   }
   .feature {
@@ -1588,6 +1596,7 @@ textarea::placeholder {
     font-family: 'Ubuntu', Arial, sans-serif;
     font-weight: 300;
     font-size: 20px;  
+    line-height: 24px;
     text-align: center;       
     margin-bottom: 4px;
     margin-top: 16px;
@@ -1600,7 +1609,8 @@ textarea::placeholder {
 .feature-text {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
-    font-size: 16px;   
+    font-size: 16px; 
+    line-height: 20px;  
     text-align: center;     
     margin-bottom: 16px;
     margin-left: 16px;   
@@ -1621,6 +1631,7 @@ textarea::placeholder {
     font-weight: 300;
     text-align: center;
     font-size: 28px;
+    line-height: 32px;
     margin-top: 20px;
     margin-bottom: 20px;
       }
@@ -1629,12 +1640,14 @@ textarea::placeholder {
     font-weight: 300;
     text-align: center;
     font-size: 20px;  
+    line-height: 24px;
     margin-bottom: 0px; 
 }
 .advantage-item p {
   font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
-    font-size: 16px;        
+    font-size: 16px;
+    line-height: 20px;        
     margin-bottom: 4px;
     margin-top: 4px; 
 } 
