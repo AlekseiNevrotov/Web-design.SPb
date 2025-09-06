@@ -500,6 +500,7 @@
     }
     .submenu-list a {
       font-size: 14px;
+      line-height: 16px;
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
       margin-bottom: 12px;
@@ -728,6 +729,7 @@ ul {
 }
 .footer__tagline {
   font-size: 14px;
+  line-height: 16px;
   color: var(--grey2);
   max-width: 240px;
   -webkit-user-select: none; 
@@ -1012,7 +1014,7 @@ textarea::placeholder {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 16px;
     margin-left: 12px;
 }
 .error {
@@ -1023,7 +1025,7 @@ textarea::placeholder {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 16px;
 }
 .sending {
     margin-top: 18px;
@@ -1033,7 +1035,7 @@ textarea::placeholder {
     font-weight: 300;
     font-size: 14px;
     margin-left: 12px;
-    line-height: 20px;
+    line-height: 16px;
 }
 .button-wrapper {
     display: flex; 
@@ -1331,7 +1333,7 @@ textarea::placeholder {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 16px;
     margin-left: 12px;
 }
 .error {
@@ -1342,7 +1344,7 @@ textarea::placeholder {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 16px;
 }
 .sending {
     margin-top: -1px;
@@ -1351,7 +1353,7 @@ textarea::placeholder {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 16px;
     margin-left: 12px;
 }
 .footer {
@@ -1372,6 +1374,7 @@ textarea::placeholder {
 }
 .footer__tagline {
   font-size: 14px;
+  line-height: 16px;
   color: var(--grey2);
   max-width: 240px;
   -webkit-user-select: none; 
@@ -1663,6 +1666,7 @@ textarea::placeholder {
     align-items: center;
     justify-content: center;
     font-size: 16px;
+    line-height: 20px;
     text-align: center;
     pointer-events: all;
   }
