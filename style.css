@@ -560,7 +560,7 @@ ul {
       margin: 0;
     }
     li {
-      margin-bottom: -20px;
+      margin-bottom: 0px;
       line-height: 1;
     }
     .portfolio-title {
@@ -584,7 +584,7 @@ ul {
       font-weight: 300;
       box-shadow: 4px 0px 8px var(--black2);
       transition: color 0.4s;
-      margin-top: 40px;
+      margin-top: 20px;
       text-align: center;
       -webkit-user-select: none; 
       -moz-user-select: none;    
