@@ -1296,7 +1296,6 @@ textarea::placeholder {
 }
 .services-list li:last-child {
     margin-bottom: 0;
-    padding-bottom: 4px;
 }
 .services-list b {
   font-family: 'Ubuntu', Arial, sans-serif;
@@ -1318,7 +1317,7 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 6px 16px 16px 16px;
+  padding: 4px 16px 16px 16px;
   margin-right: 16px;
   font-weight: 300;
 }
