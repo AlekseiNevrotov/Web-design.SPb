@@ -1096,7 +1096,7 @@ textarea::placeholder {
 #calcIframe {
   width: 100%;
   height: 100vh; 
-  max-height: 80vh; 
+  max-height: 78vh; 
   border: none;
   background: transparent;
   display: block;
