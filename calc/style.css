@@ -258,6 +258,7 @@
         font-family: 'Ubuntu', Arial, sans-serif;
       font-weight: 300;
       font-size: 20px;
+      line-height: 24px;
       color: var(--accent);
       margin-bottom: 0px;
       margin-top: 0px;
@@ -282,6 +283,7 @@
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
       font-size: 14px; 
+      line-height: 16px;
       color: var(--text);
       cursor: pointer;
       gap: 4px;
@@ -299,6 +301,7 @@
       font-family: 'Ubuntu', Arial, sans-serif;
       font-weight: 300;
       font-size: 20px;
+      line-height: 24px;
       color: var(--accent);
       text-align: left;
     }
@@ -320,6 +323,7 @@
       border-radius: 24px;
       padding: 12px 8px;
       font-size: 14px;
+      line-height: 16px;
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
       transition: border 0.2s, background 0.4s;
