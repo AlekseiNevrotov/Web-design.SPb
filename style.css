@@ -1071,7 +1071,6 @@ textarea::placeholder {
   max-width: 1076px;
   min-width: 300px; 
   height: auto; 
-  max-height: 484px; 
   background: transparent;
   border-radius: 20px;
   overflow: hidden; 
