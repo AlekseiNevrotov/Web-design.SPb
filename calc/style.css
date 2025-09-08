@@ -172,9 +172,9 @@
       outline: none;
     }
     textarea {
-      min-height: 80px;
-      max-height: 80px;
-      height: 28px;
+      min-height: 66px;
+      max-height: 66px;
+      height: 66px;
     }
     button[type="submit"] {
       width: 148px;
