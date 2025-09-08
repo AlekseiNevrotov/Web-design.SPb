@@ -386,6 +386,7 @@
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
+    line-height: 16px;
     margin-left: 12px;
 }
 .error {
@@ -396,6 +397,7 @@
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
+    line-height: 16px;
 }
 .sending {
     margin-top: 12px;
@@ -404,6 +406,7 @@
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
+    line-height: 16px;
     margin-left: 12px;
 }
     }
