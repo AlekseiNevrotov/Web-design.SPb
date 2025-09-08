@@ -1068,7 +1068,7 @@ textarea::placeholder {
   position: relative;
   z-index: 1001;
   width: 80%;
-  max-width: 1400px;
+  max-width: 1076px;
   min-width: 300px; 
   height: auto; 
   max-height: 100vh; 
