@@ -69,7 +69,7 @@
   <meta name="keywords" content="Веб-дизайн, создание сайтов, создание сайтов спб, заказать сайт, разработка сайтов под ключ.">
   <meta name="description" content="Контактная информация компании. Адрес, телефон, email." />
   <link rel="stylesheet" href="../style.css" />
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=eb89b2e6-e9ff-41e5-af9e-7b58da2e5026&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <style>
     :root {
       --mylogo: #26D9CD;
@@ -204,7 +204,6 @@
         var myMap = new ymaps.Map("map", {
             center: [59.934280, 30.335099],
             zoom: 10,
-            type: 'yandex#map',
             controls: ['zoomControl', 'typeSelector', 'fullscreenControl']
         });
         var myPlacemark = new ymaps.Placemark([59.841220, 30.347740], {
@@ -215,7 +214,6 @@
             iconColor: '#26D9CD'
         });
         myMap.geoObjects.add(myPlacemark);
-        myMap.setType('yandex#night');
         myPlacemark.balloon.open();
     }
     ymaps.ready(init);
