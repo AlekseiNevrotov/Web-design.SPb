@@ -86,6 +86,8 @@ body {
       font-weight: 300;
       font-size: 16px;
       line-height: 20px;
+      width: 164px;
+      height: 56px;
       position: relative;
       padding: 16px 32px;
       background: var(--bg);
