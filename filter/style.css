@@ -50,6 +50,7 @@ body {
       background: var(--bg);
       color: var(--text);
       margin: 20px auto;
+      margin-bottom: 12px;
       border-radius: 60px;
       cursor: pointer;
       transition: all 0.4s ease;
