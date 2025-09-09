@@ -23,8 +23,9 @@ body {
       font-family: 'Ubuntu', Arial, sans-serif;
       font-weight: 300;
       margin-bottom: 12px;
-      margin-top: 20px;
+      margin-top: 60px;
       font-size: 48px;
+      line-height: 52px;
       text-align: center;
       color: var(--text);
       -webkit-text-size-adjust: 100%;
@@ -43,11 +44,12 @@ body {
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
       font-size: 16px;
+      line-height: 20px;
       border: 1px solid var(--accent);
       padding: 16px 32px;
       background: var(--bg);
       color: var(--text);
-      margin: 40px auto;
+      margin: 20px auto;
       border-radius: 60px;
       cursor: pointer;
       transition: all 0.4s ease;
@@ -79,11 +81,12 @@ body {
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
       font-size: 16px;
+      line-height: 20px;
       position: relative;
       padding: 16px 32px;
       background: var(--bg);
       color: var(--text);
-      margin: 12px auto;
+      margin: 1px auto;
       border: 1px solid var(--accent);
       border-radius: 60px;
       cursor: pointer;
