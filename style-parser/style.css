@@ -180,4 +180,7 @@
       margin: 0 auto;
       margin-top: 12px;
     }
+    #result {
+      margin-top: 4px;
+    }
   }
