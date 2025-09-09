@@ -88,6 +88,7 @@
       color: var(--text);
       margin-top: 12px;
       font-size: 16px;
+      line-height: 20px;
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
       min-height: 40px;
@@ -97,7 +98,8 @@
       color: var(--text);
       border-radius: 20px;
       margin-top: 24px;
-      font-size: 1em;
+      font-size: 16px;
+      line-height: 20px;
       overflow-x: auto;
       overflow-x: hidden;
     white-space: pre-wrap;
@@ -105,6 +107,8 @@
     }
     .error {
       color: var(--accent);
+      font-size: 16px;
+      line-height: 20px;
     }
     #preloader {
             position: fixed;
