@@ -445,7 +445,7 @@
       user-select: none;
     }
     .mobile-menu a:last-child {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
 }
     .mobile-menu a:hover {
       color: var(--accent);
