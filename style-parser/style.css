@@ -162,4 +162,22 @@
       display: block;
       margin: 0 auto;
     }
+    button {
+      width: 168px;
+      height: 56px;
+      padding: 16px 32px;
+      border-radius: 60px;
+      background: var(--bg);
+      color: var(--text);
+      cursor: pointer;
+      border: 1px solid var(--accent);
+      transition: all 0.4s ease;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+      display: block;
+      margin: 0 auto;
+      margin-top: 12px;
+    }
   }
