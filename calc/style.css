@@ -210,7 +210,7 @@
   transform: scale(0.96);
     }
     .success {
-    margin-top: 36px;
+    margin-top: 44px;
     background-color: var(--black3); 
     color: var(--mylogo); 
     font-family: 'DM Sans', Arial, sans-serif;
@@ -380,7 +380,7 @@
   transform: scale(0.96);
     }
     .success {
-    margin-top: 16px;
+    margin-top: 24px;
     background-color: var(--black3); 
     color: var(--mylogo); 
     font-family: 'DM Sans', Arial, sans-serif;
