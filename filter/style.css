@@ -92,6 +92,7 @@ body {
       cursor: pointer;
       transition: all 0.4s ease;
       user-select: none;
+      margin-bottom: 200px;
     }
     button:hover {
       border: 1px solid var(--accent);
