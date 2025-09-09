@@ -98,7 +98,7 @@
       background: var(--bg);
       color: var(--text);
       border-radius: 20px;
-      margin-top: 24px;
+      margin-top: 20px;
       font-size: 16px;
       line-height: 20px;
       overflow-x: auto;
@@ -178,6 +178,9 @@
       font-weight: 300;
       display: block;
       margin: 0 auto;
+      margin-top: 12px;
+    }
+    pre {
       margin-top: 12px;
     }
     #result {
