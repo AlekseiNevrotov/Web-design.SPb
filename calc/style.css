@@ -380,7 +380,7 @@
   transform: scale(0.96);
     }
     .success {
-    margin-top: 12px;
+    margin-top: 16px;
     background-color: var(--black3); 
     color: var(--mylogo); 
     font-family: 'DM Sans', Arial, sans-serif;
@@ -390,7 +390,7 @@
     margin-left: 12px;
 }
 .error {
-    margin-top: 12px;
+    margin-top: 16px;
     margin-left: 12px;
     background-color: var(--black3); 
     color: var(--accent); 
@@ -400,7 +400,7 @@
     line-height: 16px;
 }
 .sending {
-    margin-top: 12px;
+    margin-top: 16px;
     background-color: var(--black3); 
     color: var(--myinterface);
     font-family: 'DM Sans', Arial, sans-serif;
