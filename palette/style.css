@@ -69,6 +69,7 @@
     .color-label {
       margin-top: 40px;
       font-size: 16px;
+      line-height: 20px;
       color: var(--text);
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
@@ -81,6 +82,7 @@
   font-family: 'DM Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
+  line-height: 20px;
   text-align: center;
 }
     h1 {
@@ -89,6 +91,7 @@
       margin-bottom: 12px;
       margin-top: 20px;
       font-size: 48px;
+      line-height: 52px;
       text-align: center;
       -webkit-text-size-adjust: 100%;
     }
@@ -105,6 +108,7 @@
       padding: 16px 32px;
       height: 56px;
       font-size: 16px;
+      line-height: 20px;
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
       color: var(--text);
@@ -174,6 +178,7 @@
       margin-bottom: 12px;
       margin-top: 40px;
       font-size: 28px;
+      line-height: 32px;
       text-align: center;
       -webkit-text-size-adjust: 100%;
     }
@@ -189,6 +194,7 @@
   font-family: 'DM Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
+  line-height: 20px;
   text-align: center;
 }
   .color-box.cube3d {
