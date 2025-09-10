@@ -112,7 +112,14 @@
 
   <url>
     <loc>https://web-design.spb.ru/blog/ux-trends/</loc>
-    <lastmod>2025-08-21</lastmod>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://web-design.spb.ru/blog/studio/</loc>
+    <lastmod>2025-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
