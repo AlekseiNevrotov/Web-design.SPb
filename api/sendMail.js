@@ -8,7 +8,7 @@ export async function POST(request) {
       pages_count,
       design_selected,
       adaptive_selected,
-      cms_selected,
+      crm_selected,
       dop_selected,
       seo_selected,
       total_cost
@@ -30,7 +30,7 @@ export async function POST(request) {
       pages_count ? `Количество страниц: ${pages_count}` : null,
       design_selected ? `Дизайн: ${design_selected}` : null,
       adaptive_selected ? `Адаптивность: ${adaptive_selected}` : null,
-      cms_selected ? `CMS: ${cms_selected}` : null,
+      crm_selected ? `CRM: ${crm_selected}` : null,
       dop_selected ? `Кастомизация: ${dop_selected}` : null,
       seo_selected ? `SEO настройки: ${seo_selected}` : null,
       total_cost ? `Итоговая стоимость: ${total_cost}` : null,

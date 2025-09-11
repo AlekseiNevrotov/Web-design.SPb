@@ -5,7 +5,7 @@ document.fonts.ready.then(() => {
     const pagesValue = document.getElementById('pagesValue');
     const design = document.getElementById('design');
     const adaptive = document.getElementById('adaptive');
-    const cms = document.getElementById('cms');
+    const crm = document.getElementById('crm');
     const dop = document.getElementById('dop');
     const seo = document.getElementById('seo');
     const total = document.getElementById('total');
@@ -13,7 +13,7 @@ document.fonts.ready.then(() => {
       let cost = pages.value * 10000;
       if (design.checked) cost += pages.value * 5000;
       if (adaptive.checked) cost += pages.value * 4000;
-      if (cms.checked) cost += 10000;
+      if (crm.checked) cost += 20000;
       if (dop.checked) cost += 15000;
       if (seo.checked) cost += pages.value * 2000;
       pagesValue.textContent = pages.value;
@@ -21,7 +21,7 @@ document.fonts.ready.then(() => {
       document.getElementById('pages_count').value = pages.value;
       document.getElementById('design_selected').value = design.checked ? 'Да' : 'Нет';
       document.getElementById('adaptive_selected').value = adaptive.checked ? 'Да' : 'Нет';
-      document.getElementById('cms_selected').value = cms.checked ? 'Да' : 'Нет';
+      document.getElementById('crm_selected').value = crm.checked ? 'Да' : 'Нет';
       document.getElementById('dop_selected').value = dop.checked ? 'Да' : 'Нет';
       document.getElementById('seo_selected').value = seo.checked ? 'Да' : 'Нет';
       document.getElementById('total_cost').value = cost;
@@ -29,7 +29,7 @@ document.fonts.ready.then(() => {
     pages.addEventListener('input', calculate);
     design.addEventListener('change', calculate);
     adaptive.addEventListener('change', calculate);
-    cms.addEventListener('change', calculate);
+    crm.addEventListener('change', calculate);
     dop.addEventListener('change', calculate);
     seo.addEventListener('change', calculate);
     calculate();
@@ -61,7 +61,7 @@ document.getElementById('auditForm').onsubmit = async function(e) {
     pages_count: form.pages_count.value,
     design_selected: form.design_selected.value,
     adaptive_selected: form.adaptive_selected.value,
-    cms_selected: form.cms_selected.value,
+    crm_selected: form.crm_selected.value,
     dop_selected: form.dop_selected.value,
     seo_selected: form.seo_selected.value,
     total_cost: form.total_cost.value
