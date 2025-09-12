@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
           icons.forEach((icon, i) => {
             setTimeout(() => {
               icon.classList.add('visible');
-            }, 300 + i * 180);
+            }, 300 + i * 1000);
           });
           observer.unobserve(stepsBlock);
         }
