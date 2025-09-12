@@ -688,6 +688,16 @@ ul {
   margin: 0 auto 16px auto;
   object-fit: contain;
 }
+.features-steps .feature-icon {
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.features-steps .feature-icon.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
     .feature {
       flex: 1 1 200px;
       background: linear-gradient(90deg, #1C1C1C, #191919);

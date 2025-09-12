@@ -352,3 +352,46 @@ window.onload = function() {
         }, 1000);
     }, 16000);
 };
+document.addEventListener('DOMContentLoaded', () => {
+  const stepsBlock = document.querySelector('.features-steps');
+  if (!stepsBlock) return;
+  const icons = stepsBlock.querySelectorAll('.feature-icon');
+  const getRootMargin = () => {
+    if (window.innerWidth < 768) {
+      return '0px 0px 280px 0px'; 
+    } else if (window.innerWidth < 1024) {
+      return '0px 0px 280px 0px'; 
+    } else {
+      return '0px 0px 80px 0px';
+    }
+  };
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          icons.forEach((icon, i) => {
+            setTimeout(() => {
+              icon.classList.add('visible');
+            }, 300 + i * 180);
+          });
+          observer.unobserve(stepsBlock);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: getRootMargin()
+    }
+  );
+  observer.observe(stepsBlock);
+  let timeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      observer.disconnect();
+      observer.threshold = 0.1;
+      observer.rootMargin = getRootMargin();
+      observer.observe(stepsBlock);
+    }, 100);
+  });
+});
