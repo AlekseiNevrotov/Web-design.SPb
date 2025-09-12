@@ -1580,6 +1580,13 @@ textarea::placeholder {
     -ms-user-select: none;     
     user-select: none;      
   }
+  .feature-icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin: 16px auto 0px auto;
+  object-fit: contain;
+}
   .features,
   .advantages-list {
     flex-direction: column;
