@@ -685,7 +685,7 @@ ul {
 }
     .feature {
       flex: 1 1 200px;
-      background: var(--black3);
+      background: linear-gradient(100deg, #1C1C1C, #121212);
       border-radius: 20px;
       padding: 24px;
       min-width: 120px;
