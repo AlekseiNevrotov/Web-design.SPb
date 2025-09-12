@@ -684,7 +684,6 @@ ul {
 }
 .feature-icon {
   display: block;
-  width: 40px;
   height: 40px;
   margin: 0 auto 16px auto;
   object-fit: contain;
@@ -1582,7 +1581,6 @@ textarea::placeholder {
   }
   .feature-icon {
   display: block;
-  width: 36px;
   height: 36px;
   margin: 16px auto -8px auto;
   object-fit: contain;
