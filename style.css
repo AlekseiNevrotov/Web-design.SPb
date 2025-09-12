@@ -1584,7 +1584,7 @@ textarea::placeholder {
   display: block;
   width: 36px;
   height: 36px;
-  margin: 16px auto 0px auto;
+  margin: 16px auto -8px auto;
   object-fit: contain;
 }
   .features,
