@@ -687,6 +687,7 @@ ul {
   height: 40px;
   margin: 0 auto 16px auto;
   object-fit: contain;
+  will-change: opacity, transform;
 }
 .features-steps .feature-icon {
   opacity: 0;
