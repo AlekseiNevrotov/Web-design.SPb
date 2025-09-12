@@ -228,6 +228,7 @@
       overflow: hidden;
       transition: transform 0.4s ease, filter 0.4s ease;
       cursor: pointer;
+      will-change: opacity, transform;
       -webkit-user-select: none; 
       -moz-user-select: none;    
       -ms-user-select: none;     
@@ -892,6 +893,7 @@ ul {
   overflow: hidden;
   border-radius: 20px;
   font-weight: 300;
+  will-change: opacity, transform;
 }
 .services-list {
   flex: 1.6;
