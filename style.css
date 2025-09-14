@@ -1131,7 +1131,7 @@ textarea::placeholder {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .modal {
   border-radius: 0px;
   display: none;
@@ -1182,7 +1182,7 @@ textarea::placeholder {
   transform: scale(0.96);
 }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
       main {
         padding: 24px 4vw 24px 4vw;
       }
@@ -1279,7 +1279,7 @@ textarea::placeholder {
       user-select: none;
 }
     }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .services-form-block {
     flex-direction: column;
     max-width: 100vw;
@@ -1464,7 +1464,7 @@ textarea::placeholder {
             transform: scale(0.96);
         }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
       :root {
     --header-height: 80px;
   }
@@ -1688,7 +1688,7 @@ textarea::placeholder {
   margin-bottom: 8px;
   margin-top: 0;
 }
-@media screen and (orientation: landscape) and (max-width: 1000px) {
+@media screen and (orientation: landscape) and (max-width: 1024px) {
   body::before {
     content: "Поверните устройство вертикально и обновите страницу.";
     position: fixed;
@@ -1708,7 +1708,7 @@ textarea::placeholder {
 #portfolio-title, #services-title, #reviews-title {
   scroll-margin-top: 140px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   #portfolio-title, #services-title, #reviews-title {
     scroll-margin-top: 100px;
   }

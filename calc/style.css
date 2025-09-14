@@ -239,7 +239,7 @@
     line-height: 16px;
     margin-left: 12px;
 }
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
       .calc-container {
         padding: 16px 16px 16px 16px;
         margin: 16px 0 16px 0;

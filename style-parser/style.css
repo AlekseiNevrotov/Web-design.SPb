@@ -144,7 +144,7 @@
         transform: rotate(360deg);
     }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   h1 {
       font-family: 'Ubuntu', Arial, sans-serif;
       font-weight: 300;
