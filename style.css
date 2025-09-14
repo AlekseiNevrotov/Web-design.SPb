@@ -397,6 +397,7 @@
       border-radius: 0px;
       transition: 0.4s;
       transform-origin: right;
+      will-change: opacity, transform;
     }
     .burger.open span {
   background: var(--accent); 
@@ -1541,6 +1542,7 @@ textarea::placeholder {
   position: relative;
   font-family: 'DM Sans', Arial, sans-serif;
   font-weight: 300;
+  will-change: opacity, transform;
 }
 .submenu-toggle::after {
   content: '';
@@ -1555,6 +1557,7 @@ textarea::placeholder {
   transform: translateY(-60%) rotate(45deg);
   transition: transform 0.4s;
   pointer-events: none;
+  will-change: opacity, transform;
 }
   main {
     padding: 40px 20px 40px 20px;
