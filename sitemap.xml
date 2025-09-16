@@ -138,4 +138,11 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://web-design.spb.ru/blog/develop/</loc>
+    <lastmod>2025-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
