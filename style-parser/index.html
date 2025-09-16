@@ -64,26 +64,26 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-  const preloader = document.getElementById('preloader');
-  if (preloader && !localStorage.getItem('preloaderShown')) {
-    document.body.style.overflow = 'hidden';
-    function hidePreloaderWhenFontsReady() {
-      if (document.fonts && document.fonts.check('1em "DM Sans"') && document.fonts.check('1em Ubuntu')) {
-        setTimeout(() => {
-          preloader.classList.add('hide');
-          document.body.style.overflow = '';
-          localStorage.setItem('preloaderShown', '1');
-        }, 1200);
-      } else {
-        setTimeout(hidePreloaderWhenFontsReady, 50);
+      const preloader = document.getElementById('preloader');
+      if (preloader && !localStorage.getItem('preloaderShown')) {
+        document.body.style.overflow = 'hidden';
+        function hidePreloaderWhenFontsReady() {
+          if (document.fonts && document.fonts.check('1em "DM Sans"') && document.fonts.check('1em Ubuntu')) {
+            setTimeout(() => {
+              preloader.classList.add('hide');
+              document.body.style.overflow = '';
+              localStorage.setItem('preloaderShown', '1');
+            }, 1200);
+          } else {
+            setTimeout(hidePreloaderWhenFontsReady, 50);
+          }
+        }
+        hidePreloaderWhenFontsReady();
+      } else if (preloader) {
+        preloader.classList.add('hide');
+        document.body.style.overflow = '';
       }
-    }
-    hidePreloaderWhenFontsReady();
-  } else if (preloader) {
-    preloader.classList.add('hide');
-    document.body.style.overflow = '';
-  }
-});
+    });
   </script>
   <script>
     async function parseStyle() {
@@ -109,7 +109,8 @@
         const pre = document.createElement('pre');
         const code = document.createElement('code');
         code.className = 'css';
-        code.textContent = data.css || 'CSS не найден';
+        const cmsInfo = data.cms ? `CMS: ${data.cms}\n` : 'CMS: Неизвестно\n'; 
+        code.textContent = cmsInfo + (data.css || 'CSS не найден');
         pre.appendChild(code);
         resultDiv.appendChild(pre);
         hljs.highlightElement(code);
