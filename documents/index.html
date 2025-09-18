@@ -139,11 +139,6 @@
       <a href="/documents/agreementnicru/">Открыть →</a>
     </div>
     </div>
-    <div class="pagination">
-            <button class="prev-page">ᐸ</button>
-            <span class="page-info">Страница 1 из 1</span>
-            <button class="next-page">ᐳ</button>
-        </div>
   </main>
   <footer class="footer">
   <div class="footer__container">
@@ -165,39 +160,5 @@
   </div>
 </footer>
 <script src="../script.js"></script>
-<script>
-        const postsPerPage = 10;
-        let currentPage = 1;
-        let totalPages = 0;
-        function showPosts(page) {
-            const posts = $('.post');
-            const start = (page - 1) * postsPerPage;
-            const end = start + postsPerPage;
-            posts.hide().slice(start, end).show();
-            totalPages = Math.ceil(posts.length / postsPerPage);
-            $('.page-info').text(`Страница ${page} из ${totalPages}`);
-            const firstPost = $('.post:visible:first');
-            if (firstPost.length) {
-                $('html, body').animate({
-                    scrollTop: firstPost.offset().top - 1000
-                }, 500);
-            }
-        }
-        $('.next-page').click(function() {
-            if (currentPage < totalPages) {
-                currentPage++;
-                showPosts(currentPage);
-            }
-        });
-        $('.prev-page').click(function() {
-            if (currentPage > 1) {
-                currentPage--;
-                showPosts(currentPage);
-            }
-        });
-        $(document).ready(function() {
-            showPosts(currentPage);
-        });
-    </script>
 </body>
 </html>
