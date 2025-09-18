@@ -117,7 +117,7 @@
         margin-bottom: 20px;
       }
        .post:last-child {
-    margin-bottom: 40px; /* Установите желаемый отступ */
+    margin-bottom: 16px; /* Установите желаемый отступ */
 }
       .post h2 {
         font-family: 'Ubuntu', Arial, sans-serif;
