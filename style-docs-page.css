@@ -31,6 +31,9 @@
       box-shadow: 4px 0px 8px var(--black2);
       transition: box-shadow 0.4s;
     }
+    .post:last-child {
+    margin-bottom: 80px; /* Установите желаемый отступ */
+}
     .post h2 {
       margin-top: 0;
       font-size: 24px;
@@ -95,50 +98,6 @@
   background: var(--myinterface);
   transition: width 0.4s;
 }
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-}
-.pagination button {
-    width: 40px;
-    margin: 0 12px;
-    height: 40px;
-      font-size: 16px;
-      font-family: 'DM Sans', Arial, sans-serif;
-      font-weight: 300;
-      color: var(--text);
-      border: 1px solid var(--grey);
-      background: var(--bg);
-      border-radius: 60px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.4s ease;
-      -webkit-user-select: none; 
-      -moz-user-select: none;    
-      -ms-user-select: none;     
-      user-select: none;
-    margin-bottom: 40px;
-}
-.pagination button:hover {
-    border: 1px solid var(--accent);
-      background: var(--bg);
-      color: var(--accent);
-}
-.pagination button:active {
-    border: 1px solid var(--myinterface);
-  background: var(--bg); 
-  color: var(--myinterface);                
-  transform: scale(0.96);
-}
-.page-info {
-    font-size: 16px;
-    line-height: 20px;
-    font-family: 'DM Sans', Arial, sans-serif;
-    font-weight: 300;
-    margin: 8px 12px;
-    color: var(--text);
-}
     @media (max-width: 1024px) {
       main {
         padding: 24px 24px 24px 24px;
@@ -157,6 +116,9 @@
         border-radius: 20px;
         margin-bottom: 20px;
       }
+       .post:last-child {
+    margin-bottom: 40px; /* Установите желаемый отступ */
+}
       .post h2 {
         font-family: 'Ubuntu', Arial, sans-serif;
     font-weight: 300;
@@ -172,47 +134,4 @@
       font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
     }
-    .pagination {
-    display: flex;
-    justify-content: center;
-    margin: 28px 0 12px 0;
-    font-size: 14px;
-    line-height: 16px;
-      font-family: 'DM Sans', Arial, sans-serif;
-      font-weight: 300;
-}
-.pagination button {
-    margin: 0 12px;
-    height: 40px;
-      font-size: 14px;
-      font-family: 'DM Sans', Arial, sans-serif;
-      font-weight: 300;
-      color: var(--text);
-      border: 1px solid var(--grey);
-      background: var(--bg);
-      border-radius: 60px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.4s ease;
-      -webkit-user-select: none; 
-      -moz-user-select: none;    
-      -ms-user-select: none;     
-      user-select: none;
-    margin-bottom: -4px;
-}
-.pagination button:hover {
-    border: 1px solid var(--accent);
-      background: var(--bg);
-      color: var(--accent);
-}
-.pagination button:active {
-    border: 1px solid var(--myinterface);
-  background: var(--bg); 
-  color: var(--myinterface);                
-  transform: scale(0.96);
-}
-.page-info {
-    margin: 12px 4px;
-    color: var(--text);
-}
     }
