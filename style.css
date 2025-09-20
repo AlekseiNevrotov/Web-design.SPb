@@ -700,7 +700,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0px;
+    margin-top: 8px;
     padding: 0;
 }
 .dot {
