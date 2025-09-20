@@ -654,6 +654,7 @@ ul {
     display: flex;
     transition: transform 0.4s ease;
     width: 100%;
+    will-change: transform;
 }
 .slide {
     flex: 0 0 100%;
