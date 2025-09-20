@@ -395,3 +395,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
   });
 });
+const sliderInner = document.querySelector('.slider-inner');
+const slides = document.querySelectorAll('.slide');
+const prevButton = document.querySelector('.slider-prev');
+const nextButton = document.querySelector('.slider-next');
+const dotsContainer = document.querySelector('.slider-dots');
+let currentIndex = 0;
+slides.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    dot.dataset.index = index;
+    dotsContainer.appendChild(dot);
+});
+const dots = document.querySelectorAll('.dot');
+function updateSlider() {
+    sliderInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+}
+function addActiveListeners(button) {
+    button.addEventListener('mousedown', () => button.classList.add('active'));
+    button.addEventListener('mouseup', () => button.classList.remove('active'));
+    button.addEventListener('mouseleave', () => button.classList.remove('active'));
+    button.addEventListener('touchstart', () => button.classList.add('active'));
+    button.addEventListener('touchend', () => button.classList.remove('active'));
+}
+addActiveListeners(prevButton);
+addActiveListeners(nextButton);
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+    updateSlider();
+});
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+    updateSlider();
+});
+dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        currentIndex = parseInt(dot.dataset.index);
+        updateSlider();
+    });
+});
+updateSlider();
