@@ -437,3 +437,32 @@ dots.forEach(dot => {
     });
 });
 updateSlider();
+
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+function handleTouchStart(event) {
+    touchStartX = event.changedTouches[0].clientX; // Запоминаем начальную позицию касания
+}
+
+function handleTouchMove(event) {
+    touchEndX = event.changedTouches[0].clientX; // Запоминаем конечную позицию касания
+}
+
+function handleTouchEnd() {
+    if (touchStartX - touchEndX > 50) {
+        // Свайп влево
+        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+        updateSlider();
+    } else if (touchEndX - touchStartX > 50) {
+        // Свайп вправо
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+        updateSlider();
+    }
+}
+
+// Добавляем обработчики для слайдера
+sliderInner.addEventListener('touchstart', handleTouchStart);
+sliderInner.addEventListener('touchmove', handleTouchMove);
+sliderInner.addEventListener('touchend', handleTouchEnd);
