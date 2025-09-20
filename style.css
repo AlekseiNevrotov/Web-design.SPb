@@ -1339,6 +1339,10 @@ textarea::placeholder {
     color: var(--grey2); 
     text-align: right; 
 }
+.dot {
+    width: 4px;
+    height: 4px;
+}
 .business-article br {
         display: none;
     }
