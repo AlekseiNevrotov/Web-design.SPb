@@ -32,7 +32,7 @@
       transition: box-shadow 0.4s;
     }
     .post:last-child {
-    margin-bottom: 80px; /* Установите желаемый отступ */
+    margin-bottom: 80px;
 }
     .post h2 {
       margin-top: 0;
@@ -44,7 +44,7 @@
     }
     .post p {
       margin-top: -16px;
-      margin-bottom: 0px;
+      margin-bottom: 8px;
       color: var(--grey2);
       font-size: 16px;
       line-height: 20px;
@@ -117,7 +117,7 @@
         margin-bottom: 20px;
       }
        .post:last-child {
-    margin-bottom: 16px; /* Установите желаемый отступ */
+    margin-bottom: 16px;
 }
       .post h2 {
         font-family: 'Ubuntu', Arial, sans-serif;
