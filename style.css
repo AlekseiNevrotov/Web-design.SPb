@@ -674,7 +674,7 @@ ul {
     font-weight: 300;
     cursor: pointer;
     opacity: 0.4;
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    transition: fadeIn 0.4s ease forwards;
     z-index: 10;
     display: flex;
     justify-content: center;
