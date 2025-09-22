@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://web-design.spb.ru/blog/installation/" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Афиша Вечеринки</title>
+  <style>
+    body { margin: 0; overflow: hidden; font-family: 'DM Sans', sans-serif; }
+    canvas { display: block; }
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8); /* Черный полупрозрачный фон */
+      color: white; 
+      padding: 20px; 
+      border: 1px solid white;
+      border-radius: 10px; 
+      height: 400px;
+      width: 400px; /* Ограничим ширину */
+      text-align: center; 
+      z-index: 1; 
+    }
+    .date {
+      text-align: right;
+      font-size: 1.2em;
+      margin: 10px 0; /* Отступы вокруг текста */
+    }
+    .mounth {
+      text-align: right;
+      font-size: 1.2em;
+      margin: 10px 0; /* Отступы вокруг текста */
+    }
+    .time {
+    position: absolute; 
+    left: 20px; 
+    bottom: 20px; 
+    font-size: 1.2em;
+    text-align: left;
+}
+    .location {
+      font-size: 1.2em;
+      margin: 10px 0; /* Отступы вокруг текста */
+    }
+    .description {
+      font-size: 1em;
+      margin: 20px 0; /* Отступы вокруг описания */
+    }
+    .btn {
+      padding: 10px 15px;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: black; 
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px; /* Отступы между кнопками */
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+        scene.background = new THREE.Color(0x000000);
+        
+        // Здесь ваш код для трехмерной сцены...
+
+        function animate() {
+            requestAnimationFrame(animate);
+            // Здесь ваш код анимации...
+            
+            renderer.render(scene, camera);
+        }
+        animate();
+        
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+
+    <div class="overlay">
+        <div class="date">30</div>
+        <div class="mounth">сентября</div>
+        <div class="location">Место: Арт-Центр "Творчество"</div>
+        <div class="description">
+            Присоединяйтесь к ночи, полной музыки, искусства и вдохновения!
+            Не пропустите выступления известных диджеев и уникальные инсталляции.
+        </div>
+        <div>
+          <button class="btn">Купить Билет</button>
+          <button class="btn">RSVP</button>
+        </div>
+        <div class="time">Start: 20:00</div>
+    </div>
+</body>
+</html>
