@@ -438,20 +438,28 @@ dots.forEach(dot => {
 });
 updateSlider();
 let touchStartX = 0;
+let touchStartY = 0; 
 let touchEndX = 0;
+let touchEndY = 0;
 function handleTouchStart(event) {
     touchStartX = event.changedTouches[0].clientX;
+    touchStartY = event.changedTouches[0].clientY;
 }
 function handleTouchMove(event) {
     touchEndX = event.changedTouches[0].clientX;
+    touchEndY = event.changedTouches[0].clientY;
 }
 function handleTouchEnd() {
-    if (touchStartX - touchEndX > 50) {
-        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-        updateSlider();
-    } else if (touchEndX - touchStartX > 50) {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-        updateSlider();
+    const deltaX = touchStartX - touchEndX;
+    const deltaY = touchStartY - touchEndY;
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        if (deltaX > 50) {
+            currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+            updateSlider();
+        } else if (deltaX < -50) {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+            updateSlider();
+        }
     }
 }
 sliderInner.addEventListener('touchstart', handleTouchStart);
