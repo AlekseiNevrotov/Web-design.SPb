@@ -438,16 +438,21 @@ dots.forEach(dot => {
 });
 updateSlider();
 let touchStartX = 0;
-let touchStartY = 0; 
+let touchStartY = 0;
 let touchEndX = 0;
-let touchEndY = 0;
+let touchEndY = 0; 
 function handleTouchStart(event) {
     touchStartX = event.changedTouches[0].clientX;
-    touchStartY = event.changedTouches[0].clientY;
+    touchStartY = event.changedTouches[0].clientY; 
 }
 function handleTouchMove(event) {
     touchEndX = event.changedTouches[0].clientX;
     touchEndY = event.changedTouches[0].clientY;
+    const deltaX = touchStartX - touchEndX;
+    const deltaY = touchStartY - touchEndY;
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        event.preventDefault();
+    }
 }
 function handleTouchEnd() {
     const deltaX = touchStartX - touchEndX;
