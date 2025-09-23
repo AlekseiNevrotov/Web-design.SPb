@@ -122,21 +122,18 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white; 
+      background-color: var(--bg);
+      color: var(--text); 
       padding: 20px; 
-      border: 1px solid white;
-      border-radius: 20px; 
+      border: 1px solid var(--myinterface);
+      border-radius: 40px; 
       height: 400px;
       width: 300px;
-      text-align: center; 
       z-index: 1; 
     }
     .logo {
     height: 68px; 
     position: absolute; 
-    top: 20px; 
-    left: 20px;
     }
     .date {
       font-family: 'Bebas Neue', sans-serif;
@@ -178,17 +175,23 @@
       margin: 10px 0; 
     }
     .price {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
       position: absolute; 
       left: 20px; 
       bottom: 20px; 
-      font-size: 1.2em;
+      font-size: 20px;
+      line-height: 20px;
       text-align: left;
 }
     .fc {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
       position: absolute; 
       right: 20px; 
       bottom: 20px; 
-      font-size: 1.2em;
+      font-size: 20px;
+      line-height: 20px;
       text-align: right;
 }
     .name {
@@ -301,7 +304,7 @@
         <div class="artist">DJ DVA</div>
         <div class="artist">DJ TRI</div>
         <div class="finish">Finish: 06:00</div>
-        <div class="price">500 rur</div>
+        <div class="price">500 ₽</div>
         <div class="fc">FC | DC</div>
         <div>
           <button class="btn">Купить Билет</button>
