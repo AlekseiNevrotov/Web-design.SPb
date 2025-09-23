@@ -125,7 +125,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      background-color: var(--bg);
+      background-color: rgba(18, 18, 18, 0.8);
       transform: translate(-50%, -50%);
       color: var(--text); 
       padding: 20px; 
@@ -305,7 +305,7 @@
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
     
     // Задаем серый цвет для линий
-    const lineMaterial = new THREE.LineBasicMaterial({ color: 0x299599 }); // Светло-серый цвет
+    const lineMaterial = new THREE.LineBasicMaterial({ color: 0x8A2BE2 });
     const lineSegments = new THREE.LineSegments(geometry, lineMaterial);
     scene.add(lineSegments);
     camera.position.z = 5;
