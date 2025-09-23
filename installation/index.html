@@ -122,7 +122,6 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: var(--bg);
       color: var(--text); 
       padding: 20px; 
       border: 1px solid var(--myinterface);
@@ -132,8 +131,18 @@
       z-index: 1; 
     }
     .logo {
-    height: 68px; 
+    height: 48px; 
     position: absolute; 
+    }
+    .adress {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      text-align: left;
+      font-size: 12px;
+      line-height: 12px;
+      position: absolute; 
+      left: 20px; 
+      top: 76px; 
     }
     .date {
       font-family: 'Bebas Neue', sans-serif;
@@ -150,7 +159,7 @@
       line-height: 12px;
     }
     .name {
-      margin-top: 40px;
+      margin-top: 60px;
       font-family: 'Bebas Neue', sans-serif;
       font-weight: 300;
       font-size: 64px;
@@ -213,13 +222,19 @@
       margin: 20px 0; /* Отступы вокруг описания */
     }
     .btn {
-      padding: 10px 15px;
+      font-family: 'Lato', sans-serif;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 300;
+      padding: 16px 16px;
       background-color: rgba(255, 255, 255, 0.5);
       color: black; 
       border: none;
-      border-radius: 5px;
+      border-radius: 68px;
       cursor: pointer;
-      margin: 10px; /* Отступы между кнопками */
+      position: absolute;
+      left: 88px;
+      bottom: 20px; 
       transition: background-color 0.3s;
     }
     .btn:hover {
@@ -305,19 +320,20 @@
         <div class="logo">
     <img src="../Logo.svg" alt="Логотип" style="height: 100%";>
 </div>
+        <div class="adress">хуй знает где какието ебеня</div>
         <div class="date">30</div>
         <div class="mounth">сентября</div>
         <div class="name">Techno</div>
         <div class="promo">все лудшие диджеи мира</div>
         <div class="start">Старт: 22:00</div>
-        <div class="artist">DJ ODIN</div>
-        <div class="artist">DJ DVA</div>
-        <div class="artist">DJ TRI</div>
+        <div class="artist">DJ SASHLINDOS</div>
+        <div class="artist">DJ BARIGA</div>
+        <div class="artist">DJ ALKASH</div>
         <div class="finish">Стоп: 06:00</div>
         <div class="price">500 ₽</div>
         <div class="fc">FC | DC | 18+</div>
         <div>
-          <button class="btn">Купить Билет</button>
+          <button class="btn">Купить белет</button>
         </div>
     </div>
 </body>
