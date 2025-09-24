@@ -163,6 +163,12 @@
     transform: translateY(0);
   }
 }
+.button-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: -40px;
+}
     .btn {
       background-color: transparent;
       font-family: 'Lato', sans-serif;
@@ -172,10 +178,8 @@
       padding: 12px 24px;
       border: 1px solid var(--myinterface);
       color: var(--myinterface); 
-      border-radius: 100px 100px 100px 100px;
+      border-radius: 100px;
       cursor: pointer;
-      position: absolute;
-      left: 88px;
       bottom: 8px;
       animation: fadeIn 0.8s ease forwards;
     }
@@ -212,14 +216,18 @@
     text-align: center;
 }
 .close {
-    color: #aaa;
+    color: var(--myinterface);
     float: right;
-    font-size: 28px; 
-    font-weight: bold; 
+    font-size: 28px;
 }
 .close:hover,
 .close:focus {
-    color: white;
+    color: var(--accent);
+    text-decoration: none;
+    cursor: pointer; 
+}
+.close:active {
+    transform: scale(0.96);
     text-decoration: none;
     cursor: pointer; 
 }
