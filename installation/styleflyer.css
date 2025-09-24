@@ -167,7 +167,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    bottom: -40px;
+    top: 36px;
 }
     .btn {
       background-color: transparent;
