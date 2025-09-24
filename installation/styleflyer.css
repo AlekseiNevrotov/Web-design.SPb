@@ -182,7 +182,6 @@
       border-radius: 100px;
       box-sizing: border-box;
       cursor: pointer;
-      bottom: 8px;
       animation: fadeIn 0.8s ease forwards;
     }
     .btn:hover {
