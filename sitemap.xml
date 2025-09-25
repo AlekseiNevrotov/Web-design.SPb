@@ -173,4 +173,11 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://web-design.spb.ru/blog/ui-trends/</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
