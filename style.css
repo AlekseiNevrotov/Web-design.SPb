@@ -473,7 +473,7 @@
       text-align: left;
       width: 100%;
       padding: 0;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       cursor: pointer;
       outline: none;
     }
@@ -492,6 +492,9 @@
       transform-origin: top;
       animation: rotateInFromTop 0.4s forwards;
     }
+.submenu-list > a:first-child {   
+    margin-top: 4px;
+}
 .submenu-list > a:last-child {   
     margin-bottom: 12px;
 }
