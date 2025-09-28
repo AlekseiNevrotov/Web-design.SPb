@@ -22,7 +22,7 @@ const scene = new THREE.Scene();
         positions.push(x1, y1, z1, x2, y2, z2);
     }
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-    const lineMaterial = new THREE.LineBasicMaterial({ color: 0x8A2BE2 });
+    const lineMaterial = new THREE.LineBasicMaterial({ color: 0x3bca98 });
     const lineSegments = new THREE.LineSegments(geometry, lineMaterial);
     scene.add(lineSegments);
     camera.position.z = 5;
