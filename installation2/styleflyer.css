@@ -93,7 +93,7 @@
       line-height: 56px;
       position: absolute;
       right: 20px; 
-      bottom: 100px;
+      bottom: 88px;
       z-index: 3;
     }
     .mounth {
@@ -157,15 +157,15 @@
     }
     .artists-container {
     position: absolute; /* Позволяет обойти необходимость менять стили самого элемента .artist */
-    top: 70%; /* Размещает контейнер по центру по вертикали */
+    top: 368px; /* Размещает контейнер по центру по вертикали */
     left: 0; /* Смещает контейнер к левой части */
     transform: translateY(-50%); /* Центрирование по вертикали */
 }
     .artist {
       color: var(--accent);
       top: 100px;
-      margin-top: 12px;
-      margin-left: 12px;
+      margin-top: 8px;
+      margin-left: 20px;
       font-family: 'Lato', sans-serif;
       font-weight: 300;
       text-align: left;
