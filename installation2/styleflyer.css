@@ -72,6 +72,15 @@
     background-color: var(--mylogo);
     z-index: 2;
 }
+.stripe5 {
+    position: absolute;
+    top: 460px;
+    left: 80px;
+    width: 140px;
+    height: 1px;
+    background-color: var(--bg);
+    z-index: 2;
+}
     .logo {
     height: 40px; 
     position: absolute;
