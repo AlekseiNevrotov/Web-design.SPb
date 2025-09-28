@@ -29,47 +29,54 @@
       box-sizing: border-box;
       z-index: 1; 
     }
+    .three-container {
+    position: relative;
+    top: -60px;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+}
     .stripe1 {
-    position: absolute; /* Позволяет наложить полоску на флаер */
-    top: 420px; /* Позиция сверху (измените по вашему желанию) */
-    left: 0; /* Начинается от левой грани флаера */
-    width: 100%; /* Полоска широкой по всей ширине флаера */
-    height: 80px; /* Высота полоски */
-    background-color: var(--mylogo); /* Цвет полоски (можно изменить) */
-    z-index: 2; /* Должен располагаться над overlay */
+    position: absolute;
+    top: 420px;
+    left: 0;
+    width: 100%; 
+    height: 80px;
+    background-color: var(--mylogo);
+    z-index: 2;
 }
 .stripe2 {
-    position: absolute; /* Позволяет наложить полоску на флаер */
-    top: 0px; /* Позиция сверху (измените по вашему желанию) */
-    left: 0; /* Начинается от левой грани флаера */
-    width: 100%; /* Полоска широкой по всей ширине флаера */
-    height: 8px; /* Высота полоски */
-    background-color: var(--mylogo); /* Цвет полоски (можно изменить) */
-    z-index: 2; /* Должен располагаться над overlay */
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: var(--mylogo);
+    z-index: 2;
 }
 .stripe3 {
-    position: absolute; /* Позволяет наложить полоску на флаер */
-    top: 0px; /* Позиция сверху (измените по вашему желанию) */
-    left: 0; /* Начинается от левой грани флаера */
-    width: 8px; /* Полоска широкой по всей ширине флаера */
-    height: 100%; /* Высота полоски */
-    background-color: var(--mylogo); /* Цвет полоски (можно изменить) */
-    z-index: 2; /* Должен располагаться над overlay */
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    background-color: var(--mylogo);
+    z-index: 2;
 }
 .stripe4 {
-    position: absolute; /* Позволяет наложить полоску на флаер */
-    top: 0px; /* Позиция сверху (измените по вашему желанию) */
-    left: 332px; /* Начинается от левой грани флаера */
-    width: 8px; /* Полоска широкой по всей ширине флаера */
-    height: 100%; /* Высота полоски */
-    background-color: var(--mylogo); /* Цвет полоски (можно изменить) */
-    z-index: 2; /* Должен располагаться над overlay */
+    position: absolute;
+    top: 0px;
+    left: 332px;
+    width: 8px;
+    height: 100%;
+    background-color: var(--mylogo);
+    z-index: 2;
 }
     .logo {
     height: 40px; 
     position: absolute;
     left: 20px; 
-    bottom: 32px;
+    bottom: 20px;
     z-index: 3;
     }
     .adress {
@@ -156,10 +163,10 @@
       margin-left: 20px; 
     }
     .artists-container {
-    position: absolute; /* Позволяет обойти необходимость менять стили самого элемента .artist */
-    top: 372px; /* Размещает контейнер по центру по вертикали */
-    left: 0; /* Смещает контейнер к левой части */
-    transform: translateY(-50%); /* Центрирование по вертикали */
+    position: absolute;
+    top: 372px;
+    left: 0;
+    transform: translateY(-50%);
 }
     .artist {
       color: var(--accent);
@@ -221,7 +228,8 @@
     display: flex;
     justify-content: center;
     position: relative;
-    top: 36px;
+    top: 440px;
+    z-index: 4;
 }
     .btn {
       background-color: transparent;
@@ -230,8 +238,8 @@
       line-height: 12px;
       font-weight: 300;
       padding: 13px 24px;
-      border: 1px solid var(--myinterface);
-      color: var(--myinterface); 
+      border: 1px solid var(--bg);
+      color: var(--bg); 
       border-radius: 100px;
       box-sizing: border-box;
       cursor: pointer;
