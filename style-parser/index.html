@@ -116,8 +116,17 @@
         const pre = document.createElement('pre');
         const code = document.createElement('code');
         code.className = 'css';
-        const cmsInfo = data.cms ? `CMS: ${data.cms}\n` : 'CMS: Неизвестно\n'; 
-        code.textContent = cmsInfo + (data.css || 'CSS не найден');
+        const cmsInfo = data.cms ? `CMS: ${data.cms}\n` : 'CMS: Неизвестно\n';
+        let techInfo = '';
+        if (data.techStack) {
+          const languages = data.techStack.languages ? data.techStack.languages.join(', ') : 'Неизвестно';
+          const frontend = data.techStack.frontendFrameworks ? data.techStack.frontendFrameworks.join(', ') : 'Vanilla JS';
+          const cssFw = data.techStack.cssFrameworks ? data.techStack.cssFrameworks.join(', ') : 'Custom CSS';
+          const jsLib = data.techStack.jsLibraries ? data.techStack.jsLibraries.join(', ') : 'Неизвестно';
+          const backend = data.techStack.backendHints ? data.techStack.backendHints.join(', ') : 'Неизвестно';
+          techInfo = `Стек: Языки - ${languages}; Frontend - ${frontend}; CSS фреймворки - ${cssFw}; JS библиотеки - ${jsLib}; Backend - ${backend}\n`;
+        }
+        code.textContent = cmsInfo + techInfo + '\n' + (data.css || 'CSS не найден');
         pre.appendChild(code);
         resultDiv.appendChild(pre);
         hljs.highlightElement(code);
