@@ -16,6 +16,10 @@ document.fonts.ready.then(() => {
       if (crm.checked) cost += 20000;
       if (dop.checked) cost += 15000;
       if (seo.checked) cost += pages.value * 2000;
+      const toggleSwitch = document.getElementById('toggleSwitch');
+      if (toggleSwitch && toggleSwitch.checked) {
+        cost *= 2;
+      }
       pagesValue.textContent = pages.value;
       total.textContent = cost.toLocaleString();
       document.getElementById('pages_count').value = pages.value;
@@ -119,4 +123,13 @@ const phoneInput = document.getElementById('phone');
   if (digits.length >= 8) masked += '-';
   if (digits.length >= 8) masked += digits.substring(8, 10);
   this.value = masked;
+});
+const toggleSwitch = document.getElementById('toggleSwitch');
+const toggleStatus = document.getElementById('toggleStatus');
+const checkboxes = document.querySelectorAll('.checkbox-group input[type="checkbox"]');
+toggleStatus.textContent = "CMS";
+toggleSwitch.addEventListener('change', () => {
+    const isChecked = toggleSwitch.checked;
+    toggleStatus.textContent = isChecked ? "Код" : "CMS";
+    calculate();
 });
