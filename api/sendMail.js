@@ -11,6 +11,7 @@ export async function POST(request) {
       crm_selected,
       dop_selected,
       seo_selected,
+      platform_type,
       total_cost
     } = await request.json();
     if (!phone || phone.trim().length !== 10 || !/^\d{10}$/.test(phone)) {
@@ -32,7 +33,8 @@ export async function POST(request) {
       adaptive_selected ? `Адаптивность: ${adaptive_selected}` : null,
       crm_selected ? `CRM: ${crm_selected}` : null,
       dop_selected ? `Кастомизация: ${dop_selected}` : null,
-      seo_selected ? `SEO настройки: ${seo_selected}` : null,
+      seo_selected ? `SEO: ${seo_selected}` : null,
+      platform_type ? `Платформа: ${platform_type}` : null,
       total_cost ? `Итоговая стоимость: ${total_cost}` : null,
     ].filter(Boolean);
     const mailText =
