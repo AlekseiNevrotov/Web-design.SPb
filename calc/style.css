@@ -286,7 +286,11 @@
     /* Сделать статус ближе к переключателю */
 .checkbox-group .status {
   margin-left: -8px; /* уменьшите до нужного значения */
-  
+  font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 16px; 
+      line-height: 24px;
+      color: var(--text);
 }
     @media (max-width: 1024px) {
       .calc-container {
@@ -338,6 +342,14 @@
       cursor: pointer;
       gap: 4px;
     }
+    .checkbox-group .status {
+  margin-left: -4px; /* уменьшите до нужного значения */
+  font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 14px; 
+      line-height: 24px;
+      color: var(--text);
+}
     input[type="checkbox"] {
       accent-color: var(--accent);
       width: 16px;
