@@ -29,7 +29,7 @@ document.fonts.ready.then(() => {
       document.getElementById('crm_selected').value = crm.checked ? 'Да' : 'Нет';
       document.getElementById('dop_selected').value = dop.checked ? 'Да' : 'Нет';
       document.getElementById('seo_selected').value = seo.checked ? 'Да' : 'Нет';
-      document.getElementById('platform_type').value = toggleSwitch.checked ? 'CMS' : 'Код';
+      document.getElementById('platform_type').value = toggleSwitch.checked ? 'Код' : 'CMS';
       document.getElementById('total_cost').value = cost;
     }
     pages.addEventListener('input', calculate);
