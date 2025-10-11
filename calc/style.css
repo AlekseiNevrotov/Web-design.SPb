@@ -283,10 +283,9 @@
     line-height: 16px;
     margin-left: 12px;
 }
-    /* Сделать статус ближе к переключателю */
 .checkbox-group .status {
-  margin-left: -8px; /* уменьшите до нужного значения */
-  font-family: 'DM Sans', Arial, sans-serif;
+      margin-left: -4px;
+      font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
       font-size: 16px; 
       line-height: 24px;
@@ -343,8 +342,8 @@
       gap: 4px;
     }
     .checkbox-group .status {
-  margin-left: -4px; /* уменьшите до нужного значения */
-  font-family: 'DM Sans', Arial, sans-serif;
+      margin-left: -4px;
+      font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
       font-size: 14px; 
       line-height: 24px;
