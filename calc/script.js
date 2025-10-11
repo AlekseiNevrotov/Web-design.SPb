@@ -133,3 +133,14 @@ toggleSwitch.addEventListener('change', () => {
     toggleStatus.textContent = isChecked ? "Код" : "CMS";
     calculate();
 });
+toggleSwitch.addEventListener('change', () => {
+    const isChecked = toggleSwitch.checked;
+    toggleStatus.textContent = isChecked ? "Код" : "CMS";
+    if (isChecked) {
+        dop.checked = false;
+        dop.disabled = true;
+    } else {
+        dop.disabled = false;
+    }
+    calculate();
+});
