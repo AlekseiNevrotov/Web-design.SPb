@@ -7,6 +7,7 @@ document.fonts.ready.then(() => {
     const adaptive = document.getElementById('adaptive');
     const crm = document.getElementById('crm');
     const dop = document.getElementById('dop');
+    const platform_type = document.getElementById('platform_type');
     const seo = document.getElementById('seo');
     const total = document.getElementById('total');
     function calculate() {
