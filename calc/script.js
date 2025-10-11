@@ -70,6 +70,7 @@ document.getElementById('auditForm').onsubmit = async function(e) {
     crm_selected: form.crm_selected.value,
     dop_selected: form.dop_selected.value,
     seo_selected: form.seo_selected.value,
+    platform_type: form.platform_type.value,
     total_cost: form.total_cost.value
   };
   try {
