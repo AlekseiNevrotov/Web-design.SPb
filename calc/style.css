@@ -283,6 +283,11 @@
     line-height: 16px;
     margin-left: 12px;
 }
+    /* Сделать статус ближе к переключателю */
+.checkbox-group .status {
+  margin-left: -8px; /* уменьшите до нужного значения */
+  
+}
     @media (max-width: 1024px) {
       .calc-container {
         padding: 16px 16px 16px 16px;
@@ -453,4 +458,4 @@
     line-height: 16px;
     margin-left: 12px;
 }
-    }
+}
