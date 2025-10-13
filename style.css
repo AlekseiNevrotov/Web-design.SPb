@@ -1782,7 +1782,7 @@ textarea::placeholder {
     scroll-margin-top: 100px;
   }
 }
-@media screen and (orientation: landscape) and (max-width: 376px) {
+@media only screen and (orientation: landscape) and (max-width: 480px) {
   body::before {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
