@@ -1786,7 +1786,7 @@ textarea::placeholder {
   body::before {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 300;
-    content: "Поверните устройство вертикально и обновите страницу. \AСвяжитесь с нами: +7 950 014-37-77";
+    content: "Поверните устройство вертикально и обновите страницу. \AСвяжитесь с нами: +7 (950) 014-37-77";
     position: fixed;
     z-index: 9999;
     inset: 0;
