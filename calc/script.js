@@ -48,7 +48,7 @@ document.getElementById('auditForm').onsubmit = async function(e) {
   e.preventDefault();
   const status = document.getElementById('form-status');
   status.className = 'sending';
-  status.innerText = 'Cогласие на обработку персональных данных.';
+  status.innerText = 'Cогласие на обработку персональных данных. ✅';
   const form = e.target;
   let digits = form.phone.value.replace(/\D/g, '');
   if (digits.startsWith('7') || digits.startsWith('8')) {
@@ -81,7 +81,7 @@ document.getElementById('auditForm').onsubmit = async function(e) {
     });
     if (res.ok) {
       status.className = 'success';
-      status.innerText = 'Спасибо за заявку!';
+      status.innerText = 'Заявка успешно отправлена! 🚀';
       setTimeout(closeModal, 1500);
     } else {
       status.className = 'error';

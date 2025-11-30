@@ -170,7 +170,7 @@ document.fonts.ready.then(function() {
   e.preventDefault();
   const status = document.getElementById('form-status');
   status.className = 'sending';
-  status.innerText = 'Cогласие на обработку персональных данных.';
+  status.innerText = 'Cогласие на обработку персональных данных. ✅';
   const form = e.target;
   let digits = form.phone.value.replace(/\D/g, '');
   if (digits.startsWith('7') || digits.startsWith('8')) {
@@ -195,7 +195,7 @@ document.fonts.ready.then(function() {
     });
     if (res.ok) {
       status.className = 'success';
-      status.innerText = 'Спасибо за заявку!';
+      status.innerText = 'Заявка успешно отправлена! 🚀';
       setTimeout(() => {
   form.reset();
   status.innerText = '';
