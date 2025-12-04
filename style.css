@@ -1296,6 +1296,9 @@ textarea::placeholder {
       main {
         padding: 24px 4vw 24px 4vw;
       }
+      .marquee {
+  padding: 92px 0;
+}
       .portfolio-link {
       display: block;
       background: var(--black3);
