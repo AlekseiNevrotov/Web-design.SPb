@@ -78,6 +78,7 @@
   white-space: nowrap;
   pointer-events: none;
   transition: opacity 0.4s;
+  will-change: opacity;
 }
 
 .marquee span {
