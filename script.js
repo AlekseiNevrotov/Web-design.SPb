@@ -470,3 +470,16 @@ function handleTouchEnd() {
 sliderInner.addEventListener('touchstart', handleTouchStart);
 sliderInner.addEventListener('touchmove', handleTouchMove);
 sliderInner.addEventListener('touchend', handleTouchEnd);
+window.addEventListener('scroll', function() {
+  const marquee = document.getElementById('mainMarquee');
+  const hero = document.querySelector('.hero');
+  if (!marquee || !hero) return;
+  const heroBottom = hero.getBoundingClientRect().bottom;
+  if (heroBottom <= 0) {
+    marquee.style.opacity = '0';
+    marquee.style.pointerEvents = 'none';
+  } else {
+    marquee.style.opacity = '1';
+    marquee.style.pointerEvents = 'auto';
+  }
+});
