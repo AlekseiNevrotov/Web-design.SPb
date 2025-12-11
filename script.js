@@ -474,8 +474,9 @@ window.addEventListener('scroll', function() {
   const marquee = document.getElementById('mainMarquee');
   const hero = document.querySelector('.hero');
   if (!marquee || !hero) return;
+  const offset = 400;
   const heroBottom = hero.getBoundingClientRect().bottom;
-  if (heroBottom <= 0) {
+  if (heroBottom <= offset) {
     marquee.style.opacity = '0';
     marquee.style.pointerEvents = 'none';
   } else {
