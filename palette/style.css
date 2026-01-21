@@ -19,8 +19,6 @@
             background: var(--bg);
             z-index: 9999;
             display: flex;
-            align-items: center;
-            justify-content: center;
             transition: color 0.4s;
         }
         #preloader.hide {

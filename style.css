@@ -30,8 +30,6 @@
 }
         #preloader {
             position: fixed;
-            align-items: center; 
-            justify-content: center; 
             top: 0; left: 0;
             width: 100vw; height: 100vh;
             background: var(--bg);
@@ -257,7 +255,8 @@
       height: 48px;        
       min-width: 100px;    
       overflow: hidden;
-      transition: transform 0.4s ease, filter 0.4s ease;
+      transition: transform 1s;
+      transform-style: preserve-3d;
       cursor: pointer;
       will-change: opacity, transform;
       -webkit-user-select: none; 
@@ -265,10 +264,6 @@
       -ms-user-select: none;     
       user-select: none;
     }
-    .logo {
-    transition: transform 1s; 
-    transform-style: preserve-3d;
-}
 @keyframes rotate {
     from {
         transform: rotateY(0deg); 
@@ -616,11 +611,10 @@ ul {
       padding: 20px 24px;
       font-size: 24px;
       line-height: 28px;
-      transition: box-shadow 0.4s;
+      transition: color 0.4s;
       font-family: 'Ubuntu', Arial, sans-serif;
       font-weight: 300;
       box-shadow: 4px 0px 8px var(--black2);
-      transition: color 0.4s;
       margin-top: 20px;
       text-align: center;
       -webkit-user-select: none; 
@@ -783,15 +777,14 @@ ul {
       margin-bottom: 80px;
     }
     .feature-image {
-    object-fit: cover;
     border-radius: 20px 20px 0px 0px; 
-    margin-bottom: 16px; 
     width: 248px; 
     height: 148px;
     object-fit: cover;
     display: block; 
     margin-left: -24px; 
     margin-top: -24px; 
+    margin-bottom: 16px; 
 }
 .feature-icon {
   display: block;
@@ -874,7 +867,7 @@ ul {
   text-decoration: none;
   line-height: 20px;
   font-size: 16px;
-  transition: 0.4s;
+  transition: color 0.4s;
   -webkit-user-select: none; 
   -moz-user-select: none;    
   -ms-user-select: none;     
@@ -913,24 +906,27 @@ ul {
   transform: scale(0.96);
 }
 .footer__socials {
-            display: flex;
-            gap: 20px;
-        }
-        .footer__socials a {
-            text-decoration: none;
-        }
-        .footer__socials i {
-            font-size: 24px; 
-            color: var(--text);
-            transition: color 0.4s;
-        }
-        .footer__socials i:hover {
-            color: var(--accent);
-        }
-        .footer__socials i:active {
-          color: var(--myinterface);
-            transform: scale(0.96);
-        }
+  display: flex;
+  gap: 20px;
+}
+
+.footer__socials a {
+  text-decoration: none;
+}
+
+.footer__socials i {
+  font-size: 24px; 
+  color: var(--text);
+  transition: color 0.4s;
+}
+
+.footer__socials i:hover {
+  color: var(--accent);
+}
+.footer__socials i:active {
+  color: var(--myinterface);
+  transform: scale(0.96);
+}
 #scrollToTop {
     font-size: 16px;
     font-family: 'DM Sans', Arial, sans-serif;
@@ -1311,11 +1307,9 @@ textarea::placeholder {
       padding: 20px 20px;
       font-size: 20px;
       line-height: 24px;
-      transition: box-shadow 0.4s;
+      transition: color 0.4s;
       font-family: 'Ubuntu', Arial, sans-serif;
       font-weight: 300;
-      box-shadow: 4px 0px 8px var(--black2);
-      transition: color 0.4s;
       margin-top: 12px;
       margin-bottom: 12px;
       text-align: center;
@@ -1536,7 +1530,7 @@ textarea::placeholder {
   text-decoration: none;
   font-size: 14px;
   line-height: 16px;
-  transition: 0.4s;
+  transition: color 0.4s;
   -webkit-user-select: none; 
   -moz-user-select: none;    
   -ms-user-select: none;     
@@ -1562,27 +1556,27 @@ textarea::placeholder {
   flex-grow: 1;
 }
 .footer__socials {
-            display: flex;
-            gap: 20px;
-        }
+  display: flex;
+  gap: 20px;
+}
 
-        .footer__socials a {
-            text-decoration: none;
-        }
+.footer__socials a {
+  text-decoration: none;
+}
 
-        .footer__socials i {
-            font-size: 24px; 
-            color: var(--text);
-            transition: color 0.4s;
-        }
+.footer__socials i {
+  font-size: 24px; 
+  color: var(--text);
+  transition: color 0.4s;
+}
 
-        .footer__socials i:hover {
-            color: var(--accent);
-        }
-        .footer__socials i:active {
-          color: var(--myinterface);
-            transform: scale(0.96);
-        }
+.footer__socials i:hover {
+  color: var(--accent);
+}
+.footer__socials i:active {
+  color: var(--myinterface);
+  transform: scale(0.96);
+}
 }
 @media (max-width: 1024px) {
       :root {

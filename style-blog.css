@@ -1,4 +1,4 @@
-    :root {
+:root {
       --mylogo: #26D9CD;
       --accent: #26D97C;
       --myinterface: #16847D;
@@ -79,11 +79,11 @@
  margin-bottom: 0;
 }
 @media (max-width: 1024px) {
-      .business-article {
-      margin-bottom: 0px;
-      text-align: left;
-}
-h1 {
+  .business-article {
+    margin-bottom: 0px;
+    text-align: left;
+  }
+  h1 {
     font-family: 'Ubuntu', Arial, sans-serif;
     font-weight: 300;
     text-align: center;
@@ -91,48 +91,45 @@ h1 {
     margin-top: 20px;
     margin-bottom: 12px;
     line-height: 32px;
-      }
-      .breadcrumbs {
- display: flex;
- flex-wrap: wrap;
- list-style: none;
- padding: 0;
- margin-top: 54px;
- font-size: 14px;
- line-height: 16px;
- color: var(--grey2);
- gap: 4px;
-}
-.breadcrumbs a {
- color: var(--grey2);
- text-decoration: none;
- font-size: 14px;
- line-height: 16px;
- font-family: 'DM Sans', Arial, sans-serif;
- font-weight: 300;
-}
-.image-container img {
+  }
+  .breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 54px;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--grey2);
+    gap: 4px;
+  }
+  .breadcrumbs a {
+    color: var(--grey2);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+  }
+  .image-container img {
     width: 100%;
     margin-top: -16px;
     margin-bottom: 20px;
     display: block;
     border-radius: 20px;
     box-shadow: 4px 0px 8px var(--black2);
+  }
+  .breadcrumbs span {
+    color: var(--accent);
+    font-size: 14px;
+    line-height: 16px;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 300;
+  }
+  .paragraph {
+    margin-bottom: 8px;
+  }
+  .paragraph:last-child {
+    margin-bottom: 0;
+  }
 }
-.breadcrumbs span {
- color: var(--accent);
- font-size: 14px;
- line-height: 16px;
- font-family: 'DM Sans', Arial, sans-serif;
- font-weight: 300;
-}
-.paragraph {
- margin-bottom: 8px;
-}
-.paragraph:last-child {
- margin-bottom: 0;
-}
-.business-article {
-      margin-bottom: 0px;
-}
-    } 

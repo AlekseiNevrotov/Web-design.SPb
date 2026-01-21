@@ -1,4 +1,4 @@
-    :root {
+:root {
       --mylogo: #26D9CD;
       --accent: #26D97C;
       --myinterface: #16847D;
@@ -32,8 +32,8 @@
       transition: box-shadow 0.4s;
     }
     .post:last-child {
-    margin-bottom: 80px;
-}
+      margin-bottom: 80px;
+    }
     .post h2 {
       margin-top: 0;
       font-size: 24px;
@@ -103,35 +103,35 @@
         padding: 24px 24px 24px 24px;
       }
       h1 {
-    font-family: 'Ubuntu', Arial, sans-serif;
-    font-weight: 300;
-    text-align: center;
-    font-size: 28px; 
-    line-height: 32px;
-    margin-top: 96px;
-    margin-bottom: 20px;
+        font-family: 'Ubuntu', Arial, sans-serif;
+        font-weight: 300;
+        text-align: center;
+        font-size: 28px; 
+        line-height: 32px;
+        margin-top: 96px;
+        margin-bottom: 20px;
       }
       .post {
         padding: 16px 16px;
         border-radius: 20px;
         margin-bottom: 20px;
       }
-       .post:last-child {
-    margin-bottom: 16px;
-}
+      .post:last-child {
+        margin-bottom: 16px;
+      }
       .post h2 {
         font-family: 'Ubuntu', Arial, sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 24px;         
-    margin-bottom: 20px;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;         
+        margin-bottom: 20px;
       }
       .post p {
-      margin-bottom: 8px;
-      color: var(--grey2);
-      font-size: 16px;
-      line-height: 20px;
-      font-family: 'DM Sans', Arial, sans-serif;
-      font-weight: 300;
-    }
+        margin-bottom: 8px;
+        color: var(--grey2);
+        font-size: 16px;
+        line-height: 20px;
+        font-family: 'DM Sans', Arial, sans-serif;
+        font-weight: 300;
+      }
     }

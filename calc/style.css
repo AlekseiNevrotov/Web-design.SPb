@@ -12,8 +12,6 @@
     }
     .preloader {
       position: fixed;
-      align-items: center; 
-      justify-content: center; 
       top: 0; left: 0;
       width: 100vw; height: 100vh;
       background: var(--bg);
@@ -191,7 +189,7 @@
   display: flex;
   align-items: left;
 }
-    input[type="text"], input[type="text"], textarea {
+    input[type="text"], textarea {
       background: var(--black3);
       color: var(--text);
       border: 1px solid var(--grey2);
@@ -209,7 +207,7 @@
       -ms-user-select: none;     
       user-select: none;
     }
-    input[type="text"]:focus, input[type="text"]:focus, textarea:focus {
+    input[type="text"]:focus, textarea:focus {
       border: 1px solid var(--myinterface);
       background: var(--black3);
       outline: none;
@@ -296,7 +294,7 @@
       .calc-container {
         padding: 16px 16px 16px 16px;
         margin: 16px 0 16px 0;
-        border-radius: 20x;
+        border-radius: 20px;
         max-width: 340px;
       }
       .columns-wrapper {
@@ -378,7 +376,7 @@
   display: flex;
   align-items: left;
 }
-    input[type="text"], input[type="text"], textarea {
+    input[type="text"], textarea {
       background: var(--black3);
       color: var(--text);
       border: 1px solid var(--grey2);
@@ -396,7 +394,7 @@
       -ms-user-select: none;     
       user-select: none;
     }
-    input[type="text"]:focus, input[type="text"]:focus, textarea:focus {
+    input[type="text"]:focus, textarea:focus {
       border: 1px solid var(--myinterface);
       background: var(--black3);
       outline: none;
